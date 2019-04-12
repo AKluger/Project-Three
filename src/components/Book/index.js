@@ -16,6 +16,9 @@ class Book extends Component{
                 <article>
                     <img src='https://66.media.tumblr.com/9359ef3c2d8ba99df7237874cee5cde1/tumblr_o87coaWRhM1vvm5d7o1_1280.jpg' className='pages'/>
                 </article>
+                <article>
+                    <p className='pageText'></p>
+                </article>
             </FlipPage>
         )
     }
