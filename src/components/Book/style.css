@@ -2,3 +2,9 @@
     width: 700px;
     height: 700px;
 }
+
+.pageText {
+    font-size: 38px;
+    color: rgb(141, 33, 151);
+    background-color: black;
+}
