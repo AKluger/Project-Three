@@ -3,6 +3,8 @@
     height: 700px;
 }
 
-.pageText (
-    
-)
+.pageText {
+    font-size: 38px;
+    color: rgb(141, 33, 151);
+    background-color: black;
+}
