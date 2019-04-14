@@ -1,0 +1,18 @@
+.logotxt{
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 50px;
+    color: rgb(168, 48, 88);
+}
+.break{
+    font-size: 40px;
+    color:black;
+}
+.navtxt{
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(36, 36, 214);
+
+}
+.navbar{
+    background-color: rgb(80, 204, 163);
+}
