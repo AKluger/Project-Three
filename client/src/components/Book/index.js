@@ -2,19 +2,55 @@ import React, { Component } from 'react';
 import BookPages from '../tempBook';
 import Nav from '../tempNav';
 import PagesContainer from "../PagesContainer";
-// import Buttons from "../PageButtons";
+import Pages from '../../prettyCity.json';
+import FlipPage from "react-flip-page";
+import Buttons from "../PageButtons";
 
 class Book extends Component{
 
+  
+state = {
+  pages: Pages
+};
+
     render() {
+
+      const theEndStyle = {
+        alignItems: 'flex-end',
+        backgroundColor: '#000',
+        color: '#fff',
+        display: 'flex',
+        justifyContent: 'center',
+        padding: 10,
+        width: '100%',
+        height: '100%'
+      };
+
+      const charPoses = {
+        exit: { opacity: 0, y: 20 },
+        enter: {
+            opacity: 1,
+            y: 0,
+            delay: ({ charIndex }) => charIndex * 170
+        }
+    };
+
         return (
           <div>
             <Nav/>
-            <PagesContainer >
-              <BookPages />
-              {/* <Buttons />   */}
+            <PagesContainer>
+            <FlipPage orientation='horizontal' className="margin" height='1300' width='1750'  >
+            {this.state.pages.map(page => (
+                <article className="pg">
+                       <Buttons />  
+                    <img src={page.imageLink} style={theEndStyle} />
+                    <div className="text-center">{page.text.map(line=>(<h2>{line}</h2>))}</div>
+                </article>
+            ))} 
+              </FlipPage>
             </PagesContainer>
           </div>
+          
         );
       }
 }
