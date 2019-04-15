@@ -5,7 +5,7 @@ const TempJumbo = () => {
     return(
         <div className="jumbotron jumbo text-center">
             <div className="container ">
-                <h1 className="display-4">CHOOSE A STORY</h1>
+                <h1 className="display-4"><div>CHOOSE</div><div>A</div> <div>STORY</div></h1>
             </div>
         </div>
         
