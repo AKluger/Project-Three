@@ -9,7 +9,7 @@ class Book extends Component{
         return (
           <div>
             <Nav/>
-            <PagesContainer>
+            <PagesContainer >
               <BookPages />
             </PagesContainer>
           </div>
