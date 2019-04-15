@@ -1,0 +1,13 @@
+.jumbo{
+    background-image: url("https://images.pexels.com/photos/33196/still-life-teddy-white-read.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: 1200px 450px;
+}
+h1{
+    font-family: 'Luckiest Guy', cursive;
+    float: right;
+    margin-left: 80%;
+    text-shadow: 4px 4px 8px whitesmoke;
+    color: rgb(175, 29, 148);
+}
