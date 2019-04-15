@@ -24,6 +24,7 @@
     "if-env": "^1.0.4",
     "react-pose": "^4.0.8",
     "react-pose-text": "^3.1.0",
-    "react-router-dom": "^5.0.0"
+    "react-router-dom": "^5.0.0",
+    "react-spring": "^8.0.19"
   }
 }

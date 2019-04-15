@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import BookPages from '../tempBook';
 import Nav from '../tempNav';
 import PagesContainer from "../PagesContainer";
+// import Buttons from "../PageButtons";
 
 class Book extends Component{
 
@@ -9,11 +10,11 @@ class Book extends Component{
         return (
           <div>
             <Nav/>
-            <PagesContainer>
+            <PagesContainer >
               <BookPages />
+              {/* <Buttons />   */}
             </PagesContainer>
           </div>
-          
         );
       }
 }
