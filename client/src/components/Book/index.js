@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
-import BookPages from '../tempBook';
 import Nav from '../tempNav';
 import PagesContainer from "../PagesContainer";
 import Pages from '../../prettyCity.json';
 import FlipPage from "react-flip-page";
-// import Buttons from "../PageButtons";
 
 class Book extends Component{
 
@@ -42,8 +40,7 @@ state = {
             <FlipPage orientation='horizontal' className="margin" height='1300' width='1750'  >
             {this.state.pages.map(page => (
                 <article className="pg">
-                       {/* <Buttons />   */}
-                    <img src={page.imageLink} style={theEndStyle} />
+                    <img src={page.imageLink} alt={page.imageTitle} style={theEndStyle} />
                     <div className="text-center">{page.text.map(line=>(<h2>{line}</h2>))}</div>
                 </article>
             ))} 
