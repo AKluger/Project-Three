@@ -2,16 +2,59 @@ import React, { Component } from "react";
 import FlipPage from "react-flip-page";
 import SplitText from "react-pose-text";
 // import Buttons from "../PageButtons";
-import "../../prettyCity.json"
+// import Pages from "../../prettyCity.json"
 
 import "./style.css";
 
 class BookPages extends Component{
-    // constructor(props) {
-    //     super(props);
-    //     this.turn = React.createRef();
+    // state = {
+    //     pages: Pages
+    //   };
+      
+    //       render() {
+      
+    //         const theEndStyle = {
+    //           alignItems: 'flex-end',
+    //           backgroundColor: '#000',
+    //           color: '#fff',
+    //           display: 'flex',
+    //           justifyContent: 'center',
+    //           padding: 5,
+    //           width: '100%',
+    //           height: '100%'
+    //         };
+      
+    //         const charPoses = {
+    //           exit: { opacity: 0, y: 20 },
+    //           enter: {
+    //               opacity: 1,
+    //               y: 0,
+    //               delay: ({ charIndex }) => charIndex * 170
+    //           }
+    //       };
+      
+    //           return (
+    //             <div className="page">
+                  
+    //               <FlipPage orientation='horizontal' className="margin" height='1300' width='1750'  >
+    //               {this.state.pages.map(page => (
+    //                   <article className="pg">
+    //                          {/* <Buttons />   */}
+    //                       <img src={page.imageLink} alt="page" style={theEndStyle} />
+    //                       <div className="text-center">{page.text.map(line=>(<h2>{line}</h2>))}</div>
+    //                   </article>
+    //               ))} 
+    //                 </FlipPage>
+                  
+    //             </div>
+                
+    //           );
+    //         }
+    constructor(props) {
+        super(props);
+        this.turn = React.createRef();
 
-    //   }
+      }
 
     render(){
             
@@ -43,5 +86,6 @@ class BookPages extends Component{
             
         )
     }
+    
 }
 export default BookPages
