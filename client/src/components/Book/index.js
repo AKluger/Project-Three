@@ -6,7 +6,6 @@ import Pages from '../../prettyCity.json';
 import FlipPage from "react-flip-page";
 import kid from './character1.png'
 import './style.css'
-
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 
@@ -29,7 +28,7 @@ function Book(){
         let height = window.innerHeight * 1.7
 
         return (
-          <div>
+          <div className="pages">
             <Nav/>
             <PagesContainer >
             <FlipPage orientation='horizontal' className="margin" height={JSON.stringify(height)} width={JSON.stringify(width)}>
