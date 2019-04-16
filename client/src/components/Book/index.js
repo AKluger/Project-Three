@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nav from '../tempNav';
+import Nav from '../Nav';
 import PagesContainer from "../PagesContainer";
 import Pages from '../../prettyCity.json';
 import FlipPage from "react-flip-page";

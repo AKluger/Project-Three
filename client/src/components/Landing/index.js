@@ -1,5 +1,5 @@
 import React from 'react'
-import Nav from '../tempNav'
+import Nav from '../Nav'
 import Jumbo from '../tempJombo'
 import Library from '../tempLibrary'
 import "./style.css"
