@@ -1,4 +1,5 @@
 import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './style.css'
 
 const tempNav = () => {
@@ -18,6 +19,9 @@ const tempNav = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="/"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/"><span className="navtxt"> <FontAwesomeIcon icon="user" /> <span className="break">|</span></span></a>
             </li>
           </ul>
         </div>
