@@ -1,5 +1,9 @@
 .page {
     position: relative;
+    
+}
+.pages{
+    margin-top: 7%;
 }
 
 .pageText {
