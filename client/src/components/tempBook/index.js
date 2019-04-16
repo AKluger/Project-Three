@@ -22,7 +22,7 @@ class BookPages extends Component{
               y: 0,
               delay: ({ charIndex }) => charIndex * 170
             }
-          };
+        };
 
         return(
             <div className="page">
