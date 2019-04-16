@@ -20,8 +20,14 @@ const tempNav = () => {
             <li className="nav-item">
               <a className="nav-link" href="/"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/"><span className="navtxt"> <FontAwesomeIcon icon="user" /> <span className="break">|</span></span></a>
+          </ul>
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item dropdown myUserGlyph ">
+              <a className="nav-link" href="/"><span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span></a>
+              <ul className="dropdown-menu">
+                <li><a href="/">Register</a></li>
+                <li><a href="/">Sign-in</a></li>
+              </ul>
             </li>
           </ul>
         </div>

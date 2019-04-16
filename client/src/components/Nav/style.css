@@ -16,10 +16,34 @@
     background-color: rgb(139, 222, 233);
     /* position: fixed; */
 }
+
 .jump {
     display:inline;
     transform-origin: 20% 50%;
     animation: jump .7s linear alternate 2;
+}
+
+.myUserGlyph {
+    height: 100%;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.dropdown-menu .sub-menu {
+    visibility: hidden;
+
+}
+  
+.dropdown-menu li:hover .sub-menu  {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 5s, opacity 300ms;
+}
+  
+ul.navbar-nav:hover .dropdown-menu {
+    display: block;
+    left: auto;
+    right: 0;
 }
 @keyframes jump {
     0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
