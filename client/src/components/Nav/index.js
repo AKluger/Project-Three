@@ -25,8 +25,8 @@ const tempNav = () => {
             <li className="nav-item dropdown myUserGlyph ">
               <a className="nav-link" href="/"><span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span></a>
               <ul className="dropdown-menu">
-                <li><a href="/">Register</a></li>
-                <li><a href="/">Sign-in</a></li>
+                <li><a href="/signup">Register</a></li>
+                <li><a href="/login">Sign-in</a></li>
               </ul>
             </li>
           </ul>
