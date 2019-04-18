@@ -37,7 +37,7 @@ function Book(){
 
       return (
         <div className="pages">
-          <Nav/>
+          <Nav />
           <Start character={pickCharacter}/>
           <PagesContainer >
           <FlipPage orientation='horizontal' className="margin" height={JSON.stringify(height)} width={JSON.stringify(width)}>

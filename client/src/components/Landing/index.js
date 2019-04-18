@@ -8,7 +8,7 @@ import "./style.css"
 const Landing = () => {
     return(
         <div className="wrapper" >
-        <Nav />
+        <Nav/>
         <Jumbo />
         <div className="wrapperImg">    
             <Library />
