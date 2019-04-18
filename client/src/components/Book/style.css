@@ -12,11 +12,38 @@
 }
 .kids {
     height: 300px;
-    /* width: 100px; */
     z-index: 11;
     position: absolute;
     margin-top: 250px;
     margin-left: 50px;
+}
+.bin {
+    height: 300px;
+    z-index: 11;
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 630px;
+}
+.trash1 {
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 350px;
+}
+.trash2 {
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 250px;
+}
+.trash3 {
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 150px;
 }
 .main {
     z-index: 10;

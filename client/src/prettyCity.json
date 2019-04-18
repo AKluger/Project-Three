@@ -8,7 +8,13 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_1.jpg",
         "cssClass": "pc-one",
-        "imageTitle":"stroll"
+        "imageTitle":"stroll",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trashbin": "https://monetthigpen.github.io/The/PrettyCityImgs/trash2.jpg",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
     },
     {
         "id": 2,
@@ -21,7 +27,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_2.jpg",
         "cssClass": "pc-two",
-        "imageTitle":"truck"
+        "imageTitle":"truck",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 3,
@@ -34,7 +44,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_3.jpg",
         "cssClass": "pc-three",
-        "imageTitle":"dirty-block"
+        "imageTitle":"dirty-block",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 4,
@@ -46,7 +60,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_4.jpg",
         "cssClass": "pc-four",
-        "imageTitle":"bin-overflow"
+        "imageTitle":"bin-overflow",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 5,
@@ -58,7 +76,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_5.jpg",
         "cssClass": "pc-five",
-        "imageTitle":"phone"
+        "imageTitle":"phone",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 6,
@@ -68,7 +90,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_6.jpg",
         "cssClass": "pc-six",
-        "imageTitle":"team"
+        "imageTitle":"team",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 7,
@@ -77,7 +103,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_7.jpg",
         "cssClass": "pc-seven",
-        "imageTitle":"litter"
+        "imageTitle":"litter",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 8,
@@ -87,7 +117,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_8.jpg",
         "cssClass": "pc-eight",
-        "imageTitle":"tires"
+        "imageTitle":"tires",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 9,
@@ -96,7 +130,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_9.jpg",
         "cssClass": "pc-nine",
-        "imageTitle":"sweeping"
+        "imageTitle":"sweeping",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 10,
@@ -105,7 +143,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_10.jpg",
         "cssClass": "pc-ten",
-        "imageTitle":"sewer-grate"
+        "imageTitle":"sewer-grate",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 11,
@@ -114,7 +156,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_11.jpg",
         "cssClass": "pc-eleven",
-        "imageTitle":"park-or-museum"
+        "imageTitle":"park-or-museum",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 12,
@@ -124,7 +170,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_12.jpg",
         "cssClass": "pc-twelve",
-        "imageTitle":"otters"
+        "imageTitle":"otters",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 13,
@@ -134,7 +184,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_13.jpg",
         "cssClass": "pc-thirteen",
-        "imageTitle":"bagged-trash-sweeping"
+        "imageTitle":"bagged-trash-sweeping",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 14,
@@ -145,7 +199,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_14.jpg",
         "cssClass": "pc-fourteen",
-        "imageTitle":"happy-crowd"
+        "imageTitle":"happy-crowd",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 15,
@@ -155,7 +213,11 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_15.jpg",
         "cssClass": "pc-fifteen",
-        "imageTitle":"smiling-faces"
+        "imageTitle":"smiling-faces",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     },
     {
         "id": 16,
@@ -167,6 +229,10 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_16.jpg",
         "cssClass": "pc-sixteen",
-        "imageTitle": "nightCity or bedroom"
+        "imageTitle": "nightCity or bedroom",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
     }
 ]
