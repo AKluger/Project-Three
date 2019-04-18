@@ -2,8 +2,8 @@
     background-image: url("https://images.pexels.com/photos/33196/still-life-teddy-white-read.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
     height: 650px;
     background-repeat: no-repeat;
-    background-size: 1300px 650px;
-    margin-top: 7%;
+    background-size: 100% 100%;
+    /* margin-top: 7%; */
     padding-top: 10%
 }
 h1{
