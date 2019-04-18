@@ -1,11 +1,11 @@
 .desk{
     background-image: url("https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-    padding-top: 25%;
+    /* padding-top: 25%; */
     /* background: red; */
     /* height: 100%; */
     display: flex;
     flex-flow: row wrap;
-    padding: 5%;
+    /* padding: 5%; */
     justify-content: space-around;
     align-content: flex-start;
     overflow: auto;

@@ -26,7 +26,7 @@ function TempLibrary() {
         <div className='row'>
             <div className='col-md-4'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-            <Link to="/prettybooks">
+            <Link to="/game">
                 <animated.img className='bookstyle' src='https://i.pinimg.com/originals/2a/a2/cb/2aa2cb4f63198bcf8de30ff658fceb3c.png' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
                 <animated.img src={kid} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/>
                 <animated.img src={bin1} className='binstyle' alt='bins' style={{ transform: props.xy.interpolate(trans3) }}/>
@@ -36,7 +36,7 @@ function TempLibrary() {
             </div>
             <div className='col-md-4'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-            <Link to="/prettybooks">
+            <Link to="/bobbysWalk">
                 <animated.img className='bookstyle' src='https://bookcover4u.com/pro/Children-book-cover-design-P1477806791CHB-Under-the-ocean-ocean-kids-book-cover-design-creatspace-kindleunder-the-ocean.jpg' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
                 <animated.img src={kid2} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/>
                 <animated.img src={bin2} className='binstyle' alt='bins' style={{ transform: props.xy.interpolate(trans3) }}/>
