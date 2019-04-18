@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../Nav'
-import Jumbo from '../tempJombo'
+// import Jumbotron from '../Jumbotron'
 import Library from '../tempLibrary'
 import "./style.css"
 
