@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { Component } from 'react';
 import Book from './components/Book'
 import Landing from './components/Landing'
+import Login from './components/Login'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
@@ -14,6 +15,7 @@ class App extends Component {
         <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/prettybooks" component={Book} />
+        <Route exact path="/login" component={Login} />
         </Switch>
       </Router>
     );
