@@ -1,0 +1,250 @@
+[
+    {
+        "id": 1,
+        "text": [
+            "Our city was pretty,",
+            "The birds sang in the trees",
+            "The air was fresh but then..."
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_1.jpg",
+        "cssClass": "pc-one",
+        "imageTitle": "stroll",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trashbin": "https://monetthigpen.github.io/The/PrettyCityImgs/trash2.jpg"
+    },
+    {
+        "id": 2,
+        "text": [
+            "SNEEZE!!!",
+            "A truck drove by and belched out smoke",
+            "We held our noses and thought we would choke!",
+            "The driver saw us and gave us a frown,",
+            "'Sorry folks but you live in filth town!'"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_2.jpg",
+        "cssClass": "pc-two",
+        "imageTitle": "truck",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/sodaCan.png"
+    },
+    {
+        "id": 3,
+        "text": [
+            "We looked around and suddenly saw,",
+            "Trash everywhere -- 'There’s a can there’s a straw!'",
+            "Mama said 'Wait!",
+            "Let’s pick that up,",
+            "If we want a pretty city We have to cleanup!'"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_3.jpg",
+        "cssClass": "pc-three",
+        "imageTitle": "dirty-block",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
+    },
+    {
+        "id": 4,
+        "text": [
+            "'But there’s so much litter look at it all,",
+            "How will I gather it, I’m so small!?'",
+            "'Silly boy' mama said 'you won’t do it alone, Everybody will help,",
+            "Just pick up the phone!'"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_4.jpg",
+        "cssClass": "pc-four",
+        "imageTitle": "bin-overflow",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
+       
+    },
+    {
+        "id": 5,
+        "text": [
+            "We called granny and Nanny and Frida and Troy,",
+            "Ava and Ann and Jamie and Roy,",
+            "Joey and Jayden, Amber and Anna,",
+            "Asia and Dixon and Bobbi and Dana."
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_5.jpg",
+        "cssClass": "pc-five",
+        "imageTitle": "phone",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/glassBottle.png"
+    },
+    {
+        "id": 6,
+        "text": [
+            "We called all of our neighbors and one by one,",
+            "They came to help cleanup the streets and have fun!"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_6.jpg",
+        "cssClass": "pc-six",
+        "imageTitle": "team",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
+    },
+    {
+        "id": 7,
+        "text": [
+            "We found bottles and wrappers,",
+            "And plastic and crackers,"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_7.jpg",
+        "cssClass": "pc-seven",
+        "imageTitle": "litter",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
+    },
+    {
+        "id": 8,
+        "text": [
+            "We grabbed Bumpers and tires,",
+            "And Diapers and wires,"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_8.jpg",
+        "cssClass": "pc-eight",
+        "imageTitle": "tires",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
+    },
+    {
+        "id": 9,
+        "text": [
+            "We cleaned the sidewalk.."
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_9.jpg",
+        "cssClass": "pc-nine",
+        "imageTitle": "sweeping",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
+    },
+    {
+        "id": 10,
+        "text": [
+            "And cleared out the grates..."
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_10.jpg",
+        "cssClass": "pc-ten",
+        "imageTitle": "sewer-grate",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
+    },
+    {
+        "id": 11,
+        "text": [
+            "We walked to the park and polished the gates"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_11.jpg",
+        "cssClass": "pc-eleven",
+        "imageTitle": "park-or-museum",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
+    },
+    {
+        "id": 12,
+        "text": [
+            "We went down to the river and saw all the otters,",
+            "They thanked us for pulling trash out of the waters!"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_12.jpg",
+        "cssClass": "pc-twelve",
+        "imageTitle": "otters",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
+    },
+    {
+        "id": 13,
+        "text": [
+            "The man in the truck even picked up a broom,",
+            "We put trash in our bags til there was no more room!"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_13.jpg",
+        "cssClass": "pc-thirteen",
+        "imageTitle": "bagged-trash-sweeping",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png",
+        "trash": "https://monetthigpen.github.io/The/PrettyCityImgs/TB.jpg"
+    },
+    {
+        "id": 14,
+        "text": [
+            "The whole town helped us out,",
+            "Me and Mama were proud,",
+            "We looked around at the people what a ginormous crowd!"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_14.jpg",
+        "cssClass": "pc-fourteen",
+        "imageTitle": "happy-crowd",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
+ 
+    },
+    {
+        "id": 15,
+        "text": [
+            "When our trash bags were full at the end of the day,",
+            "Everyone smiled and cheered, Hip-hip-HOORAY!!!"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_15.jpg",
+        "cssClass": "pc-fifteen",
+        "imageTitle": "smiling-faces",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
+
+    },
+    {
+        "id": 16,
+        "text": [
+            "The city was pretty once more",
+            "With no more trash to sweep,",
+            "We said 'goodnight pretty city'",
+            "And went home to sleep."
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_16.jpg",
+        "cssClass": "pc-sixteen",
+        "imageTitle": "nightCity or bedroom",
+        "character1": "https://monetthigpen.github.io/The/PrettyCityImgs/character1.png",
+        "character2": "https://monetthigpen.github.io/The/PrettyCityImgs/character2.png",
+        "character3": "https://monetthigpen.github.io/The/PrettyCityImgs/character3.png",
+        "character4": "https://monetthigpen.github.io/The/PrettyCityImgs/character4.png"
+    }
+]
