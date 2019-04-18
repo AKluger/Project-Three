@@ -13,7 +13,7 @@ const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 
 function BobbyWalk(){
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
-  const [pages] = useState(Pages)
+  const [pages] = useState([...Pages, ...PosPages])
   let [kid, setKid] = useState("")
 
   const pickCharacter = e => {
