@@ -21,7 +21,7 @@ module.exports = function(app) {
     db.User.create({
       email: req.body.email,
       password: req.body.password,
-      avi: req.body.avi
+      // avi: req.body.avi
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
@@ -37,15 +37,15 @@ module.exports = function(app) {
   });
 
   app.get("/api/users/", function(req, res) {
-    if (!req.user) {
-      // The user is not logged in, send back an empty object
-      res.json({});
-    } else {
+    // if (!req.user) {
+    //   // The user is not logged in, send back an empty object
+    //   res.json({});
+    // } else {
     db.User.findAll({})
       .then(function(dbUser) {
         res.json(dbUser);
       });
-    }
+    // }
   });
 
   // Route for getting some data about our user to be used client side
@@ -54,12 +54,13 @@ module.exports = function(app) {
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
+      console.log("Hi, I'm here")
     }
     else {
       res.json({
         email: req.user.email,
         id: req.user.id,
-        avi: req.user.avi
+        // avi: req.user.avi
       });
     }
   });
