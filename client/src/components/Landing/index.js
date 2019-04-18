@@ -1,6 +1,6 @@
 import React from 'react'
 import Nav from '../Nav'
-import Jumbo from '../tempJombo'
+import Jumbotron from '../Jumbotron'
 import Library from '../tempLibrary'
 import "./style.css"
 
@@ -8,8 +8,8 @@ import "./style.css"
 const Landing = () => {
     return(
         <div className="wrapper" >
-        <Nav />
-        <Jumbo />
+        <Nav/>
+        <Jumbotron />
         <div className="wrapperImg">    
             <Library />
         </div>

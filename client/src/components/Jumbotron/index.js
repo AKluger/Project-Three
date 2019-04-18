@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.css"
 
-const TempJumbo = () => {
+const Jumbotron = () => {
     return(
         <div className="jumbotron jumbo text-center">
             <div className="container ">
@@ -12,4 +12,4 @@ const TempJumbo = () => {
     )
 }
 
-export default TempJumbo
+export default Jumbotron

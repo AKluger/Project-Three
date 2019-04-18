@@ -1,12 +1,15 @@
 .wrapperImg{
     background-color: rgb(143, 143, 180);
     background-image: url("https://images.pexels.com/photos/269063/pexels-photo-269063.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* display: inline; */
     /* background-size: 1200px 450px; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 .wrapper{
-   background-color: black; 
+    background-image: url("https://images.pexels.com/photos/269063/pexels-photo-269063.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+    background-color: black; 
    /* background-image: url("https://thumbs.gfycat.com/ConcreteFriendlyGuillemot-size_restricted.gif"); */
    /* background-repeat: no-repeat; */
    /* background-size: 1200px 100px; */

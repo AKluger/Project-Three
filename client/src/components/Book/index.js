@@ -5,7 +5,9 @@ import PagesContainer from "../PagesContainer";
 import Pages from '../../prettyCity.json';
 import FlipPage from "react-flip-page";
 import './style.css'
-import Start from '../Model';
+import Start from '../Modal';
+import bin3 from '../tempLibrary/recycle.png'
+import glassBottle from '../../tempImages/glassBottle.png'
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
@@ -32,7 +34,7 @@ function Book(){
       };
 
       let width = window.innerWidth * .8
-      let height = window.innerHeight * 1.7
+      let height = window.innerHeight * 1.1
       let key = 0
 
       return (
@@ -42,16 +44,14 @@ function Book(){
           <PagesContainer >
           <FlipPage orientation='horizontal' className="margin" height={JSON.stringify(height)} width={JSON.stringify(width)}>
           {pages.map(page => (
-              <article className="pg" key={key++}>
-                <div className='page' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+              <article  key={page.id}>
+                <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   <animated.img src={eval(kid)} alt='kids' className='kids' style={{ transform: props.xy.interpolate(trans1) }}/>
-                  <img src={page.trashbin} alt='bin' className='bin' key={key++}/>
-                  <img src={page.trash} alt='trash' className='trash1' key={key++}/>
-                  <img src={page.trash} alt='trash' className='trash2' key={key++}/>
-                  <img src={page.trash} alt='trash' className='trash3' key={key++}/>
+                  {page.trash ? (<img src={bin3} alt='bin' className='bin' key={key++}/>) :(<div></div>)}
+                  {page.trash ? (<img src={page.trash} alt='trash' className={page.cssClass} key={key++}/>) :(<div></div>)}
                   <img src={page.imageLink} alt={page.imageTitle} style={theEndStyle} className='main' key={key++}/>
                 </div>
-                  <div className="text-center">{page.text.map(line=>(<h2 key={key++}>{line}</h2>))}</div>
+                  <div className="text-center page-text">{page.text.map(line=>(<h2 key={key++}>{line}</h2>))}</div>
               </article> 
           ))} 
           </FlipPage>
@@ -63,3 +63,5 @@ function Book(){
 }
 
 export default Book
+
+// <a href="https://www.freepik.com/free-photos-vectors/food">Food vector created by macrovector - www.freepik.com</a>
