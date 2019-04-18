@@ -1,10 +1,23 @@
-.pages {
-    width: 700px;
-    height: 700px;
+.page {
+    position: relative;
+    
+}
+.pages{
+    margin-top: 7%;
 }
 
 .pageText {
     font-size: 38px;
     color: rgb(141, 33, 151);
-    background-color: black;
+}
+.kids {
+    height: 300px;
+    /* width: 100px; */
+    z-index: 11;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 50px;
+}
+.main {
+    z-index: 10;
 }
