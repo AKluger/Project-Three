@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "text": [
+            "Bobby decides that he isn’t “that special somebody”. ",
+            "He puts the big black trash bag back into the  box he took it out of. He hangs Mother’s gloves on the hook near the backdoor. ",
+            "And sticks the drawing of the heart on Granny’s door."
+            
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_21.jpg",
+        "cssClass": "pc-one",
+        "imageTitle":"Heart note"   
+    },
+    {
+        "id": 2,
+        "text": [
+            "As the years go Bobby gets older and older and sees more and more trash accumulate on his street. ",
+            "Bobby  decides moves away to college.  Then after graduating  comes back to visit Mother."
+            
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_22.jpg",
+        "cssClass": "pc-one",
+        "imageTitle":"Trash in gutter"   
+    },
+    {
+        "id": 3,
+        "text": [
+            "Where once sat his mother’s garden,  a pile of trash sits high and mighty.",
+            "After seeing this Bobby says to Mother, “You can’t live in this dirty city anymore. Nobody can fix it now. Come live with me outside the city so you can have a garden again.”",
+            "Mother sighs and says, “Oh Sweet Boy,” and her head."
+            
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_23.jpg",
+        "cssClass": "pc-one",
+        "imageTitle":"Trash in Garden"   
+    }
+]

@@ -35,7 +35,7 @@ function TempLibrary() {
             <div className='col-md-4'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
             <Link to="/bobbysWalk">
-                <animated.img className='bookstyle' src='https://bookcover4u.com/pro/Children-book-cover-design-P1477806791CHB-Under-the-ocean-ocean-kids-book-cover-design-creatspace-kindleunder-the-ocean.jpg' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
+                <animated.img className='bookstyle' src='https://monetthigpen.github.io/The/Bobbys_walk/IMG_24.jpg' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
                 <animated.img src={kid2} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/>
             </Link>
             </div>
