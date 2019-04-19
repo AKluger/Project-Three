@@ -1,9 +1,10 @@
 import axios from "axios";
+import bcrypt from "bcryptjs";
 
 export default {
   // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+  getUsers: function() {
+    return axios.get("/api/users");
   },
   // Gets the book with the given id
   getBook: function(id) {
@@ -14,7 +15,10 @@ export default {
     return axios.delete("/api/books/" + id);
   },
   // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
+  saveUser: function(userData) {
+  
+        return axios.post("/api/users", userData);
   }
+
 };
+
