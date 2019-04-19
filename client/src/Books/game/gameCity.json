@@ -4,7 +4,7 @@
         "text": [
             "Time to clean up our city!"
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_1.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_1.jpg",
         "cssClass": "pc-one",
         "imageTitle": "stroll",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
@@ -16,13 +16,10 @@
     {
         "id": 2,
         "text": [
-            "SNEEZE!!!",
-            "A truck drove by and belched out smoke",
-            "We held our noses and thought we would choke!",
-            "The driver saw us and gave us a frown,",
-            "'Sorry folks but you live in filth town!'"
+            "Be sure to pick up all the litter!",
+            "Remember, Bottles go in the blue bin!"
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_2.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_2.jpg",
         "cssClass": "pc-two",
         "imageTitle": "truck",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
@@ -34,13 +31,9 @@
     {
         "id": 3,
         "text": [
-            "We looked around and suddenly saw,",
-            "Trash everywhere -- 'There’s a can there’s a straw!'",
-            "Mama said 'Wait!",
-            "Let’s pick that up,",
-            "If we want a pretty city We have to cleanup!'"
+            
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_3.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_3.jpg",
         "cssClass": "pc-three",
         "imageTitle": "dirty-block",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
