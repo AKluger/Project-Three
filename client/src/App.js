@@ -4,7 +4,7 @@ import PrettyCity from './Books/prettyCity/prettyCity'
 import BobbyWalk from './Books/bobbyWalk/BobbyWalk'
 import Game from './Books/game/Game'
 import Landing from './components/Landing'
-import Login from './components/Login'
+import Login from './pages/Login'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import './App.css';

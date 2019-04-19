@@ -1,6 +1,7 @@
 // Requiring bcrypt for password hashing. Using the bcrypt-nodejs version as the regular bcrypt module
 // sometimes causes errors on Windows machines
-var bcrypt = require("bcrypt");
+// var models = require("../models");
+var bcrypt = require("bcryptjs");
 // var bcrypt = require("bcrypt");
 var Sequelize = require("sequelize");
 // var mongoose = require('mongoose');
@@ -82,6 +83,7 @@ module.exports = function(sequelize, DataTypes) {
 
 
   // Creating a custom method for our User model. This will check if an unhashed password entered by the user can be compared to the hashed password stored in our database
+ 
   // User.prototype.validPassword = function(password) {
   //   return bcrypt.compareSync(password, this.password);
   // };
@@ -94,6 +96,34 @@ module.exports = function(sequelize, DataTypes) {
   //     null
   //   );
   // });
+
+    // generating a has
+  // User.generateHash = function(password) {
+  //   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
+  // };
+
+  // // checking if password is valid
+  // User.prototype.validPassword = function(password) {
+  //   return bcrypt.compareSync(password, this.password);
+  // };
+
+  
+//   User.associate = function(models){
+//     User.hasMany(models.Books, {
+//         foreignKey: "id",
+//         onDelete: "cascade"
+//     });
+// };
+
+User.associate = function(models) {
+  // Associating Author with Posts
+  // When an Author is deleted, also delete any associated Posts
+  User.hasMany(models.Book, {
+    onDelete: "cascade"
+  });
+};
+
+
 
   // User.associate = function(models) {
   //   // User.hasMany(models.Toy,{as: 'books', foreignKey: 'userId'});

@@ -10,7 +10,19 @@ const Book = sequelize.define("Book", {
   author: { type: Sequelize.STRING, required: true },
   currentPage: {type: Sequelize.INTEGER, required: true },
   hasStarted: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true },
+
+
 });
+
+Book.associate = function(models) {
+  // We're saying that a Post should belong to an Author
+  // A Post can't be created without an Author due to the foreign key constraint
+  Book.belongsTo(models.User, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
 
  return Book;
 

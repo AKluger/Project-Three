@@ -1,6 +1,7 @@
 // Requiring our models and passport as we've configured it
 var db = require("../models");
 var passport = require("../config/passport");
+const bcrypt = require("bcryptjs")
 
 module.exports = function(app) {
   // Using the passport.authenticate middleware with our local strategy.
@@ -16,19 +17,33 @@ module.exports = function(app) {
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
-  app.post("/api/signup", function(req, res) {
-    console.log(req.body);
-    db.User.create({
-      email: req.body.email,
-      password: req.body.password,
-      // avi: req.body.avi
-    }).then(function() {
-      res.redirect(307, "/api/login");
-    }).catch(function(err) {
-      console.log(err);
-      res.status(422).json(err.errors[0].message);
-    });
-  });
+  app.post("/api/users", function(req, res) {
+    password = req.body.password;
+    bcrypt.genSalt(10, (err, salt) => {
+      bcrypt.hash(password, salt, (err, hash) => {
+          if (err) throw err;
+          password = hash;
+          // console.log(password)
+          // password
+              // .save()
+              // .then(user  => res.json(user))
+              // .catch(user => console.log(err))
+              db.User.create({
+                email: req.body.email,
+                username: req.body.username,
+                password: password,
+                // avi: req.body.avi
+              })
+              .then(function() {
+                res.redirect(307, "/");
+              }).catch(function(err) {
+                console.log(err);
+                res.status(422).json(err.errors[0].message);
+              });
+            });
+      })
+    })  
+    
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
