@@ -6,7 +6,6 @@
     margin-top: 7%;
 } */
 /* .page-image {
-
 } */
 
 .page-text {
@@ -50,6 +49,8 @@
 }
 .main {
     z-index: 10;
+    max-height: 670px;
+    max-width: 960px;
 }
 
 .pc-one {
@@ -179,4 +180,3 @@
     right: 30px;
     top: 120px;
 }
-

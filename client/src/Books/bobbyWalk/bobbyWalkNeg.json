@@ -1,4 +1,140 @@
-[
+[    {
+    "id": 1,
+    "text": [
+        "A new day brightens the sky.",
+        "Little Bobby gets out of bed and  looks out the window and admires his city’s metallic skyline.",
+        "Mother tells him to go the corner store and pick up some eggs for breakfast."
+        
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_1.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"Skyline"   
+},
+{
+    "id": 2,
+    "text": [
+        "Bobby walks through his neighborhood studying the red brick buildings and colorful murals. ",
+        "Soaking up the warm breeze he stops, closes his eyes and breathes deeply."
+        
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_2.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"Mural"   
+},
+{
+    "id": 3,
+    "text": [
+        "He looks down at the ground to admire the flowers at the roots of the tree. To his surprise, he sees a bunched up pile of burger wrappers.",
+        "As he walks down the block he sees all the trees haves trash scattered about at their feet."
+        
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_3.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"trasy street"   
+},
+{
+    "id": 4,
+    "text": [
+        " Finally he gets to the store and hears the grown-ups say, “I can’t wait to get out of here! I’m sick of this dirty city!”",
+        "“Oh Pat, there is nothing we can do to fix it.”",
+        "“I know that is why I’m leaving!”"
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_4.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"papi shop"   
+},
+{
+    "id": 5,
+    "text": [
+        "Bobby buys the eggs with Mother’s money and walks back home with the grown-up’s words weighing heavy on his mind.",
+        "“Why is the city so dirty? How do we fix it?And why can’t we fix it? ” Bobby says  to himself."
+        
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_5.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"outside of papi shop"   
+},
+{
+    "id": 6,
+    "text": [
+        "“When he gets home he asks Mother, “Why can’t we fix our dirty city?”",
+        "Mother replies, “Why do you ask that Sweet Boy?”",
+        "Looking down at the grown Bobby solemnly says, “The grown-ups at the store said they are leaving the city because it’s so dirty and there is no way to fix it.”"
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_6.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"ma in kitchen"   
+},
+{
+    "id": 7,
+    "text": [
+        "As Bobby is speaking Granny wobbles in, sits down and says, “Sweet Boy, there is a way to fix it….”",
+        "“How?! How Granny?!” he exclaims.",
+        "Calmly and softly Granny responds, “Sweet  Boy, it takes somebody special. Somebody who will put in the work.”",
+        "“Can I be that somebody?” Bobby chirps back.",
+        "Granny pointing to a closet says, “Well, first bring me a big bag.”"
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_20.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"granny in chair"   
+},
+{
+    "id": 8,
+    "text": [
+        "Bobby looks through the house and finds a box full of big black trash bags and runs back to granny. “Here you go Granny.”",
+        "Reaching for the bag, Granny tells Bobby to go and find some gloves.",
+        "Grasping for the table behind her, Mother says, “I was just in the garden, here are my gloves.”"
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_9.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"kitchen" 
+},
+{
+    "id": 9,
+    "text": [
+        "Gesturing to Bobby Granny says,“Sweet Boy, come close.” Bobby came and sat on the arm of Granny’s chair.",
+        "She whispers, “What is something nice your mother does for you?”",
+        "Bobby sits back and thinks. He realizes his mother does so many nice things for him that he’s never thought about. "
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_10.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"granny standing up"   
+},
+{
+    "id": 10,
+    "text": [
+        "He stands up and whispers back, “She puts a funny drawing in my lunch every day.”",
+        "Granny says, “Did you tell her to do that?”",
+        "Looking at his feet, Bobby says “No”.",
+        "“Do you thank her?” she responds.",
+        "Again he says no.",
+        "“But Granny, what does that have to do with fixing our city?”"
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_11.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"note"   
+},
+{
+    "id": 11,
+    "text": [
+        "“To fix the city we have to start small. The special somebody can start with a trash bag and gloves to pick up the trash on their street. ",
+        "But the key is right here, Sweet Boy,” Granny points at Bobby’s heart.",
+        "“Like how your mother makes those drawings out of love for you and expects nothing in return, that one special somebody will pick up the trash because they love their community and expect no reward.”",
+        "Bobby thanks Granny for the solution she came up with and makes his way upstairs."
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_12.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"hands and heart"   
+},
+{
+    "id": 12,
+    "text": [
+        "The sun illuminates Bobby’s room waking him up, he thinks to himself “Can I be that one special somebody?”"
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_13.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"Light through window"   
+},
     {
         "id": 1,
         "text": [

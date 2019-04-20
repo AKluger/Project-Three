@@ -53,13 +53,16 @@
 }
 
 .pc-one {
-    height: 100px;
+    z-index: -100;
+    opacity: 0;
+    pointer-events: none;
+    /* height: 100px;
     z-index: 11;
     position: absolute;
     right: 100px;
-    top: 120px;
+    top: 120px; */
 }
-
+/* 
 .pc-two {
     height: 100px;
     z-index: 11;
@@ -146,23 +149,27 @@
     position: absolute;
     right: 30px;
     top: 120px;
+} */
+
+.pc13 {
+    z-index: 100;
+    opacity: 1;
+    pointer-events: auto;
+    /* display: block;
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    right: 30px;
+    top: 120px; */
 }
 
-.pc-thirteen {
+/* .pc-fourteen {
     height: 100px;
     z-index: 11;
     position: absolute;
     right: 30px;
     top: 120px;
-}
-
-.pc-fourteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
+} */
 
 .pc-fifteen {
     height: 100px;
