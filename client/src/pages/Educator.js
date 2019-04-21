@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-// import LoginBtn from "../components/LoginBtn";
+import {Button} from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
-// import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../components/Grid";
-// import { List, ListItem } from "../components/List";
-import { Input, TextArea, LoginBtn } from "../components/LoginForm";
+import {TextArea } from "../components/LoginForm";
 import './style.css'
 
 class Educator extends Component {
@@ -30,11 +28,6 @@ class Educator extends Component {
   //     //   .catch(err => console.log(err));
   //   };
 
-  // deleteBook = id => {
-  //   API.deleteBook(id)
-  //     .then(res => this.loadBooks())
-  //     .catch(err => console.log(err));
-  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -75,12 +68,13 @@ class Educator extends Component {
                   name="feedback"
                   placeholder="How may we improve?"
                 />
-                <LoginBtn
-                  disabled={!(this.state.email && this.state.password)}
+                <Button
+                variant="primary" size="lg"
+                  // disabled={!(this.state.email && this.state.password)}
                   onClick={this.handleFormSubmit}
                 >
-                  Login
-                </LoginBtn>
+                  Submit
+                </Button>
               </form>
             </Col>
           </Row>

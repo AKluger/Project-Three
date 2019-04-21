@@ -14,3 +14,12 @@
    /* background-repeat: no-repeat; */
    /* background-size: 1200px 100px; */
 }
+
+/* Large Imac */
+@media only screen and (min-width: 1220px)   {
+    .wrapper{ text-align: center}
+
+    .wrapperImg{
+        background-size: 100% 100%;
+}
+}

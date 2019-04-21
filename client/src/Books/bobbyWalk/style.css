@@ -18,41 +18,7 @@
     font-size: 30px;
        
 }
-.kids {
-    height: 300px;
-    z-index: 11;
-    position: absolute;
-    margin-top: 250px;
-    margin-left: 50px;
-}
-.bin {
-    height: 250px;
-    z-index: 11;
-    position: absolute;
-    bottom: 320px;
-    right: 30px;
-}
-/* .trash1 {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 350px;
-} */
-.trash2 {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 250px;
-}
-.trash3 {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 150px;
-}
+
 .main {
     z-index: 10;
 }
