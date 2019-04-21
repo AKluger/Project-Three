@@ -23,7 +23,7 @@ function TempLibrary() {
     const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
     return(
         <div className='container'>
-        <div className='row'>
+        <div className='row text-center'>
             <div className='col-md-4'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
             <Link to="/game">

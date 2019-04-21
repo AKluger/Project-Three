@@ -2,7 +2,8 @@
     {
         "id": 1,
         "text": [
-            "Time to clean up our city!"
+            "Time to clean up our city!",
+            "Click the object to deposit it in the proper can."
         ],
         "imageLink": "https://monetthigpen.github.io/The/gameImages/game_1.jpg",
         "cssClass": "pc-one",
@@ -16,8 +17,7 @@
     {
         "id": 2,
         "text": [
-            "Be sure to pick up all the litter!",
-            "Remember, Bottles go in the blue bin!"
+            "Cans go in the BLUE bin"
         ],
         "imageLink": "https://monetthigpen.github.io/The/gameImages/game_2.jpg",
         "cssClass": "pc-two",
@@ -31,7 +31,7 @@
     {
         "id": 3,
         "text": [
-            
+            "Candy wrappers go in the trash can"
         ],
         "imageLink": "https://monetthigpen.github.io/The/gameImages/game_3.jpg",
         "cssClass": "pc-three",
@@ -44,29 +44,22 @@
     {
         "id": 4,
         "text": [
-            "'But there’s so much litter look at it all,",
-            "How will I gather it, I’m so small!?'",
-            "'Silly boy' mama said 'you won’t do it alone, Everybody will help,",
-            "Just pick up the phone!'"
+            "Bottles go in the BLUE bin"
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_4.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_4.jpg",
         "cssClass": "pc-four",
         "imageTitle": "bin-overflow",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
         "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
-       
     },
     {
         "id": 5,
         "text": [
-            "We called granny and Nanny and Frida and Troy,",
-            "Ava and Ann and Jamie and Roy,",
-            "Joey and Jayden, Amber and Anna,",
-            "Asia and Dixon and Bobbi and Dana."
+            "Trash bags go in the trash bin!"
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_5.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_5.jpg",
         "cssClass": "pc-five",
         "imageTitle": "phone",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
@@ -78,10 +71,9 @@
     {
         "id": 6,
         "text": [
-            "We called all of our neighbors and one by one,",
-            "They came to help cleanup the streets and have fun!"
+            "Banana peels go in the GREEN bin"
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_6.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_6.jpg",
         "cssClass": "pc-six",
         "imageTitle": "team",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
@@ -92,10 +84,9 @@
     {
         "id": 7,
         "text": [
-            "We found bottles and wrappers,",
-            "And plastic and crackers,"
+            "Apple cores go in the GREEN bin"
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_7.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_7.jpg",
         "cssClass": "pc-seven",
         "imageTitle": "litter",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
@@ -107,10 +98,9 @@
     {
         "id": 8,
         "text": [
-            "We grabbed Bumpers and tires,",
-            "And Diapers and wires,"
+            "Great job you cleaned up the city!"
         ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_8.jpg",
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_8.jpg",
         "cssClass": "pc-eight",
         "imageTitle": "tires",
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
@@ -118,124 +108,5 @@
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
         "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
         "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
-    },
-    {
-        "id": 9,
-        "text": [
-            "We cleaned the sidewalk.."
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_9.jpg",
-        "cssClass": "pc-nine",
-        "imageTitle": "sweeping",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
-    },
-    {
-        "id": 10,
-        "text": [
-            "And cleared out the grates..."
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_10.jpg",
-        "cssClass": "pc-ten",
-        "imageTitle": "sewer-grate",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
-    },
-    {
-        "id": 11,
-        "text": [
-            "We walked to the park and polished the gates"
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_11.jpg",
-        "cssClass": "pc-eleven",
-        "imageTitle": "park-or-museum",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
-    },
-    {
-        "id": 12,
-        "text": [
-            "We went down to the river and saw all the otters,",
-            "They thanked us for pulling trash out of the waters!"
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_12.jpg",
-        "cssClass": "pc-twelve",
-        "imageTitle": "otters",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
-    },
-    {
-        "id": 13,
-        "text": [
-            "The man in the truck even picked up a broom,",
-            "We put trash in our bags til there was no more room!"
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_13.jpg",
-        "cssClass": "pc-thirteen",
-        "imageTitle": "bagged-trash-sweeping",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
-    },
-    {
-        "id": 14,
-        "text": [
-            "The whole town helped us out,",
-            "Me and Mama were proud,",
-            "We looked around at the people what a ginormous crowd!"
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_14.jpg",
-        "cssClass": "pc-fourteen",
-        "imageTitle": "happy-crowd",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
- 
-    },
-    {
-        "id": 15,
-        "text": [
-            "When our trash bags were full at the end of the day,",
-            "Everyone smiled and cheered, Hip-hip-HOORAY!!!"
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_15.jpg",
-        "cssClass": "pc-fifteen",
-        "imageTitle": "smiling-faces",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
-
-    },
-    {
-        "id": 16,
-        "text": [
-            "The city was pretty once more",
-            "With no more trash to sweep,",
-            "We said 'goodnight pretty city'",
-            "And went home to sleep."
-        ],
-        "imageLink": "https://monetthigpen.github.io/The/gameImages/IMG_16.jpg",
-        "cssClass": "pc-sixteen",
-        "imageTitle": "nightCity or bedroom",
-        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
-        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
-        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
     }
 ]
