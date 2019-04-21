@@ -1,5 +1,14 @@
 [
     {
+        "id": 0,
+        "text": [
+            "Bobby's Walk"   
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_24.jpg",
+        "cssClass": "pc-one",
+        "imageTitle":"cover"   
+    },
+    {
         "id": 1,
         "text": [
             "A new day brightens the sky.",
