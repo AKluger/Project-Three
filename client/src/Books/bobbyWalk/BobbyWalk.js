@@ -36,19 +36,9 @@ function BobbyWalk(){
 
   //  button onclick bad path updates/replaces state with neg otherwise continue...
 
-      const theEndStyle = {
-        alignItems: 'flex-end',
-        backgroundColor: '#000',
-        color: '#fff',
-        display: 'flex',
-        justifyContent: 'center',
-        padding: 5,
-        width: '100%',
-        height: '100%'
-      };
 
       let width = window.innerWidth * .8
-      let height = window.innerHeight * 1.1
+      let height = window.innerHeight * 1.11
       let key = 0
 
       return (
@@ -61,9 +51,9 @@ function BobbyWalk(){
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   {/* <animated.img alt='kids' className='kids' style={{ transform: props.xy.interpolate(trans1) }}/> */}
-                  <img src={page.imageLink} alt={page.imageTitle} style={theEndStyle} className='main' key={key++}/>
+                  <img src={page.imageLink} alt={page.imageTitle}  className='main imgs' key={key++}/>
                 </div>
-                <button onClick={handleButtonClick} className={page.cssClass}>Bobby doesn't want to be that special somebody</button>
+                <button onClick={handleButtonClick} className={page.cssClass}><a>Bobby doesn't want to be that special somebody</a></button>
                   <div className="text-center page-text">{page.text.map(line=>(<h2 key={key++}>{line}</h2>))}</div>
               </article> 
           ))} 
