@@ -8,10 +8,15 @@
 /* .page-image {
 
 } */
+.margin{
+    margin-top: 5%;
+}
 
 .page-text {
-    font-size: 38px;
-    color: rgb(141, 33, 151);
+    color: black;
+    font-family: 'Baumans', cursive;
+    font-size: 30px;
+       
 }
 .kids {
     height: 300px;
@@ -56,100 +61,14 @@
     z-index: -100;
     opacity: 0;
     pointer-events: none;
+    color: black;
     /* height: 100px;
     z-index: 11;
     position: absolute;
     right: 100px;
     top: 120px; */
 }
-/* 
-.pc-two {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 70px;
-    top: 120px;
-}
 
-.pc-three {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 100px;
-}
-
-.pc-four {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 160px;
-}
-
-.pc-five {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-six{
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-seven {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-eight {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-nine {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-ten {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-eleven {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-twelve {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-} */
 
 .pc13 {
     z-index: 100;
@@ -186,4 +105,20 @@
     right: 30px;
     top: 120px;
 }
-
+/* .theEndStyle{
+    align-Items: 'flex-end';
+    background-Color: '#000';
+    color: '#fffff';
+    display: 'flex';
+    justify-Content: 'center';
+    padding: 5%;
+    width: 200px;
+    height: 300px;
+} */
+.imgs{
+    height: 500px;
+    width:100%;
+}
+.img11{
+    height: 400px;
+}
