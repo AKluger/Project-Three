@@ -26,6 +26,7 @@ export default class tempNav extends React.Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/"><span className="navtxt"><b>Home   </b><span className="break">|</span></span></Nav.Link>
+            <Nav.Link href="/library"><span className="navtxt"><b>Library   </b><span className="break">|</span></span></Nav.Link>
             <Nav.Link href="/educator"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></Nav.Link>
             <div className="glyph">
               <NavDropdown  inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
