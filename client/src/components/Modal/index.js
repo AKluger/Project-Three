@@ -33,13 +33,13 @@ class Start extends React.Component {
             </Modal.Header>
             <Modal.Body>
                 <img src='https://monetthigpen.github.io/The/PrettyCityImgs/character1.png' alt='kid' style={Effects} 
-                onClick={()=>  this.props.character("page.character1") }/>
+                onClick={()=>  this.props.character("pages[0].character1") }/>
                 <img src='https://monetthigpen.github.io/The/PrettyCityImgs/character2.png' alt='kid' style={Effects} 
-                onClick={()=> this.props.character("page.character2") }/>
+                onClick={()=> this.props.character("pages[0].character2") }/>
                 <img src='https://monetthigpen.github.io/The/PrettyCityImgs/character3.png' alt='kid' style={Effects} 
-                onClick={()=> this.props.character("page.character3") }/>
+                onClick={()=> this.props.character("pages[0].character3") }/>
                 <img src='https://monetthigpen.github.io/The/PrettyCityImgs/character4.png' alt='kid' style={Effects} 
-                onClick={()=> this.props.character("page.character4") }/>
+                onClick={()=> this.props.character("pages[0].character4") }/>
             </Modal.Body>
             <Modal.Footer>
               <Button variant="secondary" onClick={this.handleClose}>

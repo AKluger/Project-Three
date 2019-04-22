@@ -1,17 +1,13 @@
 .page {
     position: relative;
-    
 }
-/* .pages{
-    margin-top: 7%;
-} */
-/* .page-image {
-
-} */
-
-.page-text {
+.gameText{
     font-size: 38px;
     color: rgb(141, 33, 151);
+    position: relative;
+    bottom: 480px;
+    margin: 0;
+    background-color: aliceblue;
 }
 .kids {
     height: 300px;
@@ -27,160 +23,39 @@
     bottom: 320px;
     right: 30px;
 }
-/* .trash1 {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 350px;
-} */
-.trash2 {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 250px;
-}
-.trash3 {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    margin-top: 100px;
-    margin-left: 150px;
-}
-.main {
+.goodJob {
+    position: relative;
+    font-size: 38px;
+    color: rgb(141, 33, 151);
+    bottom: 1015px;
+    right: 120px;
+    visibility: hidden;
     z-index: 10;
 }
-
-.pc-one {
-    height: 100px;
+.bubble {
+    height: 250px;
+    position: relative;
+    left: 300px;
+    bottom: 850px;
+    visibility: hidden;
+    z-index: 10;
+} 
+.gameKids {
+    height: 400px;
     z-index: 11;
     position: absolute;
-    right: 100px;
+    top: 250px;
+    left: 200px;
+}
+.gameTrash {
+    height: 200px;
+    position: absolute;
     top: 220px;
+    right: 340px
 }
-
-.pc-two {
-    height: 100px;
-    z-index: 11;
+.gameBin {
+    height: 300px;
     position: absolute;
-    right: 70px;
-    top: 120px;
-}
-
-.pc-three {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 100px;
-}
-
-.pc-four {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 160px;
-}
-
-.pc-five {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-six{
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-seven {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-eight {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-nine {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-ten {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-eleven {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-twelve {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-thirteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-fourteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-fifteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-sixteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.imgs{
-    height: 500px;
-    width:100%;
+    top: 560px;
+    right: 300px
 }
