@@ -1,5 +1,5 @@
 .pretty-text {
-    font-size: 35px;
+    font-size: 40px;
     color: black;
     font-family: 'Cabin', sans-serif;
     position: relative;
@@ -160,7 +160,7 @@
 /* no scroll required */
 @media only screen and (max-height: 768px) {
     .pretty-text {
-        font-size: 25px;
+        font-size: 28px;
     }
     .imgs {
         height: auto;
@@ -170,7 +170,7 @@
 
 @media only screen and (max-width: 640px) {
     .pretty-text {
-        font-size: 16px;
+        font-size: 22px;
     }
 }
 
@@ -178,7 +178,7 @@
 /* currently scroll required */
 @media only screen and (max-height: 414px) {
     .pretty-text {
-        font-size: 1opx;
+        font-size: 18px;
     }
     .imgs {
         height: 200px;
