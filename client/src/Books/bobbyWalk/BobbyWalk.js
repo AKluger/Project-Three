@@ -10,19 +10,13 @@ import './style.css'
 // import Start from '../../components/Modal';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
+
 
 function BobbyWalk(){
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   const [pages, setPages] = useState([...Pages, ...PosPages])
   console.log(pages);
-  // let [kid, setKid] = useState("")
 
-  // const pickCharacter = e => {
-  //   console.log(e) 
-  //   setKid(kid = e)
-  // }
-// reset page!
 
   const handleButtonClick = event => {
     event.preventDefault();
@@ -44,17 +38,16 @@ function BobbyWalk(){
       return (
         <div className="pages">
           <Nav/>
-          {/* <Start character={pickCharacter}/> */}
+          
           <PagesContainer id="pageContainer">
           <FlipPage orientation='horizontal' className="margin" height={JSON.stringify(height)} width={JSON.stringify(width)}>
           {pages.map(page => (
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-                  {/* <animated.img alt='kids' className='kids' style={{ transform: props.xy.interpolate(trans1) }}/> */}
                   <img src={page.imageLink} alt={page.imageTitle}  className='main imgs' key={key++}/>
                 </div>
-                <button onClick={handleButtonClick} className={page.cssClass}><a>Bobby doesn't want to be that special somebody</a></button>
-                  <div className="text-center page-text">{page.text.map(line=>(<h2 key={key++}>{line}</h2>))}</div>
+                <button onClick={handleButtonClick} className={page.cssClass}>Bobby doesn't want to be that special somebody</button>
+                  <div className="text-center page-text">{page.text.map(line=>(<h2 className="page-text" key={key++}>{line}</h2>))}</div>
               </article> 
           ))} 
           </FlipPage>

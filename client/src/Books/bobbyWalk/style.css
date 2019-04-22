@@ -15,7 +15,7 @@
 .page-text {
     color: black;
     font-family: 'Baumans', cursive;
-    font-size: 30px;
+    font-size: 25px;
        
 }
 
@@ -88,3 +88,48 @@
 .img11{
     height: 400px;
 }
+.titlepage{
+    height:700px;
+}
+@media only screen and (max-height: 960px) {
+    .page-text {
+        font-size: 28px;
+    }
+    .imgs {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+
+/* ipad landscape */
+/* no scroll required */
+@media only screen and (max-height: 768px) {
+    .page-text {
+        font-size: 28px;
+    }
+    .imgs {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .page-text {
+        font-size: 22px;
+    }
+}
+
+/* phone landscape */ 
+/* currently scroll required */
+@media only screen and (max-height: 414px) {
+    .page-text {
+        font-size: 18px;
+    }
+    .imgs {
+        height: 200px;
+        max-width: 100%;
+    }
+}
+
+
