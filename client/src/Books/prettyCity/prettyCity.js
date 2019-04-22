@@ -22,7 +22,7 @@ function PrettyCity() {
     height: '100%'
   };
 
-  let width = window.innerWidth > 900 ? window.innerWidth * .66 : window.innerWidth * .8;
+  let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9;
   let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1;
   let key = 0;
 
