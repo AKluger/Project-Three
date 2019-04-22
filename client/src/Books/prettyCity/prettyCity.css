@@ -141,8 +141,20 @@
 
 .imgs {
     height: auto;
-    width: 100%;
+    max-width: 100%;
+    /* max-width: 960px; */
 }
+
+@media only screen and (max-height: 960px) {
+    .pretty-text {
+        font-size: 28px;
+    }
+    .imgs {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
 
 /* ipad landscape */
 /* no scroll required */
@@ -152,7 +164,7 @@
     }
     .imgs {
         height: auto;
-        width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -169,7 +181,7 @@
         font-size: 18px;
     }
     .imgs {
-        height: auto;
+        height: 200px;
         max-width: 100%;
     }
 }
