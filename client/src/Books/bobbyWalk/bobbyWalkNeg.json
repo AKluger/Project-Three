@@ -1,4 +1,13 @@
-[    {
+[   {
+    "id": 0,
+    "text": [
+        "Bobby's Walk"   
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_24.jpg",
+    "cssClass": "pc-one titlepage",
+    "imageTitle":"cover"   
+},
+{
     "id": 1,
     "text": [
         "A new day brightens the sky.",
@@ -118,16 +127,24 @@
     "id": 11,
     "text": [
         "“To fix the city we have to start small. The special somebody can start with a trash bag and gloves to pick up the trash on their street. ",
-        "But the key is right here, Sweet Boy,” Granny points at Bobby’s heart.",
-        "“Like how your mother makes those drawings out of love for you and expects nothing in return, that one special somebody will pick up the trash because they love their community and expect no reward.”",
-        "Bobby thanks Granny for the solution she came up with and makes his way upstairs."
+        "But the key is right here, Sweet Boy,” Granny points at Bobby’s heart."
     ],
     "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_12.jpg",
-    "cssClass": "pc-one",
+    "cssClass": "pc-one img11",
     "imageTitle":"hands and heart"   
 },
 {
     "id": 12,
+    "text": [
+        "“Like how your mother makes those drawings out of love for you and expects nothing in return, that one special somebody will pick up the trash because they love their community and expect no reward.”",
+        "Bobby thanks Granny for the solution she came up with and makes his way upstairs."
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_25.jpg",
+    "cssClass": "pc-one",
+    "imageTitle":"hands and heart"   
+},
+{
+    "id": 13,
     "text": [
         "The sun illuminates Bobby’s room waking him up, he thinks to himself “Can I be that one special somebody?”"
     ],
@@ -135,6 +152,16 @@
     "cssClass": "pc-one",
     "imageTitle":"Light through window"   
 },
+{
+    "id": 14,
+    "text": [
+        "He gets out of bed, goes downstairs and sees the big black trash bag, his mother’s gardening gloves and a little drawing of a heart near the door."
+    ],
+    "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_14.jpg",
+    "cssClass": "pc13",
+    "imageTitle":"Gloves"   
+},
+
     {
         "id": 1,
         "text": [
@@ -163,7 +190,7 @@
         "text": [
             "Where once sat his mother’s garden,  a pile of trash sits high and mighty.",
             "After seeing this Bobby says to Mother, “You can’t live in this dirty city anymore. Nobody can fix it now. Come live with me outside the city so you can have a garden again.”",
-            "Mother sighs and says, “Oh Sweet Boy,” and her head."
+            "Mother sighs and says, “Oh Sweet Boy,” and shakes her head."
             
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_23.jpg",
