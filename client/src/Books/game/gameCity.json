@@ -3,7 +3,8 @@
         "id": 1,
         "text": [
             "Time to clean up our city!",
-            "Click the object to deposit it in the proper can."
+            "Click the object to deposit it in the proper can.",
+            "Click the can to switch between trash and recyle"
         ],
         "imageLink": "https://monetthigpen.github.io/The/gameImages/game_1.jpg",
         "cssClass": "pc-one",
@@ -12,12 +13,14 @@
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
         "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trashbin": "https://monetthigpen.github.io/The/gameImages/trash2.jpg"
+        "trashbin": "https://monetthigpen.github.io/The/gameImages/trash2.jpg",
+        "trash": "https://monetthigpen.github.io/The/gameImages/sodaCan.png",
+        "recycle": true
     },
     {
         "id": 2,
         "text": [
-            "Cans go in the BLUE bin"
+            "Cans go in the RECYCLE bin"
         ],
         "imageLink": "https://monetthigpen.github.io/The/gameImages/game_2.jpg",
         "cssClass": "pc-two",
@@ -26,7 +29,8 @@
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
         "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/sodaCan.png"
+        "trash": "https://monetthigpen.github.io/The/gameImages/sodaCan.png",
+        "recycle": true
     },
     {
         "id": 3,
@@ -39,7 +43,9 @@
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg",
+        "recycle": false
     },
     {
         "id": 4,
@@ -52,7 +58,9 @@
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/sodaCan.png",
+        "recycle": true
     },
     {
         "id": 5,
@@ -66,7 +74,8 @@
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
         "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/glassBottle.png"
+        "trash": "https://monetthigpen.github.io/The/gameImages/glassBottle.png",
+        "recycle": false
     },
     {
         "id": 6,
@@ -79,7 +88,9 @@
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg",
+        "recycle": false
     },
     {
         "id": 7,
@@ -93,7 +104,8 @@
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
         "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
+        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg",
+        "recycle": false
     },
     {
         "id": 8,
@@ -106,7 +118,6 @@
         "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
         "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
         "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
-        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
-        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg"
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
     }
 ]
