@@ -64,7 +64,7 @@ class Educator extends Component {
                   value={this.state.feedback}
                   onChange={this.handleInputChange}
                   name="feedback"
-                  placeholder="How may we improve?"
+                  placeholder="Leave general feedback and feature requests here"
                 />
                 <Button
                 id = "form-button" size="lg"
