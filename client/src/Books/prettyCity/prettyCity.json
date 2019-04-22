@@ -1,5 +1,18 @@
 [
     {
+        "id": 0,
+        "text": [
+            "Authored by Alex Kluger",
+            "        ",
+            "Copyright 2019"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/prettyCover.JPG",
+        "cssClass": "pc-0",
+        "imageTitle": "title"
+     
+    },
+    
+    {
         "id": 1,
         "text": [
             "Our city was pretty,",

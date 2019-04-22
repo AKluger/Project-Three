@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import {Button} from 'react-bootstrap';
+import {Button, Col, Container, Row, Jumbotron, Form} from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
-import { Col, Row, Container } from "../components/Grid";
 import {TextArea } from "../components/LoginForm";
 import './style.css'
 
@@ -57,11 +56,10 @@ class Educator extends Component {
         <Nav />
         
         <Container fluid>
-        <div class="jumbotron" id="hero-educator" />
+        <Jumbotron id="hero-educator" />
           <Row>
-            <Col size="md-6" className="mx-auto">
-
-              <form>
+            <Col md={{ span: 6, offset: 3 }} className="text-center">
+              <Form>
                 <TextArea
                   value={this.state.feedback}
                   onChange={this.handleInputChange}
@@ -69,13 +67,13 @@ class Educator extends Component {
                   placeholder="How may we improve?"
                 />
                 <Button
-                variant="primary" size="lg"
+                id = "form-button" size="lg"
                   // disabled={!(this.state.email && this.state.password)}
                   onClick={this.handleFormSubmit}
                 >
-                  Submit
+                  Submit Your Feedback
                 </Button>
-              </form>
+              </Form>
             </Col>
           </Row>
         </Container>

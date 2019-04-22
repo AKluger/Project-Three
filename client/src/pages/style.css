@@ -1,5 +1,12 @@
 #hero-educator {
-    background: repeat;
+    /* background: repeat; */
     background-image: url("./educator.jpg");
     background-size:100% auto;
+}
+
+#form-button {
+    background-color: rgb(139, 222, 233);
+    color: rgb(36, 36, 214);
+    margin-bottom: 3%;
+    font-family: 'Cabin', sans-serif;
 }
