@@ -31,8 +31,8 @@ export default class tempNav extends React.Component {
             <Nav.Link href="/"><span className="navtxt"><b>Home   </b><span className="break">|</span></span></Nav.Link>
             <Nav.Link href="/library"><span className="navtxt"><b>Library   </b><span className="break">|</span></span></Nav.Link>
             <Nav.Link href="/educator"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></Nav.Link>
-            <Nav.Link href="/resources"><span className="navtxt"><b>Learn More   </b><span className="break">|</span></span></Nav.Link>
-
+            <Nav.Link href="/resources"><span className="navtxt"><b>Resources   </b><span className="break">|</span></span></Nav.Link>
+            <Nav.Link href="/about"><span className="navtxt"><b>About Us </b><span className="break">|</span></span></Nav.Link>
            </Nav>  
             <Nav>
 

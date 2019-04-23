@@ -8,6 +8,7 @@ import Login from './pages/Login'
 import Educator from './pages/Educator.js'
 import Welcome from './pages/Welcome.js'
 import Resources from './pages/Resources.js'
+import About from './pages/About.js'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
@@ -26,6 +27,7 @@ class App extends Component {
         <Route exact path="/bobbysWalk" component={BobbyWalk} />
         <Route exact path="/prettybooks" component={PrettyCity} />
         <Route exact path="/login" component={Login} />
+        <Route exact path="/about" component={About} />
         </Switch>
       </Router>
     );
