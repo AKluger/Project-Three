@@ -7,9 +7,9 @@ import kid3 from './kids3.jpg'
 import bin1 from './recycle.png'
 import bin2 from './recycle2.png'
 import bin3 from './recycle3.png'
-import hand1 from './hand.jpg'
-import hand2 from './hand2.jpg'
-import hand3 from './hand3.jpg'
+// import hand1 from './hand.jpg'
+// import hand2 from './hand2.jpg'
+// import hand3 from './hand3.jpg'
 
 import './style.css'
 

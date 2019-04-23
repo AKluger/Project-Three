@@ -55,7 +55,7 @@ class Educator extends Component {
       <div>
         <Nav />
         
-        <Container fluid className="p-0">
+        <Container fluid className="p-0 educator">
         <Jumbotron  id="hero-educator" />
           <Row>
             <Col md={{ span: 6, offset: 3 }} className="text-center">
