@@ -36,12 +36,12 @@ function Book(){
     trash = e.target.style
     console.log(score)
     trash.visibility = "hidden"
-    // get code to shake can   
     setTimeout(turnPage, 3000 )
     setTimeout(turnScore, 2000 )
     document.querySelector(".goodJob").style.visibility = "visible"
     document.querySelector(".bubble").style.visibility = "visible"
     document.querySelector(".gameBin").style.visibility = "hidden"
+    document.querySelector(".gameBin").classList.add("shake")
     }
   }
   const turnPage = e => { 
@@ -75,7 +75,7 @@ function Book(){
                 <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   <animated.img src={eval(kid)} alt='kids' className='gameKids' style={{ transform: props.xy.interpolate(trans1) }}/>
                   <img src={pages[score].imageLink} alt={pages[score].imageTitle} style={theEndStyle}/>
-                  <img src={myBin} alt='bin' className='gameBin' onClick={pickBin}/>
+                  <img src={myBin} alt='bin' className='gameBin shake' onClick={pickBin}/>
                   <img src={pages[score].trash} alt='trash' className='gameTrash' onClick={cleanUp}/>
                   <animated.img src={bubble} alt='textBubble' className='bubble' style={{ transform: props.xy.interpolate(trans1)}}/>
                   <animated.p className="text-center goodJob" style={{ transform: props.xy.interpolate(trans1)}}>GOOD JOB!!!!!</animated.p>

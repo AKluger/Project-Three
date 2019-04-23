@@ -2,14 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useSpring, animated } from 'react-spring'
 import kid from './kids.jpg'
-import kid2 from './kids2.jpg'
-import kid3 from './kids3.jpg'
-import bin1 from './recycle.png'
-import bin2 from './recycle2.png'
-import bin3 from './recycle3.png'
-import hand1 from './hand.jpg'
-import hand2 from './hand2.jpg'
-import hand3 from './hand3.jpg'
 
 import './style.css'
 
@@ -24,7 +16,7 @@ function TempLibrary() {
     return(
         <div className='container libmargin'>
         <div className='row text-center'>
-            <div className='col-md-4'>
+            <div className='col-md-3'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
             <Link to="/game">
                 <animated.img className='bookstyle' src='https://monetthigpen.github.io/The/trashPickupCover.jpg' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
@@ -32,7 +24,15 @@ function TempLibrary() {
             </Link>
             </div>
             </div>
-            <div className='col-md-4'>
+            <div className='col-md-3'>
+            <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+            <Link to="/trashFall">
+                <animated.img className='bookstyle' src='https://ae01.alicdn.com/kf/HTB1KRbiRFXXXXcmapXXq6xXFXXXg/New-hot-Goodnight-Moon-English-original-children-s-picture-books-english-story-books-read-kids-books.jpg_640x640.jpg' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
+                {window.innerHeight < 768 ?  (<animated.img src={kid} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/>) : (<div/>)}
+            </Link>
+            </div>
+            </div>
+            <div className='col-md-3'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
             <Link to="/bobbysWalk">
                 <animated.img className='bookstyle' src='https://monetthigpen.github.io/The/Bobbys_walk/IMG_24.jpg' alt= 'bobbys walk book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
@@ -40,7 +40,7 @@ function TempLibrary() {
             </Link>
             </div>
             </div>
-            <div className='col-md-4'>
+            <div className='col-md-3'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
             <Link to="/prettybooks">
                 <animated.img className='bookstyle'  src='https://monetthigpen.github.io/The/prettyCover.JPG' alt=' pretty city book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
