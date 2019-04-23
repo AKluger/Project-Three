@@ -22,7 +22,7 @@ const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`
 function TempLibrary() {
     const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
     return(
-        <div className='container'>
+        <div className='container libmargin'>
         <div className='row text-center'>
             <div className='col-md-4'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>

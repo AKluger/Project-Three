@@ -1,6 +1,6 @@
-.jumbotron{
-    background-image: url("https://images.pexels.com/photos/33196/still-life-teddy-white-read.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
-    height: 650px;
+.jumbotronimg{
+    background-image: url("https://images.pexels.com/photos/33196/still-life-teddy-white-read.jpg?auto=compress&cs=tinysrgb&h=400&w=1260");
+    height: 400px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     /* margin-top: 7%; */
