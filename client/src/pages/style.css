@@ -1,7 +1,10 @@
 #hero-educator {
     /* background: repeat; */
     background-image: url("./educator.jpg");
-    background-size:100% auto;
+    /* background-size:100% auto; */
+    background-size: cover;
+    /* height: auto; */
+    min-height: 100vh;
 }
 
 #form-button {
@@ -13,4 +16,6 @@
 
 .welcome{
     font-family: 'Cabin', sans-serif;
+    font-size: 2em;
+    padding: 1%;
 }
