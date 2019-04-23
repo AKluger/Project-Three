@@ -6,11 +6,11 @@ import Pages from './bobbysWalkStart.json';
 import PosPages from './bobbyWalkPos.json';
 import negPages from './bobbyWalkNeg.json';
 import FlipPage from "react-flip-page";
+import {  Button } from 'react-bootstrap';
 import './style.css'
 // import Start from '../../components/Modal';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-
 
 function BobbyWalk(){
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
@@ -27,6 +27,13 @@ function BobbyWalk(){
     //document.getElementByClassName("pages")
   };
   
+  const bookStyle = {
+    position: 'relative',
+    alignItems: 'flex-end',
+    display: 'flex',
+    width: '100%',
+    height: '100%'
+  };
 
   //  button onclick bad path updates/replaces state with neg otherwise continue...
 
@@ -40,14 +47,15 @@ function BobbyWalk(){
           <Nav/>
           
           <PagesContainer id="pageContainer">
-          <FlipPage orientation='horizontal'  height={JSON.stringify(height)} width={JSON.stringify(width)}>
+          <FlipPage orientation='horizontal'  height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
           {pages.map(page => (
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   <img src={page.imageLink} alt={page.imageTitle}  className='main imgsb' key={key++}/>
                 </div>
-                <button onClick={handleButtonClick} className={page.cssClass}>Bobby doesn't want to be that special somebody</button>
-                  <div className="text-center page-text">{page.text.map(line=>(<h2 className="page-text" key={key++}>{line}</h2>))}</div>
+                <Button variant="outline-dark" onClick={handleButtonClick} className={page.cssClass}> Click here and turn page for Bobby  to <b>NOT</b> be that "Special Somebody"</Button>
+                
+                  <div className="text-center bobby-text">{page.text.map(line=>(<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
               </article> 
           ))} 
           </FlipPage>

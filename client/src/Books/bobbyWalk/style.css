@@ -12,10 +12,10 @@
     margin-top: 5%;
 }
 
-.page-text {
-    color: rgb(214, 51, 51);
+.bobby-text {
+    color: rgb(51, 67, 214);
     font-family: 'Baumans', cursive;
-    font-size: 25px;
+    font-size: 21px;
        
 }
 
@@ -28,12 +28,13 @@
     opacity: 0;
     pointer-events: none;
     color: black;
+    font-family: 'Baumans', cursive; 
     /* height: 100px;
     z-index: 11;
     position: absolute;
     right: 100px;
     top: 120px; */
-}
+}   
 
 
 .pc13 {
@@ -85,48 +86,47 @@
     height: 500px;
     width:100%;
 }
-.img11{
+/* .img11{
     height: 400px;
-}
+} */
 .titlepage{
-    height:700px;
+    height:300px;
 }
+
 @media only screen and (max-height: 960px) {
-    .page-text {
-        font-size: 28px;
+    .bobby-text {
+        font-size: 21px;
     }
-    .imgs {
-        height: auto;
-        max-width: 100%;
+    .imgsb {
+        height: 400px;
+        width: 100%;
     }
 }
-
-
 /* ipad landscape */
 /* no scroll required */
 @media only screen and (max-height: 768px) {
-    .page-text {
-        font-size: 28px;
+    .bobby-text {
+        font-size: 21px;
     }
-    .imgs {
-        height: auto;
+    .imgsb {
+        height: 200;
         max-width: 100%;
     }
 }
 
 @media only screen and (max-width: 640px) {
-    .page-text {
-        font-size: 22px;
+    .bobby-text {
+        font-size: 18px;
     }
 }
 
 /* phone landscape */ 
 /* currently scroll required */
 @media only screen and (max-height: 414px) {
-    .page-text {
-        font-size: 18px;
+    .bobby-text {
+        font-size: 10px;
     }
-    .imgs {
+    .imgsb {
         height: 200px;
         max-width: 100%;
     }
