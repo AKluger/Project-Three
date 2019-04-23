@@ -8,16 +8,12 @@ module.exports = function(sequelize, DataTypes) {
 const Book = sequelize.define("Book", {
   title: { type: Sequelize.STRING, required: true },
   author: { type: Sequelize.STRING, required: true },
-  currentPage: {type: Sequelize.INTEGER, required: true },
-  hasStarted: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true },
-
+  complete: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false },
 
 });
 
 Book.associate = function(models) {
-  // We're saying that a Post should belong to an Author
-  // A Post can't be created without an Author due to the foreign key constraint
-  Book.belongsTo(models.User, {
+  Book.belongsTo(models.Class, {
     foreignKey: {
       allowNull: false
     }
@@ -27,7 +23,3 @@ Book.associate = function(models) {
  return Book;
 
 }
-
-// const Book = mongoose.model("Book", bookSchema);
-
-// module.exports = Book;

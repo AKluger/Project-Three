@@ -11,7 +11,6 @@ export default class tempNav extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.state = {
       isOpen: false
     };
@@ -40,7 +39,7 @@ export default class tempNav extends React.Component {
               <NavDropdown  inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/login"><span className="droptxt">Sign-in</span></NavDropdown.Item>
+                <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item>
               </NavDropdown>
               </div>
             </Nav>

@@ -3,21 +3,34 @@ import bcrypt from "bcryptjs";
 
 export default {
   // Gets all books
-  getUsers: function() {
-    return axios.get("/api/users");
+  getTeachers: function() {
+    return axios.get("/api/teachers");
   },
   // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/" + id);
+  // getUser: function(id) {
+  //   return axios.get("/api/teacher/" + id);
+  // },
+  getUser: function(email) {
+    axios.get("/api/teachers/" + email)
+      .then(res => {console.log(res.data)})
+        // console.log(res.data);
+      // })
+    },
+
+  deserializeUser: function(password, hash) {
+    return bcrypt.compareSync(password, hash);
   },
   // Deletes the book with the given id
   deleteBook: function(id) {
     return axios.delete("/api/books/" + id);
   },
   // Saves a book to the database
-  saveUser: function(userData) {
+  saveTeacher: function(userData) {
   
-        return axios.post("/api/users", userData);
+    return axios.post("/api/teachers", userData);
+  },
+  logOutUser: function() {
+    return axios.get("logout");
   }
 
 };

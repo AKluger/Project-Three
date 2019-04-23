@@ -10,6 +10,7 @@ import Welcome from './pages/Welcome.js'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
+import Login2 from "./pages/Login2";
 library.add(faUser)
 
 class App extends Component {
