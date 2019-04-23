@@ -55,8 +55,8 @@ class Educator extends Component {
       <div>
         <Nav />
         
-        <Container fluid>
-        <Jumbotron id="hero-educator" />
+        <Container fluid className="p-0">
+        <Jumbotron  id="hero-educator" />
           <Row>
             <Col md={{ span: 6, offset: 3 }} className="text-center">
               <Form>
@@ -64,7 +64,7 @@ class Educator extends Component {
                   value={this.state.feedback}
                   onChange={this.handleInputChange}
                   name="feedback"
-                  placeholder="Leave general feedback and feature requests here"
+                  placeholder="We'd love to hear your feedback!!!"
                 />
                 <Button
                 id = "form-button" size="lg"

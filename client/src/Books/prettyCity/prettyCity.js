@@ -19,11 +19,15 @@ function PrettyCity() {
     alignItems: 'flex-end',
     display: 'flex',
     width: '100%',
-    height: '100%'
+    height: '100%',
+    // backgroundColor: '#f9d29d',
+    // zIndex: '100'
+// backgroundImage: 'linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%)'
+
   };
 
   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9;
-  let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1;
+  let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1.11;
   let key = 0;
 
   return (
@@ -31,9 +35,9 @@ function PrettyCity() {
       <Nav />
       <PagesContainer >
 
-        <FlipPage orientation='horizontal' height={JSON.stringify(height) - 102} width={JSON.stringify(width)} style={bookStyle}>
+        <FlipPage orientation='horizontal' uncutPages={true} height={JSON.stringify(height) - 102} width={JSON.stringify(width)} style={bookStyle}>
           {pages.map(page => (
-            <article key={page.id}>
+            <article key={page.id} className="pretty-color">
               <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                 <img src={page.imageLink} alt={page.imageTitle} className='imgs' key={key++} />
               </div>

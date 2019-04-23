@@ -31,13 +31,18 @@ export default class tempNav extends React.Component {
             <Nav.Link href="/"><span className="navtxt"><b>Home   </b><span className="break">|</span></span></Nav.Link>
             <Nav.Link href="/library"><span className="navtxt"><b>Library   </b><span className="break">|</span></span></Nav.Link>
             <Nav.Link href="/educator"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></Nav.Link>
+
            </Nav>  
             <Nav>
+
+            <div className="glyph">
+
               <NavDropdown  inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/login"><span className="droptxt">Sign-in</span></NavDropdown.Item>
               </NavDropdown>
+              </div>
             </Nav>
          
         </Navbar.Collapse>
