@@ -15,6 +15,7 @@
 .navbarcol{
     background-color: rgb(139, 222, 233);
     /* position: fixed; */
+    padding: -2%;
 }
 
 .jump {

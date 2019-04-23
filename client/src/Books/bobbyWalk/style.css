@@ -13,7 +13,7 @@
 }
 
 .page-text {
-    color: black;
+    color: rgb(214, 51, 51);
     font-family: 'Baumans', cursive;
     font-size: 25px;
        
@@ -81,7 +81,7 @@
     width: 200px;
     height: 300px;
 } */
-.imgs{
+.imgsb{
     height: 500px;
     width:100%;
 }

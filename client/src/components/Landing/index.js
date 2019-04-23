@@ -9,7 +9,6 @@ const Landing = () => {
     return(
         <div className="wrapper" >
         <Nav/>
-        <Jumbotron />
         <div className="wrapperImg">    
             <Library />
         </div>

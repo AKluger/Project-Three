@@ -2,9 +2,12 @@ import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './style.css'
 import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
-
+const navstyle={
+  paddingBottom: 0
+}
 
 export default class tempNav extends React.Component {
+  
   constructor(props) {
     super(props);
 
@@ -20,7 +23,7 @@ export default class tempNav extends React.Component {
   }
   render() {
     return (
-      <Navbar  className="navbarcol" expand="lg">
+      <Navbar  className="navbarcol" style={navstyle} expand="sm">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
@@ -28,14 +31,15 @@ export default class tempNav extends React.Component {
             <Nav.Link href="/"><span className="navtxt"><b>Home   </b><span className="break">|</span></span></Nav.Link>
             <Nav.Link href="/library"><span className="navtxt"><b>Library   </b><span className="break">|</span></span></Nav.Link>
             <Nav.Link href="/educator"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></Nav.Link>
-            <div className="glyph">
+           </Nav>  
+            <Nav>
               <NavDropdown  inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/login"><span className="droptxt">Sign-in</span></NavDropdown.Item>
               </NavDropdown>
-            </div>
-          </Nav>
+            </Nav>
+         
         </Navbar.Collapse>
       </Navbar>
     );

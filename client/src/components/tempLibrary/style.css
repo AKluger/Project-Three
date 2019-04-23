@@ -20,6 +20,9 @@
     bottom: 200px;
     z-index: 3;
 }
+.libmargin{
+    margin-top: 5%;
+}
 
 @media only screen and (min-width: 1220px)   {
 .bookstyle {
