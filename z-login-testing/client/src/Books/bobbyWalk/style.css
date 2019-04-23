@@ -1,0 +1,135 @@
+.page {
+    position: relative;
+    
+}
+/* .pages{
+    margin-top: 7%;
+} */
+/* .page-image {
+
+} */
+.margin{
+    margin-top: 5%;
+}
+
+.bobby-text {
+    color: rgb(51, 67, 214);
+    font-family: 'Baumans', cursive;
+    font-size: 21px;
+       
+}
+
+.main {
+    z-index: 10;
+}
+
+.pc-one {
+    z-index: -100;
+    opacity: 0;
+    pointer-events: none;
+    color: black;
+    font-family: 'Baumans', cursive; 
+    /* height: 100px;
+    z-index: 11;
+    position: absolute;
+    right: 100px;
+    top: 120px; */
+}   
+
+
+.pc13 {
+    z-index: 100;
+    opacity: 1;
+    pointer-events: auto;
+    /* display: block;
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    right: 30px;
+    top: 120px; */
+}
+
+/* .pc-fourteen {
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    right: 30px;
+    top: 120px;
+} */
+
+.pc-fifteen {
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    right: 30px;
+    top: 120px;
+}
+
+.pc-sixteen {
+    height: 100px;
+    z-index: 11;
+    position: absolute;
+    right: 30px;
+    top: 120px;
+}
+/* .theEndStyle{
+    align-Items: 'flex-end';
+    background-Color: '#000';
+    color: '#fffff';
+    display: 'flex';
+    justify-Content: 'center';
+    padding: 5%;
+    width: 200px;
+    height: 300px;
+} */
+.imgsb{
+    height: 500px;
+    width:100%;
+}
+/* .img11{
+    height: 400px;
+} */
+.titlepage{
+    height:300px;
+}
+
+@media only screen and (max-height: 960px) {
+    .bobby-text {
+        font-size: 21px;
+    }
+    .imgsb {
+        height: 400px;
+        width: 100%;
+    }
+}
+/* ipad landscape */
+/* no scroll required */
+@media only screen and (max-height: 768px) {
+    .bobby-text {
+        font-size: 21px;
+    }
+    .imgsb {
+        height: 200;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .bobby-text {
+        font-size: 18px;
+    }
+}
+
+/* phone landscape */ 
+/* currently scroll required */
+@media only screen and (max-height: 414px) {
+    .bobby-text {
+        font-size: 10px;
+    }
+    .imgsb {
+        height: 200px;
+        max-width: 100%;
+    }
+}
+
+

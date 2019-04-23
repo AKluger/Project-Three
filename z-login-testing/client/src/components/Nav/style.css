@@ -1,0 +1,62 @@
+.logotxt{
+    font-family: 'Fascinate Inline', cursive;
+    font-size: 50px;
+    color: rgb(175, 29, 148);
+}
+.break{
+    font-size: 40px;
+    color:black;
+}
+.navtxt{
+    font-size: 30px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(36, 36, 214);
+}
+.navbarcol{
+    background-color: rgb(139, 222, 233);
+    /* padding: 0px 5px; */
+    /* position: fixed; */
+    padding: -2%;
+}
+
+.jump {
+    display:inline;
+    transform-origin: 20% 50%;
+    animation: jump .7s linear alternate 2;
+}
+
+.myUserGlyph {
+    height: 100%;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.dropdown-menu .sub-menu {
+    visibility: hidden;
+
+}
+
+.dropdown-menu li:hover .sub-menu  {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 5s, opacity 300ms;
+}
+  
+ul.navbar-nav:hover .dropdown-menu {
+    display: block;
+    left: auto;
+    right: 0;
+}
+@keyframes jump {
+    0%   {transform: translate3d(0,0,0) scale3d(1,1,1);}
+    40%  {transform: translate3d(0,20%,0) scale3d(.7,1.5,1);}
+    100% {transform: translate3d(0,30%,0) scale3d(1.5,.7,1);}
+}
+.glyph{
+    float: right;
+}
+.droptxt{
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    color: rgb(36, 36, 214);
+}

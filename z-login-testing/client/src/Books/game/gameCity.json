@@ -1,0 +1,123 @@
+[
+    {
+        "id": 1,
+        "text": [
+            "Time to clean up our city!",
+            "Click the object to deposit it in the proper can.",
+            "Click the can to switch between trash and recyle"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_1.jpg",
+        "cssClass": "pc-one",
+        "imageTitle": "stroll",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trashbin": "https://monetthigpen.github.io/The/gameImages/trash2.jpg",
+        "trash": "https://monetthigpen.github.io/The/gameImages/sodaCan.png",
+        "recycle": true
+    },
+    {
+        "id": 2,
+        "text": [
+            "Cans go in the RECYCLE bin"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_2.jpg",
+        "cssClass": "pc-two",
+        "imageTitle": "truck",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/sodaCan.png",
+        "recycle": true
+    },
+    {
+        "id": 3,
+        "text": [
+            "Candy wrappers go in the trash can"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_3.jpg",
+        "cssClass": "pc-three",
+        "imageTitle": "dirty-block",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg",
+        "recycle": false
+    },
+    {
+        "id": 4,
+        "text": [
+            "Bottles go in the BLUE bin"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_4.jpg",
+        "cssClass": "pc-four",
+        "imageTitle": "bin-overflow",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/sodaCan.png",
+        "recycle": true
+    },
+    {
+        "id": 5,
+        "text": [
+            "Trash bags go in the trash bin!"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_5.jpg",
+        "cssClass": "pc-five",
+        "imageTitle": "phone",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/glassBottle.png",
+        "recycle": false
+    },
+    {
+        "id": 6,
+        "text": [
+            "Banana peels go in the GREEN bin"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_6.jpg",
+        "cssClass": "pc-six",
+        "imageTitle": "team",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg",
+        "recycle": false
+    },
+    {
+        "id": 7,
+        "text": [
+            "Apple cores go in the GREEN bin"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_7.jpg",
+        "cssClass": "pc-seven",
+        "imageTitle": "litter",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png",
+        "trash": "https://monetthigpen.github.io/The/gameImages/TB.jpg",
+        "recycle": false
+    },
+    {
+        "id": 8,
+        "text": [
+            "Great job you cleaned up the city!"
+        ],
+        "imageLink": "https://monetthigpen.github.io/The/gameImages/game_8.jpg",
+        "cssClass": "pc-eight",
+        "imageTitle": "tires",
+        "character1": "https://monetthigpen.github.io/The/gameImages/character1.png",
+        "character2": "https://monetthigpen.github.io/The/gameImages/character2.png",
+        "character3": "https://monetthigpen.github.io/The/gameImages/character3.png",
+        "character4": "https://monetthigpen.github.io/The/gameImages/character4.png"
+    }
+]
