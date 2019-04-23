@@ -3,6 +3,8 @@
     color: black;
     font-family: 'Cabin', sans-serif;
     position: relative;
+    background-color: #ffffff;
+    /* background-image: linear-gradient(315deg, #ffffff 0%, #E2D7A0 74%); */
 }
 
 /* .main {
@@ -141,9 +143,15 @@
 
 .imgs {
     height: auto;
-    max-width: 100%;
+    width: 100%;
     /* max-width: 960px; */
 }
+
+/* .pretty-color {
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #E2D7A0 74%);
+
+} */
 
 @media only screen and (max-height: 960px) {
     .pretty-text {

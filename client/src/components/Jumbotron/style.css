@@ -16,7 +16,7 @@
 
 /* Imac */
 @media only screen and (min-width: 1440px)   {
-    .jumbotron{
+    .landing-jumbotron{
         /* background-image: url("https://images.pexels.com/photos/33196/still-life-teddy-white-read.jpg?auto=compress&cs=tinysrgb&h=750&w=1260"); */
         height: 1200px;
         /* background-repeat: no-repeat; */
@@ -33,7 +33,7 @@
 /* IPAD */
 @media only screen and (max-width: 768px)   {
 
-    .jumbotron{
+    .landing-jumbotron{
         background-image: url("https://images.pexels.com/photos/33196/still-life-teddy-white-read.jpg?auto=compress&cs=tinysrgb&h=750&w=1260");
         height: 475px;
         background-repeat: no-repeat;
