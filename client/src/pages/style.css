@@ -19,3 +19,27 @@
     font-size: 2em;
     padding: 1%;
 }
+#hero-ref{
+    background-image: url("./resources2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 70vh;
+}
+#res-float{
+   margin-left: 10%;
+}
+.cardpad{
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+}
+#rowOne{
+    margin-left: 9%;
+}
+#rowTwo{
+    margin-left:24%;
+}
+#resource-background{
+    background: rgb(228,250,200);
+    background: linear-gradient(0deg, rgba(228,250,200,1) 0%, rgba(31,102,16,1) 100%);
+}
