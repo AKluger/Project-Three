@@ -7,9 +7,9 @@ import kid3 from './kids3.jpg'
 import bin1 from './recycle.png'
 import bin2 from './recycle2.png'
 import bin3 from './recycle3.png'
-import hand1 from './hand.jpg'
-import hand2 from './hand2.jpg'
-import hand3 from './hand3.jpg'
+// import hand1 from './hand.jpg'
+// import hand2 from './hand2.jpg'
+// import hand3 from './hand3.jpg'
 
 import './style.css'
 
@@ -35,7 +35,7 @@ function TempLibrary() {
             <div className='col-md-4'>
             <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
             <Link to="/bobbysWalk">
-                <animated.img className='bookstyle' src='https://monetthigpen.github.io/The/Bobbys_walk/IMG_24.jpg' alt= 'bobbys walk book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
+                <animated.img className='bookstyle' src='https://github.com/monetthigpen/The/blob/master/Bobbys_walk/IMG_27.jpg?raw=true' alt= 'bobbys walk book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
                 {/* <animated.img src={kid2} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/> */}
             </Link>
             </div>
