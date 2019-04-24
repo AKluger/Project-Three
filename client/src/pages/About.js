@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { Button, Col, Container, Row, Jumbotron, CardColumns, Card, CardDeck } from 'react-bootstrap';
+import { Button, Col, Container, Row, Jumbotron, Card, CardDeck } from 'react-bootstrap';
 import Nav from "../components/Nav";
-import './style.css'; 
-import {useTransition, animated} from 'react-spring'
+import './style.css';
+import { useTransition, animated } from 'react-spring'
 
 function About() {
-//     const [items, set] = useState([{}])
-// const transitions = useTransition(items, item => item.key, {
-// from: { transform: 'translate3d(0,-40px,0)' },
-// enter: { transform: 'translate3d(0,0px,0)' },
-// leave: { transform: 'translate3d(0,-40px,0)' },
-// })
+    //     const [items, set] = useState([{}])
+    // const transitions = useTransition(items, item => item.key, {
+    // from: { transform: 'translate3d(0,-40px,0)' },
+    // enter: { transform: 'translate3d(0,0px,0)' },
+    // leave: { transform: 'translate3d(0,-40px,0)' },
+    // })
 
     {
         return (
@@ -28,10 +28,10 @@ function About() {
                     </Row>
                     <Row className="justify-content-md-center">
                         <CardDeck className="p-4">
-                        {/* {transitions.map(({ item, props, key }) =>
+                            {/* {transitions.map(({ item, props, key }) =>
 <animated.div key={key} style={props}>{item.text} */}
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="http://troy-wynn.com/assets/img/profile-picture.jpeg" />
+                                <Card.Img variant="top" src="https://monetthigpen.github.io/The/profileImages/troy.jpg" />
                                 <Card.Body>
                                     <Card.Title>Troy Wynn</Card.Title>
                                     <Card.Text></Card.Text>
@@ -39,7 +39,7 @@ function About() {
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="https://monetthigpen.github.io/Bootstrap-Portfolio/images/unnamed.jpg" />
+                                <Card.Img variant="top" src="https://monetthigpen.github.io/The/profileImages/monet.jpg" />
                                 <Card.Body>
                                     <Card.Title>Monet Thigpen</Card.Title>
                                     <Card.Text>
@@ -48,7 +48,7 @@ function About() {
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="https://akluger.github.io/Bootstrap-Portfolio/assets/images/proheadshot.jpeg" />
+                                <Card.Img variant="top" src="https://monetthigpen.github.io/The/profileImages/alex.jpg" />
                                 <Card.Body>
                                     <Card.Title>Alex Kluger</Card.Title>
                                     <Card.Text>
@@ -57,15 +57,15 @@ function About() {
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src=""/>
+                                <Card.Img variant="top" src="https://monetthigpen.github.io/The/profileImages/ronald.jpg" />
                                 <Card.Body>
                                     <Card.Title>Ronald Glover</Card.Title>
-                                    <Card.Text>Yo Ron where's your portfolio at I need a pic
+                                    <Card.Text>
                                     </Card.Text>
                                     <Button>Portfolio</Button>
                                 </Card.Body>
                             </Card>
-                        {/* </animated.div>)} */}
+                            {/* </animated.div>)} */}
                         </CardDeck>
                     </Row>
                 </Container>

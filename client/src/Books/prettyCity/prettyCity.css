@@ -1,17 +1,44 @@
-.pretty-text {
+/* .pretty-line {
     font-size: 40px;
     color: black;
     font-family: 'Cabin', sans-serif;
     position: relative;
     background-color: #ffffff;
-    /* background-image: linear-gradient(315deg, #ffffff 0%, #E2D7A0 74%); */
+    opacity: 0.5;
+    
+} */
+
+/* .desk{
+    background-image: url("https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+} */
+
+.pages {
+    /* overflow: hidden; */
+    /* height: 100%;
+    width: 100%; */
 }
 
-/* .main {
-    z-index: 10;
-    max-height: 1238px;
-    max-width: 960px;
-} */
+.page-container {
+    /* padding-top: 93px; */
+    height: 100vh;
+    width: 100%;
+    /* overflow: hidden; */
+
+}
+.pretty-line {
+    font-size: 40px;
+    color: black;
+    font-family: 'Cabin', sans-serif;
+    position: relative;
+    /* background-color: #ffffff; */
+    /* opacity: 0.1; */
+    
+}
 
 .pc-one {
     height: 100px;
@@ -142,23 +169,24 @@
 }
 
 .imgs {
-    height: auto;
-    width: 100%;
-    /* max-width: 960px; */
+     height: auto;
+     width: 100%; 
+
 }
 
-/* .pretty-color {
-    background-color: #ffffff;
-    background-image: linear-gradient(315deg, #ffffff 0%, #E2D7A0 74%);
-
-} */
+@media only screen and (max-height: 1200px) {
+    .imgs {
+        max-height: 80%;
+        max-width: 100%;
+    }
+}
 
 @media only screen and (max-height: 960px) {
-    .pretty-text {
+    .pretty-line {
         font-size: 28px;
     }
     .imgs {
-        height: auto;
+        max-height: 90%;
         max-width: 100%;
     }
 }
@@ -167,7 +195,7 @@
 /* ipad landscape */
 /* no scroll required */
 @media only screen and (max-height: 768px) {
-    .pretty-text {
+    .pretty-line {
         font-size: 28px;
     }
     .imgs {
@@ -177,7 +205,7 @@
 }
 
 @media only screen and (max-width: 640px) {
-    .pretty-text {
+    .pretty-line {
         font-size: 22px;
     }
 }
@@ -185,7 +213,7 @@
 /* phone landscape */ 
 /* currently scroll required */
 @media only screen and (max-height: 414px) {
-    .pretty-text {
+    .pretty-line {
         font-size: 18px;
     }
     .imgs {

@@ -1,13 +1,14 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './style.css'
-import { Navbar, Nav, NavDropdown} from 'react-bootstrap';
-const navstyle={
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+
+const navstyle = {
   paddingBottom: 0
 }
 
 export default class tempNav extends React.Component {
-  
+
   constructor(props) {
     super(props);
 
@@ -23,29 +24,29 @@ export default class tempNav extends React.Component {
   }
   render() {
     return (
-      <Navbar  className="navbarcol" style={navstyle} expand="sm">
+      <Navbar className="navbarcol" style={navstyle} expand="sm">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/"><span className="navtxt"><b>Home   </b><span className="break">|</span></span></Nav.Link>
-            <Nav.Link href="/library"><span className="navtxt"><b>Library   </b><span className="break">|</span></span></Nav.Link>
-            <Nav.Link href="/educator"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></Nav.Link>
-            <Nav.Link href="/resources"><span className="navtxt"><b>Resources   </b><span className="break">|</span></span></Nav.Link>
-            <Nav.Link href="/about"><span className="navtxt"><b>About Us </b><span className="break">|</span></span></Nav.Link>
-           </Nav>  
-            <Nav>
+            {/* <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link> */}
+            <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
+            <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
+            <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+            <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
+          </Nav>
+          <Nav>
 
             <div className="glyph">
 
-              <NavDropdown  inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
+              <NavDropdown title={<span className="navtxt"><FontAwesomeIcon className="" icon="user" /> </span>} id="basic-nav-dropdown">
                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/login"><span className="droptxt">Sign-in</span></NavDropdown.Item>
               </NavDropdown>
-              </div>
-            </Nav>
-         
+            </div>
+          </Nav>
+
         </Navbar.Collapse>
       </Navbar>
     );
@@ -61,15 +62,15 @@ export default class tempNav extends React.Component {
 //         <div className="collapse navbar-collapse" id="navbarNav">
 //           <ul className="navbar-nav">
 //             <li className="nav-item active">
-//               <a className="nav-link" href="/"><span className="navtxt"><b>Home   </b><span className="break">|</span></span><span className="sr-only">(current)</span></a>
+//               <a className="nav-link" href="/"><span className="navtxt">Home   </span><span className="sr-only">(current)</span></a>
 //             </li>
 //             <li className="nav-item">
-//               <a className="nav-link" href="/educator"><span className="navtxt"><b>Educator   </b><span className="break">|</span></span></a>
+//               <a className="nav-link" href="/educator"><span className="navtxt">Educator   </span></a>
 //             </li>
 //           </ul>
 //           <ul className="navbar-nav ml-auto">
 //             <li className="nav-item dropdown myUserGlyph ">
-//               <a className="nav-link" href="/"><span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span></a>
+//               <a className="nav-link" href="/"><span className="navtxt"><FontAwesomeIcon className="" icon="user"/> </span></a>
 //               <ul className="dropdown-menu">
 //                 <li><a href="/signup">Register</a></li>
 //                 <li><a href="/login">Sign-in</a></li>
