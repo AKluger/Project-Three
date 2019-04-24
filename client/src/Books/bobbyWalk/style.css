@@ -83,7 +83,7 @@
     height: 300px;
 } */
 .imgsb{
-    height: 500px;
+    height: auto;
     width:100%;
 }
 /* .img11{
@@ -93,7 +93,7 @@
     height:300px;
 }
 
-@media only screen and (max-height: 960px) {
+/* @media only screen and (max-height: 960px) {
     .bobby-text {
         font-size: 21px;
     }
@@ -101,10 +101,10 @@
         height: 400px;
         width: 100%;
     }
-}
+} */
 /* ipad landscape */
 /* no scroll required */
-@media only screen and (max-height: 768px) {
+/* @media only screen and (max-height: 768px) {
     .bobby-text {
         font-size: 21px;
     }
@@ -112,17 +112,17 @@
         height: 200;
         max-width: 100%;
     }
-}
+} */
 
-@media only screen and (max-width: 640px) {
+/* @media only screen and (max-width: 640px) {
     .bobby-text {
         font-size: 18px;
     }
-}
+} */
 
 /* phone landscape */ 
 /* currently scroll required */
-@media only screen and (max-height: 414px) {
+/* @media only screen and (max-height: 414px) {
     .bobby-text {
         font-size: 10px;
     }
@@ -130,6 +130,6 @@
         height: 200px;
         max-width: 100%;
     }
-}
+} */
 
 
