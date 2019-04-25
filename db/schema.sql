@@ -11,6 +11,7 @@ CREATE TABLE Teachers (
 	school varchar(255) NOT NULL,
 	city varchar(255) NOT NULL,
 	state varchar(255) NOT NULL,
+	   name varchar(255) NOT NULL,
     feedback varchar(100),
 	password varchar(255) NOT NULL,
 	PRIMARY KEY (id)

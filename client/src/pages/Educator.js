@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import {Button, Col, Container, Row, Jumbotron, Form} from 'react-bootstrap';
+import { Button, Col, Container, Row, Jumbotron, Form } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
-import {TextArea } from "../components/LoginForm";
+import { TextArea } from "../components/LoginForm";
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
 import './style.css'
@@ -11,23 +11,25 @@ class Educator extends Component {
   state = {
     user: [],
     email: "",
-    id: "",
+    username: "",
+    password: "",
+    books: [],
     feedback: "",
     isLoggedIn: true
   };
 
-  componentWillMount(){
+  componentWillMount() {
     // Retrieve jwt token
     const token = localStorage.getItem("token") || null;
 
-    if(token){
+    if (token) {
       axios.defaults.headers.common['Authorization'] = token;
       const decoded = jwtDecode(token);
-      this.setState({id: decoded.id})
-      // this.setState({email: decoded.email})
+      this.setState({ email: decoded.email })
     } else {
       delete axios.defaults.headers.common['Authorization']
-    }}
+    }
+  }
 
   //   clearForm = () => {
   //     // API.getUser()
@@ -48,14 +50,14 @@ class Educator extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.feedback) {
-      API.saveFeedback({
-        id: this.state.id,
-        // email: this.state.email,
-        note: this.state.feedback,
+    if (this.state.email && this.state.password && this.state.username) {
+      API.saveUser({
+        email: this.state.email,
+        username: this.state.username,
+        password: this.state.password,
       })
 
-        .then(this.setState({ feedback: ""}))
+        .then(this.setState({ email: "", username: "", password: "" }))
         //   .then(event.target.reset())
         .catch(err => console.log(err));
     }
@@ -63,13 +65,18 @@ class Educator extends Component {
 
   render() {
     return (
-      <div>
+      <>
         <Nav status={true} />
-        
+        <Jumbotron id="hero-educator" className="jumbotron-fluid" />
         <Container fluid className="p-0 educator">
-        <Jumbotron  id="hero-educator" />
+
           <Row>
             <Col md={{ span: 6, offset: 3 }} className="text-center">
+              <h1>We Welcome your feedback!</h1>
+              <h3>Please leave your comments below to inform our team of how we may better design our product to tailor your needs.</h3>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="text-center">
+
               <Form>
                 <TextArea
                   value={this.state.feedback}
@@ -78,7 +85,7 @@ class Educator extends Component {
                   placeholder="We'd love to hear your feedback!!!"
                 />
                 <Button
-                id = "form-button" size="lg"
+                  id="form-button" size="lg"
                   // disabled={!(this.state.email && this.state.password)}
                   onClick={this.handleFormSubmit}
                 >
@@ -88,7 +95,7 @@ class Educator extends Component {
             </Col>
           </Row>
         </Container>
-      </div>
+      </>
 
     );
   }
