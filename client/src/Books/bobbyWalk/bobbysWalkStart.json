@@ -8,7 +8,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_24.jpg",
         "cssClass": "pc-one titlepage",
-        "imageTitle":"cover"   
+        "imageTitle":"cover",
+        "audio": "https://monetthigpen.github.io/The/audio/Closed-Hi-Hat-1.wav"
     },
     {
         "id": 1,

@@ -70,7 +70,7 @@ function Book(){
           <Nav/>
           <Start character={pickCharacter}/>
           <PagesContainer >
-           
+          
               <article>
                 <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   <animated.img src={eval(kid)} alt='kids' className='gameKids' style={{ transform: props.xy.interpolate(trans1) }}/>
