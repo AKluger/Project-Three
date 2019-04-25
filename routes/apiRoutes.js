@@ -66,7 +66,7 @@ module.exports = function(app) {
 //   })
 // })
 
-app.get('/library', passport.authenticate('jwt', {session: false}))
+// app.get('/library', passport.authenticate('jwt', {session: false}))
 
 app.post("/api/teachers", function(req, res) { 
     password = req.body.password;
