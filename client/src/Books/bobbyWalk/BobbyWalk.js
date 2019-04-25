@@ -6,7 +6,7 @@ import Pages from './bobbysWalkStart.json'
 import PosPages from './bobbyWalkPos.json'
 import negPages from './bobbyWalkNeg.json'
 import FlipPage from "react-flip-page"
-import {  Button } from 'react-bootstrap'
+import {  Button, Row, Col, Container } from 'react-bootstrap'
 import first from './audio/pageOne.mp4'
 import second from './audio/pageTwo.mp4'
 import third from './audio/pageThree.mp4'
