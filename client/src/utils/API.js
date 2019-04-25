@@ -27,6 +27,15 @@ export default {
   saveTeacher: function(userData) {
     return axios.post("/api/teachers", userData);
   },
+   // Saves a book to the database
+  saveFeedback: function(userData) {
+    return axios.post("/api/feedback/", userData);
+  },
+
+  // // Saves a book to the database
+  showFeedback: function(userData) {
+    return axios.get("/api/feedback/"+userData.id, userData);
+  },
   logOutUser: function() {
     return axios.get("logout");
   }
