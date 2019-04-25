@@ -83,7 +83,7 @@ export default class tempNav extends React.Component {
       <Navbar className="navbarcol" style={navstyle} expand="lg">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="mr-4"id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
             {/* <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link> */}

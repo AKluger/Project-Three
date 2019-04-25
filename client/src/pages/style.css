@@ -1,12 +1,13 @@
- p, h5, .card-deck {
+ p, h2, h5, .card-deck {
     font-family: 'Cabin', sans-serif;
 }
 
-/* .educator {
-    background-image: url("./paper.jpg");
-    opacity:0.5;
-    background-size: cover;
-} */
+.educator {
+    /* background-image: url("./paper.jpg"); */
+max-height: 90vh;
+}
+
+
 /* educator jumbotron */
 #hero-educator {
     /* background: repeat; */
