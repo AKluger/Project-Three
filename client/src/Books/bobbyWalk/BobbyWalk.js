@@ -69,7 +69,17 @@ function BobbyWalk(){
                 <Button variant="outline-dark" onClick={handleButtonClick} className={page.cssClass}> Click here and turn page for Bobby  to <b>NOT</b> be that "Special Somebody"</Button>
                 
                   <div className="text-center bobby-text">{page.text.map(line=>(<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
-              </article> 
+                  <Row>
+                    <Col sm={4}>
+                    <Button  variant="outline-success" className={page.cssClass}> Bobby wants to be that Special Somebody</Button>
+                    </Col>
+                    <Col sm={2}></Col>
+                    <Col sm={4}>
+                    <Button  variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass}> Bobby does <b>NOT</b> want be that Special Somebody</Button>
+                    </Col>
+                  </Row>
+              </article>
+             
           ))} 
           </FlipPage>
           </PagesContainer>

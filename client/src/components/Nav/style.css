@@ -17,6 +17,7 @@
     /* padding: 0px 5px; */
     /* position: fixed; */
     padding: -2%;
+    
 }
 
 .jump {
@@ -60,3 +61,9 @@ ul.navbar-nav:hover .dropdown-menu {
     font-family: 'Quicksand', sans-serif;
     color: rgb(36, 36, 214);
 }
+/* .logintab{
+    margin-right: 50px;
+}
+.basic-nav-dropdown{
+    margin-right: 50px;
+}  */

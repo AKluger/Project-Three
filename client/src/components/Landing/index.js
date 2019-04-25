@@ -7,13 +7,14 @@ import "./style.css"
 
 const Landing = () => {
     return(
-        <div className="wrapper" >
-        <Nav/>
-        <div className="wrapperImg">    
+        // <div className="wrapper" >
+        
+        <div className="wrapperImg"> 
+          <Nav/> 
             <Library />
         </div>
         
-        </div>
+        // </div>
     )
 }
 
