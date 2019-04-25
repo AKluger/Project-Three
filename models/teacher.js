@@ -27,6 +27,13 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
   
       },
+      name: {
+        // type: DataTypes.STRING,
+        type: Sequelize.STRING,
+        // required: true
+        allowNull: false,
+  
+      },
       city: {
         // type: DataTypes.STRING,
         type: Sequelize.STRING,

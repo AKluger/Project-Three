@@ -90,7 +90,9 @@ app.post("/api/teachers", function(req, res) {
               })
               .then(teacher => {
                 jwt.sign( 
-                  { id: teacher.id },                  
+                  // { id: teacher.id },                  
+                  // { id: teacher.id, email: teacher.email },                  
+                  { id: teacher.id, email: teacher.email, name: teacher.name },                         
                   // { email: teacher.email },
                   config.get('JwtSecret'),
                   { expiresIn: 3600 },
@@ -261,7 +263,8 @@ app.post("/api/teachers", function(req, res) {
             if(!isMatch) {return res.send('empty')}
 
             jwt.sign( 
-              { id: teacher.id },              
+              { id: teacher.id, email: teacher.email, name: teacher.name },                         
+              // { id: teacher.id },              
               // { email: teacher.email },
               config.get('JwtSecret'),
               { expiresIn: 3600 },
