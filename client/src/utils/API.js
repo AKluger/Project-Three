@@ -11,9 +11,8 @@ export default {
   //   return axios.get("/api/teacher/" + id);
   // },
   getUser: function(email) {
-    axios.get("/api/teachers/" + email)
-      .then(res => {console.log(res.data)})
-        // console.log(res.data);
+    axios.get("/api/teachers/" + email);
+      // .then(res => {console.log(res.data)})
       // })
     },
 
@@ -26,7 +25,6 @@ export default {
   },
   // Saves a book to the database
   saveTeacher: function(userData) {
-  
     return axios.post("/api/teachers", userData);
   },
   logOutUser: function() {

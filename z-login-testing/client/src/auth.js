@@ -1,3 +1,5 @@
+const bcrypt = require('bcryptjs');
+
 class Auth {
     constructor() {
         this.authenticated = false;

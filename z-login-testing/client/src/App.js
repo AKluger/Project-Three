@@ -7,6 +7,7 @@ import Game from './Books/game/Game'
 import Landing from './components/Landing'
 import EduLanding from './components/EducatorLanding'
 import Login from './pages/Login'
+import SignUp from './pages/SignUp'
 import LandingLogin from './pages/LandingLogin.js'
 import Educator from './pages/Educator.js'
 import Welcome from './pages/Welcome.js'
@@ -31,7 +32,8 @@ class App extends Component {
         <Route exact path="/bobbysWalk" component={BobbyWalk} />
         <Route exact path="/prettybooks" component={PrettyCity} />
         <Route exact path="/login" component={LandingLogin} />
-        {/* <Route exact path="/logout" component={LandingLogout} /> */}
+        <Route exact path="/signup" component={SignUp} />
+        {/* <Proted exact path="/logout" component={LandingLogout} /> */}
         </Switch>
       </Router>
     );

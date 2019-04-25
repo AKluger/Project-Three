@@ -15,7 +15,7 @@ import axios from "axios";
 
 
 
-class Login extends Component {
+class SignUp extends Component {
   state = {
     user: [],
     email: "",
@@ -24,6 +24,7 @@ class Login extends Component {
     state: "",
     password: "",
     redirect: false,
+    // isLoggedIn: false,
     hash: ""
   };
 
@@ -33,15 +34,27 @@ class Login extends Component {
     })
   }
 
-  renderRedirect = () => {
-    if (this.state.redirect) {
-      return <Redirect to='/Educator' />
-    }
+  // renderRedirect = () => {
+  //   if (this.state.redirect) {
+  //     return <Redirect to='/Educator' />
+  //   }
+  // }
+
+  componentWillMount() {
+    delete axios.defaults.headers.common['Authorization'];
+    localStorage.removeItem("token");
   }
 
-//   componentDidMount() {
-//     this.clearForm();
-//   }
+
+  authenticateUser = () => {
+    this.setState({isAuthenticated: true});
+    localStorage.setItem("234123jsfjodifisjf232304", this.state.isAuthenticated);
+
+  }
+
+  componentDidMount() {
+
+  }
 
 //   clearForm = () => {
 //     // API.getUser()
@@ -73,43 +86,47 @@ class Login extends Component {
     event.preventDefault();
     console.log(this.state.school)
     // if (this.state.email && this.state.password && this.state.school) {
-    if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state) {
-      API.saveTeacher({
-        email: this.state.email,
-        school: this.state.school,
-        city: this.state.city,
-        state: this.state.state,
-        password: this.state.password,
-      })
-      .then(this.setState({email: "", school: "", password: "", state: "", city: ""}))
-      .then(this.setState({redirect: true}))
-      .catch(err => console.log(err));
-      // API.getUser(this.state.email)
-      //  this.setState({email: "", school: "", password: "", state: "", city: ""})
-      // // checking if password is valid
-      // this.setState({redirect: true})
-      //  }
-      // .then(this.props.history.push("/"))
-      //  .then(event.target.reset())
-      // .then((API.getUser(this.state.email)))
-      // .then(this.state.hash = )
-      // .then(API.deserializeUser(this.state.password, this.state.hash))
+    // if (API.newUser(this.state.email, this.state.password)) {
+
+      if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state) {
+        API.saveTeacher({
+          email: this.state.email,
+          school: this.state.school,
+          city: this.state.city,
+          state: this.state.state,
+          password: this.state.password,
+        })
+        .then(res => localStorage.setItem('token', res.data.token))
+        .then(this.setState({email: "", school: "", password: "", state: "", city: ""}))
+        .then(this.setState({redirect: true}))
+        .catch(err => console.log(err));
+        // API.getUser(this.state.email)
+        //  this.setState({email: "", school: "", password: "", state: "", city: ""})
+        // // checking if password is valid
+        // this.setState({redirect: true})
+        //  }
+        // .then(this.props.history.push("/"))
+        //  .then(event.target.reset())
+        // .then((API.getUser(this.state.email)))
+        // .then(this.state.hash = )
+        // .then(API.deserializeUser(this.state.password, this.state.hash))
+      }
     }
-  };
+  // };
 
   render() {
 
     if (this.state.redirect) {
-      return <Redirect to='/' />
+      return <Redirect to='/educator' />
     }
 
     return (
       <div >
-        <Nav/>
+        <Nav status={false}/>
         <Container fluid >
             <Row>
             <Col md={{ span: 4, offset: 4 }} className="text-center pt-4">
-            <span className="headerText mb-2"> Login </span>
+            <span className="headerText mb-2"> Sign-Up </span>
                 <Form>
                 <Input
                     value={this.state.email}
@@ -117,36 +134,36 @@ class Login extends Component {
                     name="email"
                     placeholder="Email"
                 />
-                {/* <Input
-                    value={this.state.school}
-                    onChange={this.handleInputChange}
-                    name="school"
-                    placeholder="School"
-                /> */}
-                <Input
+                  <Input
                     value={this.state.password}
                     onChange={this.handleInputChange}
                     name="password"
                     placeholder="Password"
                     type="password"
                 />
-                {/* <Input
+                <Input
+                    value={this.state.school}
+                    onChange={this.handleInputChange}
+                    name="school"
+                    placeholder="School"
+                />
+                <Input
                     value={this.state.city}
                     onChange={this.handleInputChange}
                     name="city"
                     placeholder="City"
-                /> */}
-                {/* <Input
+                />
+                <Input
                     value={this.state.state}
                     onChange={this.handleInputChange}
                     name="state"
                     placeholder="State"
-                /> */}
+                />
                 <LoginBtn
-                    disabled={!(this.state.email && this.state.password)}
+                    disabled={!(this.state.email && this.state.password && this.state.school && this.state.city && this.state.state)}
                     onClick={this.handleFormSubmit}
                 >
-                    Login
+                    Sign-Up
                 </LoginBtn>
                 </Form>
             </Col>
@@ -158,4 +175,4 @@ class Login extends Component {
   }
 }
 
-export default Login;
+export default SignUp;

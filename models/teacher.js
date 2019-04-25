@@ -1,42 +1,15 @@
 // Requiring bcrypt for password hashing. Using the bcrypt-nodejs version as the regular bcrypt module
 // sometimes causes errors on Windows machines
-// var models = require("../models");
+var db = require("../models");
 var bcrypt = require("bcryptjs");
 // var bcrypt = require("bcrypt");
 var Sequelize = require("sequelize");
-// var mongoose = require('mongoose');
-// var uniqueValidator = require('mongoose-unique-validator');
-
-// var UserSchema = new mongoose.Schema({
-//   email: {
-//     type: String,
-//     required: true,
-//     trim: true,
-//     unique: true,
-//   },
-//   name: {
-//     type: String,
-//     required: true,
-//     trim: true,
-//   },
-//   favoriteBook: {
-//     type: String,
-//     required: true,
-//     trim: true
-//   },
-//   password: {
-//     type: String,
-//     required: true
-//   }
-// });
-
-// UserSchema.plugin(uniqueValidator, {message: 'is already taken.'});
-// var User = mongoose.model('User', UserSchema);
-// module.exports = User;
+var sequelize = db.sequelize;
 
 // Creating our User model
 module.exports = function(sequelize, DataTypes) {
   var Teacher = sequelize.define("Teacher", {
+    
     // The email cannot be null, and must be a proper email before creation
     email: {
       // type: DataTypes.STRING,

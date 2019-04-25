@@ -10,6 +10,7 @@
     "axios": "^0.18.0",
     "bcrypt": "^3.0.6",
     "bcryptjs": "^2.4.3",
+    "client": "0.0.1",
     "delay": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose-unique-validator": "^2.0.2",
