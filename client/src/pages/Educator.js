@@ -11,9 +11,7 @@ class Educator extends Component {
   state = {
     user: [],
     email: "",
-    username: "",
-    password: "",
-    books: [],
+    id: "",
     feedback: "",
     isLoggedIn: true
   };
@@ -25,7 +23,8 @@ class Educator extends Component {
     if(token){
       axios.defaults.headers.common['Authorization'] = token;
       const decoded = jwtDecode(token);
-      this.setState({email: decoded.email})
+      this.setState({id: decoded.id})
+      // this.setState({email: decoded.email})
     } else {
       delete axios.defaults.headers.common['Authorization']
     }}
@@ -49,14 +48,14 @@ class Educator extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.email && this.state.password && this.state.username) {
-      API.saveUser({
-        email: this.state.email,
-        username: this.state.username,
-        password: this.state.password,
+    if (this.state.feedback) {
+      API.saveFeedback({
+        id: this.state.id,
+        // email: this.state.email,
+        note: this.state.feedback,
       })
 
-        .then(this.setState({ email: "", username: "", password: "" }))
+        .then(this.setState({ feedback: ""}))
         //   .then(event.target.reset())
         .catch(err => console.log(err));
     }
