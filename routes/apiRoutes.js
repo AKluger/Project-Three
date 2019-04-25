@@ -86,7 +86,7 @@ app.post("/api/teachers", function(req, res) {
                 city: req.body.city,
                 state: req.body.state,
                 password: password,
-                // avi: req.body.avi
+                name: req.body.name
               })
               .then(teacher => {
                 jwt.sign( 
