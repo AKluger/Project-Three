@@ -1,11 +1,17 @@
 import React from "react";
+import axios from 'axios'
 import { Col, Container, Row, Jumbotron, Badge } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import './style.css'
 
-function Welcome() {
+class Welcome extends React.Component {
 
-  {
+  // componentDidMount() {
+  //   delete axios.defaults.headers.common['Authorization'];
+  //   localStorage.removeItem("token");
+  // }
+
+  render() {
     return (
       <div>
         <Nav />
@@ -23,5 +29,6 @@ function Welcome() {
     );
   }
 }
+
 
 export default Welcome;

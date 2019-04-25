@@ -3,6 +3,7 @@ import {Button, Col, Container, Row, Jumbotron, Form} from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
 import {TextArea } from "../components/LoginForm";
+import axios from 'axios'
 import './style.css'
 
 class Educator extends Component {
@@ -12,12 +13,19 @@ class Educator extends Component {
     username: "",
     password: "",
     books: [],
-    feedback: ""
+    feedback: "",
+    isLoggedIn: true
   };
 
-  //   componentDidMount() {
-  //     this.clearForm();
-  //   }
+  componentWillMount(){
+    // Retrieve jwt token
+    const token = localStorage.getItem("token") || null;
+
+    if(token){
+      axios.defaults.headers.common['Authorization'] = token;
+    } else {
+      delete axios.defaults.headers.common['Authorization']
+    }}
 
   //   clearForm = () => {
   //     // API.getUser()
@@ -26,6 +34,7 @@ class Educator extends Component {
   //     //   )
   //     //   .catch(err => console.log(err));
   //   };
+
 
 
   handleInputChange = event => {
@@ -53,7 +62,7 @@ class Educator extends Component {
   render() {
     return (
       <div>
-        <Nav />
+        <Nav status={true} />
         
         <Container fluid className="p-0 educator">
         <Jumbotron  id="hero-educator" />

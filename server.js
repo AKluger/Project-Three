@@ -21,7 +21,9 @@ app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true 
 app.use(passport.initialize());
 app.use(passport.session());
 
-require("./routes/apiRoutesP2")(app);
+require("./routes/apiRoutes")(app);
+// require("./routes/htmlRoutes")(app);
+
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {

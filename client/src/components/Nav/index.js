@@ -1,7 +1,10 @@
 import React from 'react'
+import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './style.css'
 import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Redirect } from 'react-router-dom'
+
 
 const navstyle = {
   paddingBottom: 0
@@ -12,25 +15,78 @@ export default class tempNav extends React.Component {
   constructor(props) {
     super(props);
 
-    this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      isLoggedIn: false,
+      redirect: false,
+
     };
   }
+
+  componentDidMount() {
+    const token = localStorage.getItem("token") || null;
+    if(token){
+      axios.defaults.headers.common['Authorization'] = token;
+    }
+    // console.log(localStorage.getItem('token'));
+    this.tokenExists();
+    // if(localStorage.getItem('token')) {
+    //   this.LoggedIn = true
+    // }
+    // if(localStorage.getItem('token')===null) {
+    //   this.setState({isLoggedIn: false})
+    // }
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
     });
   }
+
+  tokenExists() {
+    // localStorage.getItem('token')
+    // console.log(localStorage.getItem('token'))
+    if(localStorage.getItem('token')) {
+      this.setState({isLoggedIn: true}, () => {
+        console.log(this.state)
+        // debugger
+      })
+    }
+    // this.setState({isLoggedIn: false})
+    }
+  
+
+  logoutUser() {
+    // if(localStorage.getItem('token')==null) {
+      this.setState({isLoggedIn: false})
+      this.setState({redirect: true})
+      console.log(this.state.isLoggedIn)
+    // }
+  }
+
   render() {
-    return (
-      <Navbar className="navbarcol" style={navstyle} expand="lg">
+    // if (!localStorage.getItem('token')) {
+    //   this.setState({isLoggedIn:false})
+    // }
+    if (this.state.redirect) {
+      return <Redirect to='/signup' />
+    }
+    // debugger
+    console.log(`Logged In: ${this.props.status}`) 
+    console.log(`Token in Storage?: ${localStorage.getItem('token')}`)
+    // const content = !this.props.status || !localStorage.getItem('token') ? (
+    const content = (!localStorage.getItem('token') || false) ? (
+      
+    // const content = (!this.props.status || !localStorage.getItem('token')) ? (
+      
+      <Navbar className="navbarcol" style={navstyle} expand="sm">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse className="pr-5"id="basic-navbar-nav">
           <Nav className="mr-auto">
-            {/* <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link> */}
-            <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
+            <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
+            {/* <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link> */}
             <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
             <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
@@ -42,16 +98,120 @@ export default class tempNav extends React.Component {
               <NavDropdown title={<span className="navtxt logintab"><FontAwesomeIcon className="" icon="user" /> </span>} id="basic-nav-dropdown">
                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/login"><span className="droptxt">Sign-in</span></NavDropdown.Item>
+                <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item>
               </NavDropdown>
             </div>
           </Nav>
 
         </Navbar.Collapse>
       </Navbar>
+    ) : (
+    <Navbar className="navbarcol" style={navstyle} expand="sm">
+        <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            {/* <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link> */}
+            <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
+            <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
+            <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+            <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
+          </Nav>
+          <Nav>
+
+
+        <div className="glyph">
+          <NavDropdown inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
+            <NavDropdown.Item onClick={this.tokenExists} href="/signup"><span className="droptxt">Logout</span></NavDropdown.Item>
+            <NavDropdown.Divider />
+            {/* <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item> */}
+          </NavDropdown>
+          </div>
+        </Nav>
+     
+    </Navbar.Collapse>
+    </Navbar>
     );
-  }
+    return (
+      <div>
+        {content}
+      </div>
+    );
+  // }
+  // return (
+    
+  // );
 }
+}
+
+
+// WITH IF
+// render() {
+//     if (!localStorage.getItem('token') && (true)) {
+//     return(
+//       <Navbar className="navbarcol" style={navstyle} expand="sm">
+//         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse className="pr-5"id="basic-navbar-nav">
+//           <Nav className="mr-auto">
+//             <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
+//             {/* <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link> */}
+//             <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
+//             <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+//             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
+//           </Nav>
+//           <Nav>
+
+//             <div className="glyph">
+
+//               <NavDropdown title={<span className="navtxt logintab"><FontAwesomeIcon className="" icon="user" /> </span>} id="basic-nav-dropdown">
+//                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
+//                 <NavDropdown.Divider />
+//                 <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item>
+//               </NavDropdown>
+//             </div>
+//           </Nav>
+
+//         </Navbar.Collapse>
+//       </Navbar>
+//     // ) : (
+//     )
+//   }
+//   return(
+//     <Navbar className="navbarcol" style={navstyle} expand="sm">
+//         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse id="basic-navbar-nav">
+//           <Nav className="mr-auto">
+//             {/* <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link> */}
+//             <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
+//             <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
+//             <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+//             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
+//           </Nav>
+//           <Nav>
+
+
+//         <div className="glyph">
+//           <NavDropdown inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
+//             <NavDropdown.Item onClick={this.tokenExists} href="/signup"><span className="droptxt">Logout</span></NavDropdown.Item>
+//             <NavDropdown.Divider />
+//             {/* <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item> */}
+//           </NavDropdown>
+//           </div>
+//         </Nav>
+     
+//     </Navbar.Collapse>
+//     </Navbar>
+//     );
+
+//   // }
+//   // return (
+    
+//   // );
+// }
+// }
+
 // const tempNav = () => {
 //   return(
 //       <nav className="navbar  navbar-expand-md navbar-dark">

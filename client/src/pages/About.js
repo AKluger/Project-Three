@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import axios from 'axios'
 import { Button, Col, Container, Row, Jumbotron, Card, CardDeck } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import './style.css';
 import { useTransition, animated } from 'react-spring'
 
-function About() {
+class About extends React.Component {
     //     const [items, set] = useState([{}])
     // const transitions = useTransition(items, item => item.key, {
     // from: { transform: 'translate3d(0,-40px,0)' },
@@ -12,10 +13,29 @@ function About() {
     // leave: { transform: 'translate3d(0,-40px,0)' },
     // })
 
-    {
+    state= {
+        isLoggedIn: false
+    }
+    componentDidMount(){
+        // Retrieve jwt token
+        const token = localStorage.getItem("token") || null;
+    
+        if(token){
+          axios.defaults.headers.common['Authorization'] = token;
+          console.log(token)
+        }
+          // } else {
+    //       delete axios.defaults.headers.common['Authorization']
+    // }
+    }
+
+    
+
+        render() {
+    
         return (
             <div>
-                <Nav />
+                <Nav status={this.state.isLoggedIn}/>
 
                 <Container fluid className="p-0">
                     <Jumbotron id="about-header" />

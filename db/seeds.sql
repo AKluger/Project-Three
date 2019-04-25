@@ -1,4 +1,7 @@
 USE funko_db;
  
-INSERT INTO users (email, username, password)
-VALUES ("wynn@gmail.com","troy","uh");
+INSERT INTO Books (title, author, complete)
+VALUES ("test","test",false);
+
+INSERT INTO Class (name)
+VALUES ("Pretty City");
