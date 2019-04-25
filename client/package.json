@@ -13,6 +13,7 @@
     "client": "0.0.1",
     "delay": "^4.2.0",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
     "mongoose-unique-validator": "^2.0.2",
     "mongoose-validator": "^2.1.0",
     "react": "^16.8.6",

@@ -10,6 +10,7 @@ const jwt = require('jsonwebtoken');
 const Teacher = require('../models/teacher')
 // const key = require('../config/keys.js')
 const config = require('config')
+const auth = require('../config/middleware/auth')
 
 
 
@@ -132,14 +133,58 @@ app.post("/api/teachers", function(req, res) {
       });
   
 
-      app.get("/api/teachers/:email", function(req, res) {
+      // app.get("/api/teachers/:email", function(req, res) {
+      //   db.Teacher.findOne({
+      //     where: {
+      //       email: req.params.email
+      //     }
+      //   })
+      //     .then(function(dbTeacher) {
+      //       res.json(dbTeacher);
+      //       // console.log(dbTeacher.password)
+      //     });
+      // });
+
+      app.post("/api/login/", function(req, res) {
+        const { password, email } = req.body
+        // console.log(req.body)
         db.Teacher.findOne({
           where: {
-            email: req.params.email
+            email: email
           }
         })
-          .then(function(dbTeacher) {
-            res.json(dbTeacher);
+          .then(teacher => {
+            // console.log(teacher)
+            if (!teacher) {return res.send('empty')}
+            // if (!teacher) {return res.status(400).json({msg: 'Invalid Credentials'})
+
+            // console.log(teacher.password)
+            bcrypt.compare(password, teacher.password)
+              .then(isMatch => {
+                console.log(isMatch)
+                // if(!isMatch) return res.status(400).json({msg: 'Invalid Credentials'})
+                if(!isMatch) {return res.send('empty')}
+  
+                jwt.sign( 
+                  { email: teacher.email },
+                  config.get('JwtSecret'),
+                  { expiresIn: 3600 },
+                  (err, token) => {
+                    if(err) throw err;
+                    // localStorage.setItem('token', token)
+                    // console.log(token)
+                    res.json({
+                      token,
+                      teacher: {
+                        id: teacher.id,
+                        email: teacher.email
+                      }
+                    })
+                  }
+  
+                )
+  
+              })
             // console.log(dbTeacher.password)
           });
       });
@@ -163,16 +208,16 @@ app.post("/api/teachers", function(req, res) {
     }
   });
 
-  app.post('/api/login/', (req, res) => {
-    const user = {
-      id: 1,
-      username: 'troy',
-      email: 'troy@gmail.com'
-    }
-    jwt.sign({user: user}, 'secretkey', (err, token) => {
-      res.json({token: token})
-    });
-  })
+  // app.post('/api/login/', (req, res) => {
+  //   const user = {
+  //     id: 1,
+  //     username: 'troy',
+  //     email: 'troy@gmail.com'
+  //   }
+  //   jwt.sign({user: user}, 'secretkey', (err, token) => {
+  //     res.json({token: token})
+  //   });
+  // })
 
 
   // Route for logging user out

@@ -4,6 +4,7 @@ import Nav from "../components/Nav";
 import API from "../utils/API";
 import {TextArea } from "../components/LoginForm";
 import axios from 'axios'
+import jwtDecode from 'jwt-decode'
 import './style.css'
 
 class Educator extends Component {
@@ -23,6 +24,8 @@ class Educator extends Component {
 
     if(token){
       axios.defaults.headers.common['Authorization'] = token;
+      const decoded = jwtDecode(token);
+      this.setState({email: decoded.email})
     } else {
       delete axios.defaults.headers.common['Authorization']
     }}
