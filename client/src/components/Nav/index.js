@@ -73,14 +73,17 @@ export default class tempNav extends React.Component {
       return <Redirect to='/signup' />
     }
     // debugger
-    console.log(!this.props.status, !localStorage.getItem('token'))
-    const content = !this.props.status || !localStorage.getItem('token') ? (
+    console.log(`Logged In: ${this.props.status}`) 
+    console.log(`Token in Storage?: ${localStorage.getItem('token')}`)
+    // const content = !this.props.status || !localStorage.getItem('token') ? (
+    const content = (!localStorage.getItem('token') || false) ? (
+      
     // const content = (!this.props.status || !localStorage.getItem('token')) ? (
-
+      
       <Navbar className="navbarcol" style={navstyle} expand="sm">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
+        <Navbar.Collapse className="pr-5"id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
             {/* <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link> */}
@@ -92,7 +95,7 @@ export default class tempNav extends React.Component {
 
             <div className="glyph">
 
-              <NavDropdown title={<span className="navtxt"><FontAwesomeIcon className="" icon="user" /> </span>} id="basic-nav-dropdown">
+              <NavDropdown title={<span className="navtxt logintab"><FontAwesomeIcon className="" icon="user" /> </span>} id="basic-nav-dropdown">
                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item>
@@ -140,6 +143,75 @@ export default class tempNav extends React.Component {
   // );
 }
 }
+
+
+// WITH IF
+// render() {
+//     if (!localStorage.getItem('token') && (true)) {
+//     return(
+//       <Navbar className="navbarcol" style={navstyle} expand="sm">
+//         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse className="pr-5"id="basic-navbar-nav">
+//           <Nav className="mr-auto">
+//             <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
+//             {/* <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link> */}
+//             <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
+//             <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+//             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
+//           </Nav>
+//           <Nav>
+
+//             <div className="glyph">
+
+//               <NavDropdown title={<span className="navtxt logintab"><FontAwesomeIcon className="" icon="user" /> </span>} id="basic-nav-dropdown">
+//                 <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
+//                 <NavDropdown.Divider />
+//                 <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item>
+//               </NavDropdown>
+//             </div>
+//           </Nav>
+
+//         </Navbar.Collapse>
+//       </Navbar>
+//     // ) : (
+//     )
+//   }
+//   return(
+//     <Navbar className="navbarcol" style={navstyle} expand="sm">
+//         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse id="basic-navbar-nav">
+//           <Nav className="mr-auto">
+//             {/* <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link> */}
+//             <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
+//             <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
+//             <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+//             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
+//           </Nav>
+//           <Nav>
+
+
+//         <div className="glyph">
+//           <NavDropdown inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
+//             <NavDropdown.Item onClick={this.tokenExists} href="/signup"><span className="droptxt">Logout</span></NavDropdown.Item>
+//             <NavDropdown.Divider />
+//             {/* <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item> */}
+//           </NavDropdown>
+//           </div>
+//         </Nav>
+     
+//     </Navbar.Collapse>
+//     </Navbar>
+//     );
+
+//   // }
+//   // return (
+    
+//   // );
+// }
+// }
+
 // const tempNav = () => {
 //   return(
 //       <nav className="navbar  navbar-expand-md navbar-dark">

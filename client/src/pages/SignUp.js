@@ -98,8 +98,15 @@ class SignUp extends Component {
         })
         .then(res => localStorage.setItem('token', res.data.token))
         .then(this.setState({email: "", school: "", password: "", state: "", city: ""}))
-        .then(this.setState({redirect: true}))
+        .then(setTimeout(() => {
+          this.setState({
+              redirect: true,
+            })
+          }, 2000)
+        )
         .catch(err => console.log(err));
+  
+          // this.setState({redirect: true}))
         // API.getUser(this.state.email)
         //  this.setState({email: "", school: "", password: "", state: "", city: ""})
         // // checking if password is valid
