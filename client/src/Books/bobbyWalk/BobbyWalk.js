@@ -6,7 +6,7 @@ import Pages from './bobbysWalkStart.json';
 import PosPages from './bobbyWalkPos.json';
 import negPages from './bobbyWalkNeg.json';
 import FlipPage from "react-flip-page";
-import {  Button } from 'react-bootstrap';
+import {  Button, Row, Col, Container } from 'react-bootstrap';
 import './style.css'
 // import Start from '../../components/Modal';
 
@@ -47,16 +47,25 @@ function BobbyWalk(){
           <Nav/>
           
           <PagesContainer id="pageContainer">
-          <FlipPage orientation='horizontal'  height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
+          <FlipPage orientation='horizontal'  flipOnTouch={true} height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
           {pages.map(page => (
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   <img src={page.imageLink} alt={page.imageTitle}  className='main imgsb' key={key++}/>
                 </div>
-                <Button variant="outline-dark" onClick={handleButtonClick} className={page.cssClass}> Click here and turn page for Bobby  to <b>NOT</b> be that "Special Somebody"</Button>
                 
                   <div className="text-center bobby-text">{page.text.map(line=>(<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
-              </article> 
+                  <Row>
+                    <Col sm={4}>
+                    <Button  variant="outline-success" className={page.cssClass}> Bobby wants to be that Special Somebody</Button>
+                    </Col>
+                    <Col sm={2}></Col>
+                    <Col sm={4}>
+                    <Button  variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass}> Bobby does <b>NOT</b> want be that Special Somebody</Button>
+                    </Col>
+                  </Row>
+              </article>
+             
           ))} 
           </FlipPage>
           </PagesContainer>
