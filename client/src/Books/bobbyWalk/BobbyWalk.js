@@ -34,7 +34,7 @@ function BobbyWalk(){
     // firstPage.current.load()
     // firstPage.current.play()
     // Pages[0].src.load()
-    pages[0].audio.play()
+//     pages[0].audio.play()
   }
   
   const bookStyle = {
