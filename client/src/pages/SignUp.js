@@ -95,6 +95,7 @@ class SignUp extends Component {
           school: this.state.school,
           city: this.state.city,
           state: this.state.state,
+          name: this.state.name,
           password: this.state.password,
         })
         .then(res => localStorage.setItem('token', res.data.token))
