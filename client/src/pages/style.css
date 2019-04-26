@@ -1,4 +1,8 @@
- p, h2, h5, .card-deck {
+ body {
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #ececec  10%, rgb(139, 222, 233) 74%) ;
+ }
+p, h2, h5, .card-deck {
      font-family: 'Cabin', sans-serif;
  }
 
@@ -38,6 +42,9 @@
      background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
      color: rgb(36, 36, 214);
  }
+
+ .creator button:hover {
+     color: #045de9}
 
  #login-btn, #form-button {
      background-color: #ffffff;
@@ -91,10 +98,11 @@
 
  .creator {
      transition: box-shadow .5s;
+     box-shadow: 5px 0 12px rgba(158, 54, 54, 0.2);
  }
 
  .creator:hover {
-     box-shadow: 5px 0 14px rgba(158, 54, 54, 0.2);
+     box-shadow: 10px 0 20px rgba(158, 54, 54, 0.2);
  }
 
  #login {

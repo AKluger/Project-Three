@@ -51,7 +51,7 @@ class About extends React.Component {
                             {/* {transitions.map(({ item, props, key }) =>
 <animated.div key={key} style={props}>{item.text} */}
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="http://troy-wynn.com/assets/img/profile-picture.jpeg" />
+                                <Card.Img variant="top" src="https://avatars3.githubusercontent.com/u/43094922?s=460&v=4" />
                                 <Card.Body>
                                     <Card.Title>Troy Wynn</Card.Title>
                                     <Card.Text></Card.Text>
@@ -77,7 +77,7 @@ class About extends React.Component {
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="https://monetthigpen.github.io/The/profileImages/ronald.jpg" />
+                                <Card.Img variant="top" src="https://avatars3.githubusercontent.com/u/42901139?s=400&v=4" />
                                 <Card.Body>
                                     <Card.Title>Ronald Glover</Card.Title>
                                     <Card.Text>

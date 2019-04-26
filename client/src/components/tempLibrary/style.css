@@ -28,7 +28,8 @@
 .bookstyle {
     height: 400px;
     width: 300px;
-     box-shadow: 5px 5px #cfb578, 10px 10px #dfcea6, 15px 15px #cfb578;
+     box-shadow: 3px 3px #b89975, 10px 10px #ffffff, 15px 15px #b89975;
+     border-radius: 10px 5px 0px 10px;
 }
 }
 

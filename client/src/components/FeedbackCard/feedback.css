@@ -7,6 +7,33 @@
     background-color: #cfb578
 }
 
-.card { box-shadow: 5px 5px #cfb578, 10px 10px #dfcea6, 15px 15px #cfb578;}
+.card { }
+
+.comment-card {box-shadow: 10px 10px 5px 0px rgba(201,201,201,1);
+}
 
 .card-title { text-decoration-line: underline;}
+
+/* @media (min-width: 576px) {
+  .card-columns {
+      column-count: 2;
+  }
+}
+
+@media (min-width: 768px) {
+  .card-columns {
+      column-count: 3;
+  }
+}
+
+@media (min-width: 992px) {
+  .card-columns {
+      column-count: 4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+      column-count: 5;
+  } */
+/* } */

@@ -104,7 +104,8 @@ app.post("/api/teachers", function(req, res) {
                       token,
                       teacher: {
                         id: teacher.id,
-                        email: teacher.email
+                        email: teacher.email,
+                        name: teacher.name
                       }
                     })
                   }
@@ -215,7 +216,8 @@ app.post("/api/teachers", function(req, res) {
       db.Feedback.create({
         email: req.body.email,
         TeacherId: req.body.TeacherId,
-        note: req.body.note
+        note: req.body.note,
+        name: req.body.name
       })
         .then(function(dbFeedback) {
           console.log(dbFeedback);
@@ -277,7 +279,8 @@ app.post("/api/teachers", function(req, res) {
                   token,
                   teacher: {
                     id: teacher.id,
-                    email: teacher.email
+                    email: teacher.email,
+                    name: teacher.name
                   }
                 })
               }
