@@ -34,7 +34,7 @@ class About extends React.Component {
         render() {
     
         return (
-            <div>
+            <>
                 <Nav status={this.state.isLoggedIn}/>
 
                 <Container fluid className="p-0">
@@ -89,7 +89,7 @@ class About extends React.Component {
                         </CardDeck>
                     </Row>
                 </Container>
-            </div>
+            </>
 
         );
     }

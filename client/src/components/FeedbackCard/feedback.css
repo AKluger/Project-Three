@@ -1,0 +1,12 @@
+.btn-beige {
+    border-color: #d6d0c4;
+    background-color: #dfcea6;
+  }
+
+.btn-beige:hover {
+    background-color: #cfb578
+}
+
+.card { box-shadow: 5px 5px #cfb578, 10px 10px #dfcea6, 15px 15px #cfb578;}
+
+.card-title { text-decoration-line: underline;}

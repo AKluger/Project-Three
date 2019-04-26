@@ -34,7 +34,7 @@ export default {
 
   // // Saves a book to the database
   showFeedback: function(userData) {
-    return axios.get("/api/feedback/"+userData.id, userData);
+    return axios.get("/api/feedback/", userData);
   },
   logOutUser: function() {
     return axios.get("logout");
