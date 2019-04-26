@@ -28,6 +28,7 @@ class Educator extends Component {
     if (token) {
       axios.defaults.headers.common['Authorization'] = token;
       const decoded = jwtDecode(token);
+      console.log(decoded);
       this.setState({
         email: decoded.email,
         id: decoded.id
@@ -81,7 +82,8 @@ class Educator extends Component {
         note: this.state.feedback,
         TeacherId: this.state.id
       })
-        .then(this.setState({ email: "", username: "", password: "" }))
+        .then(this.setState({ feedback: ""}))
+        .then(this.loadFeedback())
         //   .then(event.target.reset())
         .catch(err => console.log(err));
     }
@@ -102,12 +104,13 @@ class Educator extends Component {
             <Col md={{ span: 6, offset: 3 }} className="text-center">
 
               <Form>
-                <TextArea
-                  value={this.state.feedback}
+              <Form.Group controlId="exampleForm.ControlTextarea1">
+    <Form.Label>Example textarea</Form.Label>
+    <Form.Control as="textarea" rows="3" value={this.state.feedback}
                   onChange={this.handleInputChange}
                   name="feedback"
-                  placeholder="We'd love to hear your feedback!!!"
-                />
+                  placeholder="We'd love to hear your feedback!!!" />
+  </Form.Group>
                 <Button
                   id="form-button" size="lg"
                   // disabled={!(this.state.email && this.state.password)}
@@ -125,7 +128,7 @@ class Educator extends Component {
                 // buttonClass="btn mt-1 mr-1 shadow-none"
                 // buttonText="Delete Book"
                 />
-              ) : (<div className="col-md-8 offset-md-2 text-center feedback-section">
+              ) : (<div className="col-md-8 offset-md-2 text-center feedback-section mb-4">
                 <h3>No Feedback Yet!</h3>
               </div>
                 )}

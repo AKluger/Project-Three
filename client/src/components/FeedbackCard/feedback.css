@@ -7,6 +7,6 @@
     background-color: #cfb578
 }
 
-.card { box-shadow: 5px 5px #cfb578, 10px 10px #dfcea6, 15px 15px #cfb578;}
+.card { box-shadow: 10px 10px 5px 0px rgba(201,201,201,1);}
 
 .card-title { text-decoration-line: underline;}

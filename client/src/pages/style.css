@@ -1,4 +1,8 @@
- p, h2, h5, .card-deck {
+ body {
+    background-color: #045de9;
+    background-image: linear-gradient(315deg, #ececec  0%, rgb(139, 222, 233) 54%) ;
+ }
+p, h2, h5, .card-deck {
      font-family: 'Cabin', sans-serif;
  }
 
