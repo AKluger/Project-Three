@@ -8,6 +8,7 @@ module.exports = function(sequelize, DataTypes) {
 const Feedback = sequelize.define("Feedback", {
     // email: { type: Sequelize.STRING, allowNull: false, required: true },
     note: { type: Sequelize.STRING, allowNull: false, required: true },
+    name: { type: Sequelize.STRING, allowNull: false, required: true },
     // FeedbackId: {
     //     type: Sequelize.INTEGER,
     //     defaultValue: 1

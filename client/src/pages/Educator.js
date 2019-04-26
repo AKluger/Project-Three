@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Button, Col, Container, Row, Jumbotron, Form, } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
-import { TextArea } from "../components/LoginForm";
+// import { TextArea } from "../components/LoginForm";
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
 import FeedbackCard from "../components/FeedbackCard/Feedback.js"
@@ -14,6 +14,7 @@ class Educator extends Component {
     user: [],
     email: "",
     id: "",
+    name: "",
     // username: "",
     // password: "",
     comments: [],
@@ -31,7 +32,8 @@ class Educator extends Component {
       console.log(decoded);
       this.setState({
         email: decoded.email,
-        id: decoded.id
+        id: decoded.id,
+        name: decoded.name
       })
 
     } else {
@@ -79,10 +81,11 @@ class Educator extends Component {
     if (this.state.email && this.state.feedback) {
       API.saveFeedback({
         email: this.state.email,
+        name: this.state.name,
         note: this.state.feedback,
         TeacherId: this.state.id
       })
-        .then(this.setState({ feedback: ""}))
+        .then(this.setState({ feedback: "" }))
         .then(this.loadFeedback())
         //   .then(event.target.reset())
         .catch(err => console.log(err));
@@ -104,13 +107,13 @@ class Educator extends Component {
             <Col md={{ span: 6, offset: 3 }} className="text-center">
 
               <Form>
-              <Form.Group controlId="exampleForm.ControlTextarea1">
-    <Form.Label>Example textarea</Form.Label>
-    <Form.Control as="textarea" rows="3" value={this.state.feedback}
-                  onChange={this.handleInputChange}
-                  name="feedback"
-                  placeholder="We'd love to hear your feedback!!!" />
-  </Form.Group>
+                <Form.Group controlId="exampleForm.ControlTextarea1">
+                  {/* <Form.Label></Form.Label> */}
+                  <Form.Control as="textarea" rows="3" value={this.state.feedback}
+                    onChange={this.handleInputChange}
+                    name="feedback"
+                    placeholder="We'd love to hear your feedback!!!" />
+                </Form.Group>
                 <Button
                   id="form-button" size="lg"
                   // disabled={!(this.state.email && this.state.password)}
@@ -121,17 +124,17 @@ class Educator extends Component {
               </Form>
             </Col>
             {/* <Col md={{ span: 6, offset: 3 }} className="text-center"> */}
-              {this.state.comments.length ? (
-                <FeedbackCard className="m-3"
-                  comments={this.state.comments}
-                // buttonAction={this.deleteBook}
-                // buttonClass="btn mt-1 mr-1 shadow-none"
-                // buttonText="Delete Book"
-                />
-              ) : (<div className="col-md-8 offset-md-2 text-center feedback-section mb-4">
-                <h3>No Feedback Yet!</h3>
-              </div>
-                )}
+            {this.state.comments.length ? (
+              <FeedbackCard className="m-3"
+                comments={this.state.comments}
+              // buttonAction={this.deleteBook}
+              // buttonClass="btn mt-1 mr-1 shadow-none"
+              // buttonText="Delete Book"
+              />
+            ) : (<div className="col-md-8 offset-md-2 text-center feedback-section mb-4">
+              <h3>No Feedback Yet!</h3>
+            </div>
+              )}
 
             {/* </Col> */}
           </Row>
