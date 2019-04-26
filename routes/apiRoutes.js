@@ -211,10 +211,11 @@ app.post("/api/teachers", function(req, res) {
 
     app.post("/api/feedback", function(req, res) {
       console.log(req.body)
-      const { id, note } = req.body
+      // const { id, note } = req.body
       db.Feedback.create({
-        TeacherId: id,
-        note: note
+        email: req.body.email,
+        TeacherId: req.body.TeacherId,
+        note: req.body.note
       })
         .then(function(dbFeedback) {
           console.log(dbFeedback);

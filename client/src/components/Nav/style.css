@@ -64,3 +64,9 @@ ul.navbar-nav:hover .dropdown-menu {
 #basic-navbar-nav {
     padding-right: 90px;
 }
+
+.dropdown-menu{
+    color: black;
+    background-color: #ffffff;
+     background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}

@@ -28,6 +28,7 @@
 .bookstyle {
     height: 400px;
     width: 300px;
+     box-shadow: 5px 5px #cfb578, 10px 10px #dfcea6, 15px 15px #cfb578;
 }
 }
 

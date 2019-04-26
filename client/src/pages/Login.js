@@ -131,7 +131,7 @@ class Login extends Component {
             <Row>
             <Col md={{ span: 4, offset: 4 }} className="text-center pt-4">
             <span className="headerText mb-2"> Login </span>
-                <Form>
+                <Form className="signup-form">
                 <Input
                     value={this.state.email}
                     onChange={this.handleInputChange}
@@ -166,6 +166,7 @@ class Login extends Component {
                 <LoginBtn
                     disabled={!(this.state.email && this.state.password)}
                     onClick={this.handleFormSubmit}
+                    id="login-btn"
                 >
                     Login
                 </LoginBtn>

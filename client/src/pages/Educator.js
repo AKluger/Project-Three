@@ -1,19 +1,21 @@
 import React, { Component } from "react";
-import { Button, Col, Container, Row, Jumbotron, Form } from 'react-bootstrap';
+import { Button, Col, Container, Row, Jumbotron, Form, } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
 import { TextArea } from "../components/LoginForm";
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
-import FeedbackCard from "../components/FeedbackCard/Feedback"
+import FeedbackCard from "../components/FeedbackCard/Feedback.js"
 import './style.css'
 
 class Educator extends Component {
+
   state = {
     user: [],
     email: "",
-    username: "",
-    password: "",
+    id: "",
+    // username: "",
+    // password: "",
     comments: [],
     feedback: "",
     isLoggedIn: true
@@ -26,21 +28,29 @@ class Educator extends Component {
     if (token) {
       axios.defaults.headers.common['Authorization'] = token;
       const decoded = jwtDecode(token);
-      this.setState({ email: decoded.email })
+      this.setState({
+        email: decoded.email,
+        id: decoded.id
+      })
+
     } else {
       delete axios.defaults.headers.common['Authorization']
     }
+  }
+
+  componentDidMount() {
+    this.loadFeedback();
   }
 
   loadFeedback = () => {
     console.log("getting feedback")
     API.showFeedback()
       .then(res =>
-          this.setState({
-            comments: res.data
-          })
-          )
-          .catch(err => console.log(err));
+        this.setState({
+          comments: res.data
+        })
+      )
+      .catch(err => console.log(err));
   }
   //   clearForm = () => {
   //     // API.getUser()
@@ -49,8 +59,6 @@ class Educator extends Component {
   //     //   )
   //     //   .catch(err => console.log(err));
   //   };
-
-
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -61,13 +69,18 @@ class Educator extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.email && this.state.password && this.state.username) {
-      API.saveUser({
+    // if (this.state.email && this.state.password && this.state.username) {
+    //   API.saveUser({
+    //     email: this.state.email,
+    //     username: this.state.username,
+    //     password: this.state.password,
+    //   
+    if (this.state.email && this.state.feedback) {
+      API.saveFeedback({
         email: this.state.email,
-        username: this.state.username,
-        password: this.state.password,
+        note: this.state.feedback,
+        TeacherId: this.state.id
       })
-
         .then(this.setState({ email: "", username: "", password: "" }))
         //   .then(event.target.reset())
         .catch(err => console.log(err));
@@ -76,7 +89,7 @@ class Educator extends Component {
 
   render() {
     return (
-      <>
+      <div>
         <Nav status={true} />
         <Jumbotron id="hero-educator" className="jumbotron-fluid" />
         <Container fluid className="p-0 educator">
@@ -104,23 +117,23 @@ class Educator extends Component {
                 </Button>
               </Form>
             </Col>
-            <Col md={{ span: 6, offset: 3 }} className="text-center">
-            {this.state.comments.length ? (
-              <FeedbackCard
-                comments={this.state.comments}
+            {/* <Col md={{ span: 6, offset: 3 }} className="text-center"> */}
+              {this.state.comments.length ? (
+                <FeedbackCard className="m-3"
+                  comments={this.state.comments}
                 // buttonAction={this.deleteBook}
                 // buttonClass="btn mt-1 mr-1 shadow-none"
                 // buttonText="Delete Book"
-              />
-            ) : (<div className="col-md-8 offset-md-2 text-center feedback-section">
-              <h3>No Feedback Yet!</h3>
-            </div>
-              )}
-            
-            </Col>
+                />
+              ) : (<div className="col-md-8 offset-md-2 text-center feedback-section">
+                <h3>No Feedback Yet!</h3>
+              </div>
+                )}
+
+            {/* </Col> */}
           </Row>
         </Container>
-      </>
+      </div>
 
     );
   }
