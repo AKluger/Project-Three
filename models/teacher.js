@@ -27,6 +27,13 @@ module.exports = function(sequelize, DataTypes) {
         allowNull: false,
   
       },
+      name: {
+        // type: DataTypes.STRING,
+        type: Sequelize.STRING,
+        // required: true
+        allowNull: false,
+  
+      },
       city: {
         // type: DataTypes.STRING,
         type: Sequelize.STRING,
@@ -39,6 +46,13 @@ module.exports = function(sequelize, DataTypes) {
         type: Sequelize.STRING,
         // required: true
         allowNull: false,
+  
+      },
+      feedback: {
+        // type: DataTypes.STRING,
+        type: Sequelize.STRING,
+        // required: true
+        // allowNull: false,
   
       },
     password: {
@@ -105,8 +119,8 @@ module.exports = function(sequelize, DataTypes) {
 Teacher.associate = function(models) {
   // Associating Author with Posts
   // When an Author is deleted, also delete any associated Posts
-  Teacher.hasMany(models.Class, {
-    onDelete: "cascade"
+  Teacher.hasMany(models.Feedback, {
+    onDelete: "cascade",
   });
 };
 

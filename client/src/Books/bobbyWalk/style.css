@@ -92,12 +92,15 @@
 .titlepage{
     height:300px;
 }
-/* @media only screen and (max-height: 1200px) {
+ @media only screen and (min-height: 1200px) {
     .imgsb {
         max-height: 80%;
         max-width: 100%;
     }
-} */
+    .bobby-text {
+        font-size: 34px;
+    }
+} 
 
 /* @media only screen and (max-height: 960px) {
     .bobby-text {
@@ -130,7 +133,7 @@
 
 /* phone landscape */ 
 /* currently scroll required */
-/* @media only screen and (max-height: 414px) {
+ @media only screen and (max-height: 414px) {
     .bobby-text {
         font-size: 10px;
     }
@@ -138,6 +141,6 @@
         height: 200px;
         max-width: 100%;
     }
-} */
+} 
 
 

@@ -10,6 +10,7 @@ const jwt = require('jsonwebtoken');
 const Teacher = require('../models/teacher')
 // const key = require('../config/keys.js')
 const config = require('config')
+const auth = require('../config/middleware/auth')
 
 
 
@@ -66,7 +67,7 @@ module.exports = function(app) {
 //   })
 // })
 
-app.get('/library', passport.authenticate('jwt', {session: false}))
+// app.get('/library', passport.authenticate('jwt', {session: false}))
 
 app.post("/api/teachers", function(req, res) { 
     password = req.body.password;
@@ -85,12 +86,14 @@ app.post("/api/teachers", function(req, res) {
                 city: req.body.city,
                 state: req.body.state,
                 password: password,
-                // avi: req.body.avi
+                name: req.body.name
               })
               .then(teacher => {
-
                 jwt.sign( 
-                  { email: teacher.email },
+                  // { id: teacher.id },                  
+                  // { id: teacher.id, email: teacher.email },                  
+                  { id: teacher.id, email: teacher.email, name: teacher.name },                         
+                  // { email: teacher.email },
                   config.get('JwtSecret'),
                   { expiresIn: 3600 },
                   (err, token) => {
@@ -125,28 +128,167 @@ app.post("/api/teachers", function(req, res) {
       //   // The user is not logged in, send back an empty object
       //   res.json({});
       // } else {
-      db.Teacher.findAll({})
+      db.Teacher.findAll({
+        include: [db.Feedback]
+      })
         .then(function(dbTeacher) {
           res.json(dbTeacher);
         });
       });
   
 
-      app.get("/api/teachers/:email", function(req, res) {
+      // app.post("/api/teachers/:id", function(req, res) {
+      //   db.Teacher.findOne({
+      //     where: {
+      //       email: req.params.email
+      //     }
+      //   })
+      //     .then(function(dbTeacher) {
+      //       res.json(dbTeacher);
+      //       // console.log(dbTeacher.password)
+      //     });
+      // });
+
+
+      app.get("/api/teachers/:id", function(req, res) {
+        // Here we add an "include" property to our options in our findOne query
+        // We set the value to an array of the models we want to include in a left outer join
+        // In this case, just db.Post
         db.Teacher.findOne({
           where: {
-            email: req.params.email
-          }
-        })
-          .then(function(dbTeacher) {
-            res.json(dbTeacher);
-            // console.log(dbTeacher.password)
-          });
+            id: req.params.id
+          },
+          include: [db.Feedback]
+        }).then(function(dbTeacher) {
+          res.json(dbTeacher);
+        });
       });
 
+
+  // Feedback 
+  // Feedback  
+  // Feedback  
+
+  app.get("/api/feedback", function(req, res) {
+    console.log(req.body)
+    const { note } = req.body
+    db.Feedback.findAll({})
+      .then(function(dbFeedback) {
+        res.json(dbFeedback);
+    });
+  });
+
+  app.get("/api/posts/:id", function(req, res) {
+    // Here we add an "include" property to our options in our findOne query
+    // We set the value to an array of the models we want to include in a left outer join
+    // In this case, just db.Author
+    db.Feedback.findOne({
+      where: {
+        id: req.params.id
+      },
+      include: [db.Teacher]
+    }).then(function(dbFeedback) {
+      res.json(dbFeedback);
+    });
+  });
+
+  // app.get("/api/feedback", function(req, res) {
+  //   var query = {};
+  //   console.log(req.body)
+  //   if (req.body.teacher_id) {
+  //     query.teacher_id = req.query.teacher_id;
+  //   }
+  //   // Here we add an "include" property to our options in our findAll query
+  //   // We set the value to an array of the models we want to include in a left outer join
+  //   // In this case, just db.Author
+  //   db.Feedback.findAll({
+  //     where: query,
+  //     include: [db.Teacher]
+  //   }).then(function(dbFeedback) {
+  //     res.json(dbFeedback);
+  //   });
+  // });
+
+    app.post("/api/feedback", function(req, res) {
+      console.log(req.body)
+      const { id, note } = req.body
+      db.Feedback.create({
+        TeacherId: id,
+        note: note
+      })
+        .then(function(dbFeedback) {
+          console.log(dbFeedback);
+          res.json(dbFeedback);
+      });
+    });
+
+      // PUT route for updating posts
+      app.put("/api/feedback", function(req, res) {
+        db.Post.update(
+          req.body,
+          {
+            where: {
+              TeacherId: req.body.id
+            }
+          }).then(function(dbFeedback) {
+          res.json(dbFeedback);
+        });
+      });
+      
+      
+
+  //
   // AUTH API // 
   // AUTH API // 
   // AUTH API // 
+
+  app.post("/api/login/", function(req, res) {
+    const { password, email } = req.body
+    // console.log(req.body)
+    db.Teacher.findOne({
+      where: {
+        email: email
+      }
+    })
+      .then(teacher => {
+        // console.log(teacher)
+        if (!teacher) {return res.send('empty')}
+        // if (!teacher) {return res.status(400).json({msg: 'Invalid Credentials'})
+
+        // console.log(teacher.password)
+        bcrypt.compare(password, teacher.password)
+          .then(isMatch => {
+            console.log(isMatch)
+            // if(!isMatch) return res.status(400).json({msg: 'Invalid Credentials'})
+            if(!isMatch) {return res.send('empty')}
+
+            jwt.sign( 
+              { id: teacher.id, email: teacher.email, name: teacher.name },                         
+              // { id: teacher.id },              
+              // { email: teacher.email },
+              config.get('JwtSecret'),
+              { expiresIn: 3600 },
+              (err, token) => {
+                if(err) throw err;
+                // localStorage.setItem('token', token)
+                // console.log(token)
+                res.json({
+                  token,
+                  teacher: {
+                    id: teacher.id,
+                    email: teacher.email
+                  }
+                })
+              }
+
+            )
+
+          })
+        // console.log(dbTeacher.password)
+      });
+  });
+
+
    app.get("/api/signup", function(req, res) {
     // console.log(req.user.avi);
     if (!req.user) {
@@ -163,16 +305,16 @@ app.post("/api/teachers", function(req, res) {
     }
   });
 
-  app.post('/api/login/', (req, res) => {
-    const user = {
-      id: 1,
-      username: 'troy',
-      email: 'troy@gmail.com'
-    }
-    jwt.sign({user: user}, 'secretkey', (err, token) => {
-      res.json({token: token})
-    });
-  })
+  // app.post('/api/login/', (req, res) => {
+  //   const user = {
+  //     id: 1,
+  //     username: 'troy',
+  //     email: 'troy@gmail.com'
+  //   }
+  //   jwt.sign({user: user}, 'secretkey', (err, token) => {
+  //     res.json({token: token})
+  //   });
+  // })
 
 
   // Route for logging user out
