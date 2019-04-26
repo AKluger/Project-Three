@@ -177,6 +177,7 @@ class SignUp extends Component {
                 <LoginBtn
                     disabled={!(this.state.email && this.state.password && this.state.school && this.state.city && this.state.state)}
                     onClick={this.handleFormSubmit}
+                    id="login-btn"
                 >
                     Sign-Up
                 </LoginBtn>

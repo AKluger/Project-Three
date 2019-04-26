@@ -1,17 +1,21 @@
 import React from 'react';
 import './feedback.css';
+import { Card, Col } from 'react-bootstrap';
 
 // maps comments for both search and saved pages, type of button decided in ternary on comment having mongo id or google id
-function BookCard(props) {
+function FeedbackCard(props) {
 
     return (
-        <div className="col-md-8 offset-md-2">
+        <>
+        <Col md={{ span: 8, offset: 2 }} className="text-center">
+        {/* <div className="col-md-8 offset-md-2"> */}
             {props.comments.map(comment => (
-                <div className="card mt-4" key={comment.id}> 
-                    <div className="card-body">
-                        <div className="d-flex justify-content-between">
-                            <h4 className="card-title">{comment.note}</h4>
-                            <div>
+                <Card style={{ width: '18rem' }} className="m-4" key={comment.id}> 
+                    <Card.Body>
+                        {/* <div className="d-flex justify-content-between"> */}
+                            {/* <Card.title>Comment left by: {comment.email} </Card.title> */}
+                            <Card.Text>{comment.note}</Card.Text>
+        
                                 {/* <a className="btn btn-beige mr-1 mt-1 shadow-none" href={comment.link} target="_blank" */}
                                     {/* rel="noopener noreferrer">View Book</a> */}
                                 {/* <button className={props.buttonClass}
@@ -19,14 +23,15 @@ function BookCard(props) {
                                     id={comment.id ? comment.id : comment.googleId}>
                                     {props.buttonText}
                                 </button> */}
-                                </div>
-                        </div>
+                         
+                        {/* </div> */}
 
-                    </div>
-                </div>
+                    </Card.Body>
+                </Card>
             ))}
-        </div>
+            </Col>
+        </>
     )
 }
 
-export default BookCard;
+export default FeedbackCard;
