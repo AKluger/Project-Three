@@ -5,6 +5,7 @@ import API from "../utils/API";
 import { TextArea } from "../components/LoginForm";
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
+import FeedbackCard from "../components/FeedbackCard/Feedback"
 import './style.css'
 
 class Educator extends Component {
@@ -13,7 +14,7 @@ class Educator extends Component {
     email: "",
     username: "",
     password: "",
-    books: [],
+    comments: [],
     feedback: "",
     isLoggedIn: true
   };
@@ -31,6 +32,16 @@ class Educator extends Component {
     }
   }
 
+  loadFeedback = () => {
+    console.log("getting feedback")
+    API.showFeedback()
+      .then(res =>
+          this.setState({
+            comments: res.data
+          })
+          )
+          .catch(err => console.log(err));
+  }
   //   clearForm = () => {
   //     // API.getUser()
   //     //   .then(res =>
@@ -73,7 +84,7 @@ class Educator extends Component {
           <Row>
             <Col md={{ span: 6, offset: 3 }} className="text-center">
               <h1>We Welcome your feedback!</h1>
-              <h3>Please leave your comments below to inform our team of how we may better design our product to tailor your needs.</h3>
+              <h3>Please leave your comments below to inform our team of how we may better design our product to suit your needs.</h3>
             </Col>
             <Col md={{ span: 6, offset: 3 }} className="text-center">
 
@@ -92,6 +103,20 @@ class Educator extends Component {
                   Submit Your Feedback
                 </Button>
               </Form>
+            </Col>
+            <Col md={{ span: 6, offset: 3 }} className="text-center">
+            {this.state.comments.length ? (
+              <FeedbackCard
+                comments={this.state.comments}
+                // buttonAction={this.deleteBook}
+                // buttonClass="btn mt-1 mr-1 shadow-none"
+                // buttonText="Delete Book"
+              />
+            ) : (<div className="col-md-8 offset-md-2 text-center feedback-section">
+              <h3>No Feedback Yet!</h3>
+            </div>
+              )}
+            
             </Col>
           </Row>
         </Container>

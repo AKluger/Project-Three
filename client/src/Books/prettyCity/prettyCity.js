@@ -40,7 +40,7 @@ function PrettyCity() {
     <div className="pages">
       <Nav />
       <PagesContainer >
-        <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
+        <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} showSwipeHint={true} height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
           {pages.map(page => (
             <article key={page.id}>
               <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>

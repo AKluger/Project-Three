@@ -34,13 +34,8 @@ class About extends React.Component {
         render() {
     
         return (
-<<<<<<< Updated upstream
-            <div>
-                <Nav status={this.state.isLoggedIn}/>
-=======
             <>
-                <Nav />
->>>>>>> Stashed changes
+                <Nav status={this.state.isLoggedIn}/>
 
                 <Container fluid className="p-0">
                     <Jumbotron id="about-header" />

@@ -108,3 +108,8 @@
  .headerText {
      font-size: 2rem;
  }
+
+ .feedback-section {
+    box-shadow: 5px 0 14px rgba(158, 54, 54, 0.2);
+    
+ }
