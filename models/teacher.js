@@ -24,7 +24,7 @@ module.exports = function(sequelize, DataTypes) {
         // type: DataTypes.STRING,
         type: Sequelize.STRING,
         // required: true
-        allowNull: false,
+        // allowNull: false,
   
       },
       name: {
