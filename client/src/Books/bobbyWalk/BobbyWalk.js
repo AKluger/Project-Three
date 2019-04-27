@@ -66,7 +66,6 @@ function BobbyWalk(){
                 <source src={page.src} type="audio/mp4" >
                 </source>
                 </audio>
-                <Button variant="outline-dark" onClick={handleButtonClick} className={page.cssClass}> Click here and turn page for Bobby  to <b>NOT</b> be that "Special Somebody"</Button>
                 
                   <div className="text-center bobby-text">{page.text.map(line=>(<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
                   <Row>
