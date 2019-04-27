@@ -2,8 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './style.css'
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom'
+import { Input, TextArea, LoginBtn } from "../LoginForm";
 
 
 const navstyle = {
@@ -86,46 +87,53 @@ export default class tempNav extends React.Component {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
-            {/* <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link> */}
-            <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
-            <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+            <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
+            {/* <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link> */}
+            {/* <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link> */}
             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
           </Nav>
           <Nav>
 
             <div className="glyph">
-
-              <NavDropdown title={<span className="navtxt logintab"><FontAwesomeIcon className="" icon="user" /> </span>} id="basic-nav-dropdown">
-                <NavDropdown.Item href="/signup"><span className="droptxt">Register</span></NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item>
-              </NavDropdown>
+                <Button
+                  href="/login"
+                  id="login-nav"
+                >
+                  Sign-In
+                </Button>
+                <Button
+                  href="/signup"
+                  id="signin-nav"
+                >
+                  Sign-Up
+                </Button>
             </div>
           </Nav>
 
         </Navbar.Collapse>
       </Navbar>
     ) : (
-    <Navbar className="navbarcol" style={navstyle} expand="sm">
+    <Navbar className="navbarcol" style={navstyle} expand="lg">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            {/* <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link> */}
+            <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
             <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
             <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
-            <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link>
+            {/* <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link> */}
             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
           </Nav>
           <Nav>
 
 
         <div className="glyph">
-          <NavDropdown  title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
-            <NavDropdown.Item onClick={this.tokenExists} href="/signup"><span className="droptxt">Logout</span></NavDropdown.Item>
-            <NavDropdown.Divider />
-            {/* <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item> */}
-          </NavDropdown>
+           <Button
+              href="/login"
+              id="logout-nav"
+            >
+              Logout
+            </Button>
           </div>
         </Nav>
      
