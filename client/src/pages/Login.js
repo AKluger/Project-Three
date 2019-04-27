@@ -168,7 +168,7 @@ class Login extends Component {
                     onClick={this.handleFormSubmit}
                     id="login-btn"
                 >
-                    Login
+                    Sign-In
                 </LoginBtn>
                 </Form>
             </Col>
