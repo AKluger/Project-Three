@@ -101,8 +101,8 @@ class Educator extends Component {
 
           <Row>
             <Col md={{ span: 6, offset: 3 }} className="text-center">
-              <h1>We Welcome your feedback!</h1>
-              <h3>Please leave your comments below to inform our team of how we may better design our product to suit your needs.</h3>
+              <h1 className="educator">We Welcome your feedback!</h1>
+              <h3 className="educator">Please leave your comments below to inform our team of how we may better design our product to suit your needs.</h3>
             </Col>
             <Col md={{ span: 6, offset: 3 }} className="text-center">
 
