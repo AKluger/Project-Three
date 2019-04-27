@@ -40,6 +40,10 @@
     
 }
 
+.margin{
+    margin-top: 5%;
+}
+
 .pc-one {
     height: 100px;
     z-index: 11;

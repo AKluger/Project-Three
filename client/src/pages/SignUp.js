@@ -24,8 +24,9 @@ class SignUp extends Component {
     state: "",
     password: "",
     redirect: false,
+    name: "",
     // isLoggedIn: false,
-    hash: ""
+    hash: "",
   };
 
   setRedirect = () => {
@@ -88,16 +89,17 @@ class SignUp extends Component {
     // if (this.state.email && this.state.password && this.state.school) {
     // if (API.newUser(this.state.email, this.state.password)) {
 
-      if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state) {
+      if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state && this.state.name) {
         API.saveTeacher({
           email: this.state.email,
           school: this.state.school,
           city: this.state.city,
           state: this.state.state,
+          name: this.state.name,
           password: this.state.password,
         })
         .then(res => localStorage.setItem('token', res.data.token))
-        .then(this.setState({email: "", school: "", password: "", state: "", city: ""}))
+        .then(this.setState({email: "", school: "", password: "", state: "", city: "", name: ""}))
         .then(setTimeout(() => {
           this.setState({
               redirect: true,
@@ -148,6 +150,12 @@ class SignUp extends Component {
                     placeholder="Password"
                     type="password"
                 />
+                  <Input
+                    value={this.state.name}
+                    onChange={this.handleInputChange}
+                    name="name"
+                    placeholder="Full Name"
+                />
                 <Input
                     value={this.state.school}
                     onChange={this.handleInputChange}
@@ -169,6 +177,7 @@ class SignUp extends Component {
                 <LoginBtn
                     disabled={!(this.state.email && this.state.password && this.state.school && this.state.city && this.state.state)}
                     onClick={this.handleFormSubmit}
+                    id="login-btn"
                 >
                     Sign-Up
                 </LoginBtn>

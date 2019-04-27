@@ -80,10 +80,10 @@ export default class tempNav extends React.Component {
       
     // const content = (!this.props.status || !localStorage.getItem('token')) ? (
       
-      <Navbar className="navbarcol" style={navstyle} expand="sm">
+      <Navbar className="navbarcol" style={navstyle} expand="lg">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse className="pr-5"id="basic-navbar-nav">
+        <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
             {/* <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link> */}
@@ -121,7 +121,7 @@ export default class tempNav extends React.Component {
 
 
         <div className="glyph">
-          <NavDropdown inline title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
+          <NavDropdown  title={<span className="navtxt"><b><FontAwesomeIcon className="" icon="user"/> </b><span className="break">|</span></span>} id="basic-nav-dropdown">
             <NavDropdown.Item onClick={this.tokenExists} href="/signup"><span className="droptxt">Logout</span></NavDropdown.Item>
             <NavDropdown.Divider />
             {/* <NavDropdown.Item href="/login"><span className="droptxt">Login</span></NavDropdown.Item> */}

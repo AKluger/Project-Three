@@ -10,14 +10,14 @@ export default {
   // getUser: function(id) {
   //   return axios.get("/api/teacher/" + id);
   // },
-  getUser: function(email) {
-    axios.get("/api/teachers/" + email);
+  getTeacher: function(userData) {
+    return axios.post("/api/login/", userData);
       // .then(res => {console.log(res.data)})
       // })
     },
 
   deserializeUser: function(password, hash) {
-    return bcrypt.compareSync(password, hash);
+    return bcrypt.compare(password, hash);
   },
   // Deletes the book with the given id
   deleteBook: function(id) {
@@ -26,6 +26,15 @@ export default {
   // Saves a book to the database
   saveTeacher: function(userData) {
     return axios.post("/api/teachers", userData);
+  },
+   // Saves a book to the database
+  saveFeedback: function(userData) {
+    return axios.post("/api/feedback/", userData);
+  },
+
+  // // Saves a book to the database
+  showFeedback: function(userData) {
+    return axios.get("/api/feedback/", userData);
   },
   logOutUser: function() {
     return axios.get("logout");

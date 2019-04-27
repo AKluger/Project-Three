@@ -24,20 +24,27 @@ class Login extends Component {
     state: "",
     password: "",
     redirect: false,
-    hash: ""
+    redo: false,
+    hash: "",
   };
 
+  componentWillMount() {
+    delete axios.defaults.headers.common['Authorization'];
+    localStorage.removeItem("token");
+  }
+
+ 
   setRedirect = () => {
     this.setState({
       redirect: true
     })
   }
 
-  renderRedirect = () => {
-    if (this.state.redirect) {
-      return <Redirect to='/Educator' />
-    }
-  }
+  // renderRedirect = () => {
+  //   if (this.state.redirect) {
+  //     return <Redirect to='/Educator' />
+  //   }
+  // }
 
 //   componentDidMount() {
 //     this.clearForm();
@@ -71,19 +78,29 @@ class Login extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state.school)
+    // console.log(this.state.school)
     // if (this.state.email && this.state.password && this.state.school) {
-    if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state) {
-      API.saveTeacher({
+    // if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state) {
+    if (this.state.email && this.state.password) {
+      API.getTeacher({
         email: this.state.email,
-        school: this.state.school,
-        city: this.state.city,
-        state: this.state.state,
         password: this.state.password,
       })
-      .then(this.setState({email: "", school: "", password: "", state: "", city: ""}))
-      .then(this.setState({redirect: true}))
+      .then(res => {
+        if(res.data==='empty') {
+          this.setState({redo: true})
+        }
+        localStorage.setItem('token', res.data.token)
+      })
+      .then(this.setState({email: "", password: ""}))
+      .then(setTimeout(() => {
+        this.setState({
+          redirect: true,
+        })
+      }, 2000)
+      )
       .catch(err => console.log(err));
+      // .then(this.setState({redirect: true}))
       // API.getUser(this.state.email)
       //  this.setState({email: "", school: "", password: "", state: "", city: ""})
       // // checking if password is valid
@@ -100,7 +117,11 @@ class Login extends Component {
   render() {
 
     if (this.state.redirect) {
-      return <Redirect to='/' />
+      return <Redirect to='/educator' />
+    }
+
+    if (this.state.redo) {
+      return window.location.reload()
     }
 
     return (
@@ -110,7 +131,7 @@ class Login extends Component {
             <Row>
             <Col md={{ span: 4, offset: 4 }} className="text-center pt-4">
             <span className="headerText mb-2"> Login </span>
-                <Form>
+                <Form className="signup-form">
                 <Input
                     value={this.state.email}
                     onChange={this.handleInputChange}
@@ -145,6 +166,7 @@ class Login extends Component {
                 <LoginBtn
                     disabled={!(this.state.email && this.state.password)}
                     onClick={this.handleFormSubmit}
+                    id="login-btn"
                 >
                     Login
                 </LoginBtn>

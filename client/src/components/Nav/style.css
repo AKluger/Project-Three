@@ -61,9 +61,12 @@ ul.navbar-nav:hover .dropdown-menu {
     font-family: 'Quicksand', sans-serif;
     color: rgb(36, 36, 214);
 }
-/* .logintab{
-    margin-right: 50px;
+#basic-navbar-nav {
+    padding-right: 90px;
 }
-.basic-nav-dropdown{
-    margin-right: 50px;
-}  */
+
+.dropdown-menu{
+    color: black;
+    background-color: #ffffff;
+     background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+}

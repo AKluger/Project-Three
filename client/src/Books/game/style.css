@@ -59,3 +59,33 @@
     top: 560px;
     right: 300px
 }
+
+/* ipad landscape */
+/* no scroll required */
+@media only screen and (max-height: 768px) {
+    .gameText {
+        font-size: 28px;
+    }
+    .imgs {
+        height: auto;
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .gameText {
+        font-size: 22px;
+    }
+}
+
+/* phone landscape */ 
+/* currently scroll required */
+@media only screen and (max-height: 414px) {
+    .gameText {
+        font-size: 18px;
+    }
+    .imgs {
+        height: 200px;
+        max-width: 100%;
+    }
+}

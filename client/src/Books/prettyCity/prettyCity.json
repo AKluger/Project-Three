@@ -2,7 +2,7 @@
     {
         "id": 0,
         "text": [
-            "Authored by Alex Kluger",
+            "Text & Illustration by Alex Kluger",
             "Copyright 2019"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/titlePage.jpg",
@@ -15,8 +15,8 @@
         "id": 1,
         "text": [
             "Our city was pretty,",
-            "The birds sang in the trees",
-            "The air was fresh but then..."
+            "The birds sang in the trees,",
+            "The air was fresh, but then..."
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_1.jpg",
         "cssClass": "pc-one",
@@ -30,7 +30,7 @@
     {
         "id": 2,
         "text": [
-            "SNEEZE!!!  A truck drove by and belched out smoke",
+            "SNEEZE!!!  A truck drove by and belched out smoke.",
             "We held our noses and thought we would choke!",
             "The driver saw us and gave us a frown,",
             "'Sorry folks but you live in filth town!'"
@@ -48,9 +48,9 @@
         "id": 3,
         "text": [
             "We looked around and suddenly saw,",
-            "Trash everywhere -- 'There’s a can there’s a straw!'",
+            "Trash everywhere -- 'There’s a can!  There’s a straw!'",
             "Mama said 'Wait!  Let’s pick that up'",
-            "If we want a pretty city We have to cleanup!'"
+            "If we want a pretty city we have to clean up!'"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_3.jpg",
         "cssClass": "pc-three",
@@ -63,9 +63,9 @@
     {
         "id": 4,
         "text": [
-            "'But there’s so much litter look at it all,",
-            "How will I gather it, I’m so small!?'",
-            "'Silly child' mama said 'you won’t do it alone, Everybody will help,",
+            "'But there’s so much litter.  Look at it all!",
+            "How will I gather it? I’m so small!'",
+            "'Silly child,' mama said, 'you won’t do it alone. Everybody will help,",
             "Just pick up the phone!'"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_4.jpg",
@@ -80,7 +80,7 @@
     {
         "id": 5,
         "text": [
-            "We called granny and Nanny and Frida and Troy,",
+            "We called Granny and Nanny and Frida and Troy,",
             "Ava and Ann and Jamie and Roy,",
             "Joey and Jayden, Amber and Anna,",
             "Asia and Dixon and Bobbi and Hannah."
@@ -98,7 +98,7 @@
         "id": 6,
         "text": [
             "We called all of our neighbors and one by one,",
-            "They came to help cleanup the streets and have fun!"
+            "They came to help clean up the streets and have fun!"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_6.jpg",
         "cssClass": "pc-six",
@@ -126,8 +126,8 @@
     {
         "id": 8,
         "text": [
-            "We grabbed Bumpers and tires,",
-            "And Diapers and wires,"
+            "We grabbed bumpers and tires,",
+            "And diapers and wires,"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_8.jpg",
         "cssClass": "pc-eight",
@@ -141,7 +141,7 @@
     {
         "id": 9,
         "text": [
-            "We cleaned the sidewalk.."
+            "We swept all the sidewalks..."
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_9.jpg",
         "cssClass": "pc-nine",
@@ -169,7 +169,7 @@
     {
         "id": 11,
         "text": [
-            "We walked to the park and polished the gates"
+            "We walked to the park and polished the gates."
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_18.jpg",
         "cssClass": "pc-eleven",
@@ -198,8 +198,8 @@
     {
         "id": 13,
         "text": [
-            "The man in the truck even picked up a broom,",
-            "We put trash in our bags til there was no more room!"
+            "The man in the truck even picked up a broom.",
+            "We put trash in our bags 'til there was no more room!"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_13.jpg",
         "cssClass": "pc-thirteen",
@@ -213,9 +213,9 @@
     {
         "id": 14,
         "text": [
-            "The whole town helped us out,",
-            "Me and Mama were proud,",
-            "We looked around at the people what a ginormous crowd!"
+            "The whole town helped us out.",
+            "Me and Mama were proud.",
+            "We looked around at the people-- what a ginormous crowd!"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_17.jpg",
         "cssClass": "pc-fourteen",

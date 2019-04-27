@@ -35,7 +35,8 @@
     {
         "id": 3,
         "text": [
-            "Candy wrappers go in the trash can"
+            "Candy wrappers go in the trash can",
+            "Hint: Click the bin to change it!"
         ],
         "imageLink": "https://monetthigpen.github.io/The/gameImages/game_3.jpg",
         "cssClass": "pc-three",
