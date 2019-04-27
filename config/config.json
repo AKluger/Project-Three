@@ -1,7 +1,7 @@
 {
     "development": {
       "username": "root",
-      "password": "back8987",
+      "password": "yourRootPassword",
       "database": "funko_db",
       "host": "localhost",
       "dialect": "mysql"
