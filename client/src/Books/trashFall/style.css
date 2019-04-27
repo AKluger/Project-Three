@@ -1,0 +1,92 @@
+.gameTrash2 {
+    height: 75px;
+    position: absolute;
+    top: 120px;
+    right: 300px;
+    visibility: hidden;  
+}
+.gameTrash3 {
+    height: 75px;
+    position: absolute;
+    top: 120px;
+    right: 500px;
+    visibility: hidden;  
+}
+.gameTrash4 {
+    height: 75px;
+    position: absolute;
+    top: 120px;
+    visibility: hidden;  
+    right: 700px;
+}
+.gameTrash5 {
+    height: 75px;
+    position: absolute;
+    top: 120px;
+    visibility: hidden;  
+    right: 900px;
+}
+.gameTrash6 {
+    height: 75px;
+    position: absolute;
+    top: 120px;
+    visibility: hidden;  
+    right: 1100px;
+}
+.gameBin2 {
+    height: 200px;
+    position: absolute;
+    top: 560px;
+    right: 300px;
+    z-index: 12;
+}
+.shake {
+    -webkit-animation: shake .5s .0125s;
+    animation: shake .5s .0125s
+}
+.scoreboard {
+    display: inline;
+    float: left;
+}
+
+@-webkit-keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    12.5%,
+    37.5%,
+    62.5%,
+    87.5% {
+        -webkit-transform: translate(-10px);
+        transform: translate(-10px)
+    }
+    25%,
+    50%,
+    75% {
+        -webkit-transform: translate(10px);
+        transform: translate(10px)
+    }
+}
+
+@keyframes shake {
+    0%,
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+    12.5%,
+    37.5%,
+    62.5%,
+    87.5% {
+        -webkit-transform: translate(-10px);
+        transform: translate(-10px)
+    }
+    25%,
+    50%,
+    75% {
+        -webkit-transform: translate(10px);
+        transform: translate(10px)
+    }
+}

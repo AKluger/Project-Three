@@ -31,8 +31,8 @@ function BobbyWalk(){
 
   const startReading = (oldPageIndex, direction) => {
     // setCount(count + 1)
-    // firstPage.current.load()
-    // firstPage.current.play()
+    firstPage.current.load()
+    firstPage.current.play()
     // Pages[0].src.load()
 //     pages[0].audio.play()
   }
@@ -85,7 +85,7 @@ function BobbyWalk(){
           <audio ref={firstPage}>
                 <source src={bookAudio[count]} type="audio/mp4" >
                 </source>
-            </audio>
+          </audio>
             {/* <audio ref={secondPage}>
                 <source src={second} type="audio/mp4" >
                 </source>
