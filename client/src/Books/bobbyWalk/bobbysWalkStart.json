@@ -9,7 +9,7 @@
         "imageLink": "https://github.com/monetthigpen/The/blob/master/Bobbys_walk/IMG_26.png?raw=true",
         "cssClass": "pc-one titlepage",
         "imageTitle":"cover",
-        "audio": "https://monetthigpen.github.io/The/audio/Closed-Hi-Hat-1.wav"
+        "audio": "https://monetthigpen.github.io/The/audio/pageOne.mp4"
     },
     {
         "id": 1,
@@ -20,7 +20,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_1.jpg",
         "cssClass": "pc-one",
-        "imageTitle":"Skyline"   
+        "imageTitle":"Skyline",
+        "audio": "https://monetthigpen.github.io/The/audio/pageTwo.mp4"
     },
     {
         "id": 2,
@@ -31,7 +32,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_2.jpg",
         "cssClass": "pc-one",
-        "imageTitle":"Mural"   
+        "imageTitle":"Mural",
+        "audio": "https://monetthigpen.github.io/The/audio/pageThree.mp4"  
     },
     {
         "id": 3,
