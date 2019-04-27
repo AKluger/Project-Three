@@ -50,7 +50,7 @@ class trashFall extends React.Component{
         console.log(rand)
         console.log(bin)
         console.log(random.getBoundingClientRect())
-        if(rand === bin) this.setState({makes: this.state.makes + 1})
+        if(rand === (bin+100)) this.setState({makes: this.state.makes + 1})
         else this.setState({misses: this.state.misses + 1}) 
       }, 700)
 
