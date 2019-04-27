@@ -21,34 +21,34 @@ const trans4 = (x, y) => `translate3d(${x / 3.5}px,${y / 3.5}px,0)`
 
 function TempLibrary() {
     const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
-    return(
+    return (
         <div className='container libmargin'>
-        <div className='row text-center'>
-            <div className='col-md-4'>
-            <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-            <Link to="/game">
-                <animated.img className='bookstyle' src='https://monetthigpen.github.io/The/trashPickupCover.jpg' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
-                {window.innerHeight < 768 ?  (<animated.img src={kid} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/>) : (<div/>)}
-            </Link>
+            <div className='row text-center'>
+                <div className='col-md-4'>
+                    <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+                        <Link to="/bobbysWalk">
+                            <animated.img className='bookstyle' src='https://github.com/monetthigpen/The/blob/master/Bobbys_walk/IMG_27.jpg?raw=true' alt='bobbys walk book cover' style={{ transform: props.xy.interpolate(trans1) }} />
+                            {/* <animated.img src={kid2} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/> */}
+                        </Link>
+                    </div>
+                </div>
+                <div className='col-md-4'>
+                    <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+                        <Link to="/prettybooks">
+                            <animated.img className='bookstyle' src='https://monetthigpen.github.io/The/prettyCover.JPG' alt=' pretty city book cover' style={{ transform: props.xy.interpolate(trans1) }} />
+                            {/* <animated.img src="https://www.wonderschool.com/images/school/badges/infanttoddler-lvl2.svg" className='age-style' alt='bins' style={{ transform: props.xy.interpolate(trans4) }}/>  */}
+                        </Link>
+                    </div>
+                </div>
+                <div className='col-md-4'>
+                    <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+                        <Link to="/trashfall">
+                            <animated.img className='bookstyle' src='https://monetthigpen.github.io/The/trashPickupCover.jpg' alt='book cover' style={{ transform: props.xy.interpolate(trans1) }} />
+                            {window.innerHeight < 768 ? (<animated.img src={kid} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }} />) : (<div />)}
+                        </Link>
+                    </div>
+                </div>
             </div>
-            </div>
-            <div className='col-md-4'>
-            <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-            <Link to="/bobbysWalk">
-                <animated.img className='bookstyle' src='https://github.com/monetthigpen/The/blob/master/Bobbys_walk/IMG_27.jpg?raw=true' alt= 'bobbys walk book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
-                {/* <animated.img src={kid2} className='kidstyle' alt='kids' style={{ transform: props.xy.interpolate(trans2) }}/> */}
-            </Link>
-            </div>
-            </div>
-            <div className='col-md-4'>
-            <div className="container" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-            <Link to="/prettybooks">
-                <animated.img className='bookstyle'  src='https://monetthigpen.github.io/The/prettyCover.JPG' alt=' pretty city book cover' style={{ transform: props.xy.interpolate(trans1) }}/>
-                {/* <animated.img src="https://www.wonderschool.com/images/school/badges/infanttoddler-lvl2.svg" className='age-style' alt='bins' style={{ transform: props.xy.interpolate(trans4) }}/>  */}
-            </Link>
-            </div>
-            </div>
-        </div>
         </div>
     )
 }

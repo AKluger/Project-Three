@@ -1,6 +1,8 @@
 .bookstyle {
     height: 300px;
     width: 200px;
+    box-shadow: 3px 3px #b89975, 10px 10px #ffffff, 15px 15px #b89975;
+    border-radius: 10px 5px 0px 10px;
 }
 .kidstyle {
     height: 100px;
