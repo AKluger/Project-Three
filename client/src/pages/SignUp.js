@@ -26,6 +26,7 @@ class SignUp extends Component {
     redirect: false,
     name: "",
     // isLoggedIn: false,
+    redo: "",
     hash: "",
   };
 
@@ -56,6 +57,8 @@ class SignUp extends Component {
   componentDidMount() {
 
   }
+
+  
 
 //   clearForm = () => {
 //     // API.getUser()
@@ -98,6 +101,12 @@ class SignUp extends Component {
           name: this.state.name,
           password: this.state.password,
         })
+        .then(res => {
+          if(res.data==='empty') {
+            this.setState({redo: true})
+          }
+          localStorage.setItem('token', res.data.token)
+        })
         .then(res => localStorage.setItem('token', res.data.token))
         .then(this.setState({email: "", school: "", password: "", state: "", city: "", name: ""}))
         .then(setTimeout(() => {
@@ -127,6 +136,10 @@ class SignUp extends Component {
 
     if (this.state.redirect) {
       return <Redirect to='/educator' />
+    }
+
+    if (this.state.redo) {
+      return window.location.reload()
     }
 
     return (
@@ -160,7 +173,7 @@ class SignUp extends Component {
                     value={this.state.school}
                     onChange={this.handleInputChange}
                     name="school"
-                    placeholder="School"
+                    placeholder="School (Optional)"
                 />
                 <Input
                     value={this.state.city}
