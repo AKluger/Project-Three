@@ -13,6 +13,7 @@ import About from './pages/About.js'
 import Nav from './components/Nav'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
+import trashFall from './Books/trashFall'
 import './App.css';
 import Login2 from "./pages/Login2";
 library.add(faUser)
@@ -29,6 +30,7 @@ class App extends Component {
         <Route exact path="/game" component={Game} />
         <Route exact path="/bobbysWalk" component={BobbyWalk} />
         <Route exact path="/prettybooks" component={PrettyCity} />
+        <Route exact path="/trashFall" component={trashFall} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/about" component={About} />
         <Route exact path="/signup" component={SignUp} />

@@ -9,6 +9,7 @@ p, h2, h5, .card-deck {
  .educator {
      /* background-image: url("./paper.jpg"); */
      max-height: 90vh;
+     font-family: 'Cabin', sans-serif;
  }
 
  /* educator jumbotron */
