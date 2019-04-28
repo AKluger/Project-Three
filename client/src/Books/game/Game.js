@@ -9,6 +9,7 @@ import trashBin from '../../components/tempLibrary/trashCan.png'
 import bubble from '../../components/tempLibrary/speech_bubble.png'
 import './style.css'
 
+
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 

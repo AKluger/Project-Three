@@ -4,8 +4,9 @@ import PagesContainer from "../../components/PagesContainer"
 import Draggable from 'react-draggable'
 import Pages from '../game/gameCity.json'
 import recycleBin from '../../components/tempLibrary/recycle2.png'
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Row, Col } from 'react-bootstrap';
 import './style.css'
+
 
 class trashFall extends React.Component{
   constructor(props) {
@@ -40,7 +41,7 @@ class trashFall extends React.Component{
     // makes img go back to the top of the screen
       setTimeout(() => {
         random.style.transform = "translate(0px, 0px)"
-      }, 1400)
+      }, 1600)
 
     // makes img invisible after they have fallen and get the x vaule both trash and bin
       setTimeout(() => {
@@ -50,10 +51,10 @@ class trashFall extends React.Component{
         console.log(rand)
         console.log(bin)
         console.log(random.getBoundingClientRect())
-        if(rand === (bin+100)) this.setState({makes: this.state.makes + 1})
+        if(rand === (bin + 100)) this.setState({makes: this.state.makes + 1})
         else this.setState({misses: this.state.misses + 1}) 
-      }, 700)
-
+      }, 800)
+      
   }
   check = () => {
     // let rand = Math.ceil(random.getBoundingClientRect().x/100)*100
@@ -80,26 +81,38 @@ class trashFall extends React.Component{
           <Nav/>
           <PagesContainer >
               <article>
-                <div className='page-image' >
-                  <img src={Pages[0].imageLink} alt={Pages[0].imageTitle} style={backgroundStyle} />
-                  <Card className='scoreboard'>
-                    <Card.Body>Your score: {this.state.makes}</Card.Body>
-                  </Card>
-                  <Card className='scoreboard'>
-                    <Card.Body>Your misses: {this.state.misses}</Card.Body>
-                  </Card>
-                  <Button className='scoreboard' variant="primary" size="lg" onClick={()=> setInterval(this.start, 3000)}>
-                    Start
-                  </Button>
-                  <Draggable axis="x" >
+                <Row className='page-image' >
+                  <Col>
+                    <img src={Pages[0].imageLink} alt={Pages[0].imageTitle} style={backgroundStyle} />
+                    <Draggable axis="x" >
                       <img src={recycleBin} alt='bin' ref={this.Bin} className='gameBin2' />
-                  </Draggable>
-                  <img src={Pages[0].trash} ref={this.trash1} alt='trash' className='gameTrash2' />
-                  <img src={Pages[0].trash} ref={this.trash2} alt='trash' className='gameTrash3' />
-                  <img src={Pages[0].trash} ref={this.trash3} alt='trash' className='gameTrash4' />
-                  <img src={Pages[0].trash} ref={this.trash4} alt='trash' className='gameTrash5' />
-                  <img src={Pages[0].trash} ref={this.trash5} alt='trash' className='gameTrash6' />   
-                </div>
+                    </Draggable>
+                    <img src={Pages[0].trash} ref={this.trash1} alt='trash' className='gameTrash2' />
+                    <img src={Pages[0].trash} ref={this.trash2} alt='trash' className='gameTrash3' />
+                    <img src={Pages[0].trash} ref={this.trash3} alt='trash' className='gameTrash4' />
+                    <img src={Pages[0].trash} ref={this.trash4} alt='trash' className='gameTrash5' />
+                    <img src={Pages[0].trash} ref={this.trash5} alt='trash' className='gameTrash6' /> 
+                  </Col>
+                  <Col id="scorestyle">
+                    <Row>
+                      <Card className='scoreboard'>
+                        <Card.Body className="scorecard"><b>Score:</b> {this.state.makes}</Card.Body>
+                      </Card>
+                    </Row>
+                    <Row className="gamecol">
+                      <Card className='scoreboard'>
+                        <Card.Body className="scorecard"><b>Missed:</b> {this.state.misses}</Card.Body>
+                      </Card>
+                    </Row>
+                    <Row className="gamecol">
+                      <Button className='scoreboard' id="startbutton" variant="primary" size="lg" onClick={()=> setInterval(this.start, 3000)}>
+                        Start
+                      </Button>
+                    </Row>
+                  </Col>
+                  
+                    
+                </Row>
               </article> 
             {/* onClick={this.pickBin2} */}
           </PagesContainer>

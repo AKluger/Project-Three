@@ -2,14 +2,14 @@
     height: 75px;
     position: absolute;
     top: 120px;
-    right: 300px;
+    right: 100px;
     visibility: hidden;  
 }
 .gameTrash3 {
     height: 75px;
     position: absolute;
     top: 120px;
-    right: 500px;
+    right: 200px;
     visibility: hidden;  
 }
 .gameTrash4 {
@@ -17,21 +17,21 @@
     position: absolute;
     top: 120px;
     visibility: hidden;  
-    right: 700px;
+    right: 300px;
 }
 .gameTrash5 {
     height: 75px;
     position: absolute;
     top: 120px;
     visibility: hidden;  
-    right: 900px;
+    right: 400px;
 }
 .gameTrash6 {
     height: 75px;
     position: absolute;
     top: 120px;
     visibility: hidden;  
-    right: 1100px;
+    right: 500px;
 }
 .gameBin2 {
     height: 200px;
@@ -89,4 +89,21 @@
         -webkit-transform: translate(10px);
         transform: translate(10px)
     }
+}
+#scorestyle{
+    margin-top: 3%;
+}
+.gamecol{
+    margin-bottom: 2px;
+    margin-top:2px;
+}
+.scorecard{
+    background-color: #ffffff;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    color: rgb(36, 36, 214);
+    font-family: 'Cabin', sans-serif;
+    font-size: 25px;
+}
+#startbutton{
+    font-size: 30px;
 }
