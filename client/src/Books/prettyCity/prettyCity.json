@@ -2,12 +2,13 @@
     {
         "id": 0,
         "text": [
-            "Text & Illustration by Alex Kluger",
+            "Text & Artwork by Alex Kluger",
             "Copyright 2019"
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/titlePage.jpg",
         "cssClass": "pc-0",
-        "imageTitle": "title"
+        "imageTitle": "title",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-1.m4a"
      
     },
     
@@ -21,7 +22,7 @@
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_1.jpg",
         "cssClass": "pc-one",
         "imageTitle": "stroll",
-        "trashbin": "https://monetthigpen.github.io/The/PrettyCityImgs/trash2.jpg"
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-1.m4a"
     },
     {
         "id": 2,
@@ -34,7 +35,7 @@
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_2.jpg",
         "cssClass": "pc-two",
         "imageTitle": "truck",
-        "trash": "https://monetthigpen.github.io/The/sodaCan.png"
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-1.m4a"
     },
     {
         "id": 3,
@@ -46,7 +47,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_3.jpg",
         "cssClass": "pc-three",
-        "imageTitle": "dirty-block"
+        "imageTitle": "dirty-block",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-2.m4a"
     },
     {
         "id": 4,
@@ -58,7 +60,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_4.jpg",
         "cssClass": "pc-four",
-        "imageTitle": "bin-overflow"
+        "imageTitle": "bin-overflow",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-3.m4a"
        
     },
     {
@@ -72,7 +75,7 @@
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_5.jpg",
         "cssClass": "pc-five",
         "imageTitle": "phone",
-        "trash": "https://monetthigpen.github.io/The/glassBottle.png"
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-4.m4a"
     },
     {
         "id": 6,
@@ -82,7 +85,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_6.jpg",
         "cssClass": "pc-six",
-        "imageTitle": "team"
+        "imageTitle": "team",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-5.m4a"
     },
     {
         "id": 7,
@@ -92,7 +96,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_7.jpg",
         "cssClass": "pc-seven",
-        "imageTitle": "litter"
+        "imageTitle": "litter",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-6.m4a"
     },
     {
         "id": 8,
@@ -102,7 +107,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_8.jpg",
         "cssClass": "pc-eight",
-        "imageTitle": "tires"
+        "imageTitle": "tires",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-7.m4a"
     },
     {
         "id": 9,
@@ -111,7 +117,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_9.jpg",
         "cssClass": "pc-nine",
-        "imageTitle": "sweeping"
+        "imageTitle": "sweeping",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-8.m4a"
     },
     {
         "id": 10,
@@ -120,7 +127,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_10.jpg",
         "cssClass": "pc-ten",
-        "imageTitle": "sewer-grate"
+        "imageTitle": "sewer-grate",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-9.m4a"
     },
     {
         "id": 11,
@@ -129,7 +137,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_18.jpg",
         "cssClass": "pc-eleven",
-        "imageTitle": "park-or-museum"
+        "imageTitle": "park-or-museum",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-10.m4a"
     },
     {
         "id": 12,
@@ -139,7 +148,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_12.jpg",
         "cssClass": "pc-twelve",
-        "imageTitle": "otters"
+        "imageTitle": "otters",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-11.m4a"
     },
     {
         "id": 13,
@@ -149,7 +159,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_13.jpg",
         "cssClass": "pc-thirteen",
-        "imageTitle": "bagged-trash-sweeping"
+        "imageTitle": "bagged-trash-sweeping",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-12.m4a"
     },
     {
         "id": 14,
@@ -160,7 +171,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_17.jpg",
         "cssClass": "pc-fourteen",
-        "imageTitle": "happy-crowd"
+        "imageTitle": "happy-crowd",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-13.m4a"
  
     },
     {
@@ -171,7 +183,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_14.jpg",
         "cssClass": "pc-fifteen",
-        "imageTitle": "smiling-faces"
+        "imageTitle": "smiling-faces",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-14.m4a"
 
     },
     {
@@ -184,7 +197,8 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/IMG_16.jpg",
         "cssClass": "pc-sixteen",
-        "imageTitle": "nightCity or bedroom"
+        "imageTitle": "nightCity or bedroom",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-15.m4a"
     },
     {
         "id": 17,
@@ -193,6 +207,7 @@
         ],
         "imageLink": "https://monetthigpen.github.io/The/PrettyCityImgs/endPage.jpg",
         "cssClass": "pc-seventeen",
-        "imageTitle": "city-at-night"
+        "imageTitle": "city-at-night",
+        "audioLink": "https://monetthigpen.github.io/The/pretty_city_audio/pc-16.m4a"
     }
 ]

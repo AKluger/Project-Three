@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { useSpring, animated } from 'react-spring'
 import Nav from '../../components/Nav';
 import PagesContainer from "../../components/PagesContainer";
-import {Container, Image} from "react-bootstrap";
+import {Container, Image, Modal} from "react-bootstrap";
+import AudioModal from '../../components/AudioModal';
 import Pages from './prettyCity.json';
 import FlipPage from "react-flip-page";
 import './prettyCity.css'
@@ -13,8 +14,11 @@ const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 function PrettyCity() {
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   const [pages] = useState(Pages);
+  let [narration, setAudio] = useState(false);
+  const firstPage = useRef(null)
 
   const pageColor = 'linear-gradient(344deg, rgba(255,255,255,1) 0%, rgba(241,241,255,1) 56%, rgba(242,242,239,1) 100%)';
+  
   const bookStyle = {
     position: 'relative',
     alignItems: 'flex-end',
@@ -22,25 +26,31 @@ function PrettyCity() {
     height: '100%',
     width: '100%',
     marginBottom: '93px',
-  };
+  }; 
 
-  const startReading = (oldPageIndex, direction) => {
-    // setCount(count + 1)
-    // firstPage.current.load()
-    // firstPage.current.play()
-    // Pages[0].src.load()
-//     pages[0].audio.play()
+  const toggleAudio = e => {
+    console.log(e) 
+    setAudio(e)
   }
-  
+
+  const startReading = () => {
+    if (narration) {
+    firstPage.current.load()
+    firstPage.current.play()
+  }
+  else{return}
+}
+
   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9;
-  let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1.11;
+  let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1.2;
   let key = 0;
 
   return (
     <div className="pages">
       <Nav />
+      <AudioModal audio={toggleAudio}/>
       <PagesContainer >
-        <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} showSwipeHint={true} height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
+        <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} showSwipeHint={true} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
           {pages.map(page => (
             <article key={page.id}>
               <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
@@ -49,6 +59,10 @@ function PrettyCity() {
               <div className="text-center pretty-text pt-2">
               {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}
               </div>
+              <audio ref={firstPage}>
+                <source src={page.audioLink} type="audio/mp4" >
+                </source>
+                </audio>
             </article>
           ))}
         </FlipPage>
