@@ -38,14 +38,10 @@
  @media only screen and (max-width: 640px)   {
 
     .bookstyle {
-        height: 200px;
-        width: 150px;
-        padding: 3%;
-        
-    }
-
-    //not working
-    .kidstyle {
-        /* z-index: -1000; */
+        height: 175px;
+        width: 125px;
+        margin-top: 5%;
+        box-shadow: 3px 3px #b89975, 7px 7px #ffffff, 10px 10px #b89975;
+        border-radius: 10px 5px 0px 10px; 
     }
 } 

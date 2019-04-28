@@ -12,6 +12,9 @@ import { Input, TextArea, LoginBtn } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
 
+
+
+
 class Login extends Component {
   state = {
     user: [],
@@ -62,8 +65,7 @@ class Login extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    // if (this.state.email && this.state.password && this.state.school) {
-    // if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state) {
+
     if (this.state.email && this.state.password) {
       API.getTeacher({
         email: this.state.email,
@@ -82,12 +84,13 @@ class Login extends Component {
           })
         }, 2000)
         )
-        .catch(this.handleLoginErr());
+        .catch(
+          this.handleLoginErr());
     }
   };
 
   render() {
-
+    console.log(this.state.redirect)
     if (this.state.redirect) {
       return <Redirect to='/educator' />
     }

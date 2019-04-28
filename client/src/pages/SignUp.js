@@ -57,23 +57,7 @@ class SignUp extends Component {
   componentDidMount() {
 
   }
-
   
-
-//   clearForm = () => {
-//     // API.getUser()
-//     //   .then(res =>
-//         this.setState({email: "", username: "", password: ""})
-//     //   )
-//     //   .catch(err => console.log(err));
-//   };
-
-  // deleteBook = id => {
-  //   API.deleteBook(id)
-  //     .then(res => this.loadBooks())
-  //     .catch(err => console.log(err));
-  // };
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
