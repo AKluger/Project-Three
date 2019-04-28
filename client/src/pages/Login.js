@@ -1,19 +1,12 @@
 import React, { Component } from "react";
-
 import './style.css'
 import { Button, Col, Container, Row, Form, Text } from 'react-bootstrap';
-// import LoginBtn from "../components/LoginBtn";
 import Nav from "../components/Nav";
-import {withErrorHandling, DivWithErrorHandling} from "../components/ErrorDiv/ErrorDiv.js";
+import { DivWithErrorHandling } from "../components/ErrorDiv/ErrorDiv.js";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-// import { Col, Row, Container } from "../components/Grid";
 import { Input, TextArea, LoginBtn } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
-
-
-
 
 class Login extends Component {
   state = {
@@ -24,7 +17,6 @@ class Login extends Component {
     state: "",
     password: "",
     redirect: false,
-    redo: false,
     hash: "",
     showError: false
   };
@@ -34,14 +26,11 @@ class Login extends Component {
     localStorage.removeItem("token");
   }
 
-
   setRedirect = () => {
     this.setState({
       redirect: true
     })
   }
-
-  
 
   // looking to trigger alert if formsubmit fails
   handleLoginErr(err) {
@@ -50,18 +39,12 @@ class Login extends Component {
     })
   }
 
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
-
-  // async getUser (email) {
-  //   const res = await axios('/api/teachers/'+email)
-  //   return await res.send(res.data)
-  // }
 
   handleFormSubmit = event => {
     event.preventDefault();
@@ -73,31 +56,26 @@ class Login extends Component {
       })
         .then(res => {
           if (res.data === 'empty') {
-            this.setState({ redo: true })
+            this.setState({ redirect: false })
           }
-          localStorage.setItem('token', res.data.token)
+
+          else {
+            localStorage.setItem('token', res.data.token)
+            this.setState({ redirect: true })
+          }
         })
         .then(this.setState({ email: "", password: "" }))
-        .then(setTimeout(() => {
-          this.setState({
-            redirect: true,
-          })
-        }, 2000)
-        )
         .catch(
           this.handleLoginErr());
     }
   };
+
 
   render() {
     console.log(this.state.redirect)
     if (this.state.redirect) {
       return <Redirect to='/educator' />
     }
-
-    // if (this.state.redo) {
-    //   return window.location.reload()
-    // }
 
     return (
       <DivWithErrorHandling showError={this.state.showError}>

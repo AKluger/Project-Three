@@ -14,7 +14,7 @@ import './prettyCity.css'
 function PrettyCity() {
   // const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   const [pages] = useState(Pages);
-  const [pageNumber, setPage] = useState(0);
+  let [pageNumber, setPageNumber] = useState(0);
   let [narration, setAudio] = useState(false);
   const firstPage = useRef(null);
 
@@ -36,9 +36,12 @@ function PrettyCity() {
 
   const startReading = () => {
 
-    if (narration) {
+    if (narration && pageNumber<16) {
+      pageNumber++
+      setPageNumber(pageNumber)
     firstPage.current.load()
     firstPage.current.play()
+    
   }
   else{return}
 }

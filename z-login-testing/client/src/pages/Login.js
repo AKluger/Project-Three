@@ -1,14 +1,8 @@
 import React, { Component } from "react";
-
 import './style.css'
 import {Button, Col, Container, Row, Jumbotron, Form, Text} from 'react-bootstrap';
-// import LoginBtn from "../components/LoginBtn";
-// import Jumbotron from "../components/Jumbotron";
 import Nav from "../components/Nav";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-// import { Col, Row, Container } from "../components/Grid";
-// import { List, ListItem } from "../components/List";
 import { Input, TextArea, LoginBtn } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
@@ -39,35 +33,12 @@ class Login extends Component {
     }
   }
 
-//   componentDidMount() {
-//     this.clearForm();
-//   }
-
-//   clearForm = () => {
-//     // API.getUser()
-//     //   .then(res =>
-//         this.setState({email: "", username: "", password: ""})
-//     //   )
-//     //   .catch(err => console.log(err));
-//   };
-
-  // deleteBook = id => {
-  //   API.deleteBook(id)
-  //     .then(res => this.loadBooks())
-  //     .catch(err => console.log(err));
-  // };
-
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
       [name]: value
     });
   };
-
-  // async getUser (email) {
-  //   const res = await axios('/api/teachers/'+email)
-  //   return await res.send(res.data)
-  // }
 
   handleFormSubmit = event => {
     event.preventDefault();

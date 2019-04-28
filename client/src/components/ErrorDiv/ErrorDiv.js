@@ -5,7 +5,7 @@ import React from "react";
 export const withErrorHandling = WrappedComponent => ({ showError, children }) => {
     return (
       <WrappedComponent>
-        {showError && <div className="error-message">Oops! Something went wrong!</div>}
+        {showError && <div className="error-message">Invalid Credentials.</div>}
         {children}
       </WrappedComponent>
     );
