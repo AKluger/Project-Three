@@ -88,11 +88,10 @@ class SignUp extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state.school)
     // if (this.state.email && this.state.password && this.state.school) {
     // if (API.newUser(this.state.email, this.state.password)) {
 
-      if (this.state.email && this.state.password && this.state.school && this.state.city && this.state.state && this.state.name) {
+      if (this.state.email && this.state.password && this.state.city && this.state.state && this.state.name) {
         API.saveTeacher({
           email: this.state.email,
           school: this.state.school,
@@ -188,7 +187,7 @@ class SignUp extends Component {
                     placeholder="State"
                 />
                 <LoginBtn
-                    disabled={!(this.state.email && this.state.password && this.state.school && this.state.city && this.state.state)}
+                    disabled={!(this.state.email && this.state.password && this.state.city && this.state.state)}
                     onClick={this.handleFormSubmit}
                     id="login-btn"
                 >

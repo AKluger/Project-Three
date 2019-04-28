@@ -16,7 +16,6 @@ class Educator extends Component {
     id: "",
     name: "",
     // username: "",
-    // password: "",
     comments: [],
     feedback: "",
     isLoggedIn: true
@@ -55,13 +54,6 @@ class Educator extends Component {
       )
       .catch(err => console.log(err));
   }
-  //   clearForm = () => {
-  //     // API.getUser()
-  //     //   .then(res =>
-  //         this.setState({email: "", username: "", password: ""})
-  //     //   )
-  //     //   .catch(err => console.log(err));
-  //   };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -116,7 +108,7 @@ class Educator extends Component {
                 </Form.Group>
                 <Button
                   id="form-button" size="lg"
-                  // disabled={!(this.state.email && this.state.password)}
+                  // disabled={!(this.state.feedback.length > 900)}
                   onClick={this.handleFormSubmit}
                 >
                   Submit Your Feedback
@@ -127,9 +119,6 @@ class Educator extends Component {
             {this.state.comments.length ? (
               <FeedbackCard className="m-3"
                 comments={this.state.comments}
-              // buttonAction={this.deleteBook}
-              // buttonClass="btn mt-1 mr-1 shadow-none"
-              // buttonText="Delete Book"
               />
             ) : (<div className="col-md-8 offset-md-2 text-center feedback-section mb-4">
               <h3>No Feedback Yet!</h3>

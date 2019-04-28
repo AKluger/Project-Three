@@ -50,7 +50,7 @@ module.exports = function(sequelize, DataTypes) {
       },
       feedback: {
         // type: DataTypes.STRING,
-        type: Sequelize.STRING,
+        type: Sequelize.TEXT,
         // required: true
         // allowNull: false,
   

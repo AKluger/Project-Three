@@ -126,3 +126,9 @@ p, h2, h5, .card-deck {
  .signup-form {
     font-family: 'Cabin', sans-serif;
  }
+
+ .error-message {
+     color: black;
+     background-color: rgb(214, 57, 57);
+     font-family: 'Cabin', sans-serif;
+ };
