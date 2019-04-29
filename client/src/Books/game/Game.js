@@ -22,20 +22,16 @@ function Book(){
   let trash = ""
 
   const pickCharacter = e => {
-    console.log(e) 
     setKid(kid = e)
   }
   const pickBin = e => {
-    console.log("clicked") 
     setBin(trashBin)
     if(myBin === trashBin){setBin(recycleBin)} 
     pages[score].recycle = !pages[score].recycle
-    console.log(pages[score].recycle)
   }
   const cleanUp = e => {
     if(score < 7 && pages[score].recycle === true){
     trash = e.target.style
-    console.log(score)
     trash.visibility = "hidden"
     // get code to shake can   
     setTimeout(turnPage, 3000 )

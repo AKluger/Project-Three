@@ -19,22 +19,17 @@ function BobbyWalk(){
   const [pages, setPages] = useState([...Pages, ...PosPages])
   const [count, setCount] = useState(-1)
   const firstPage = useRef(null)
-  // const secondPage = useRef(null)
-  // const thirdPage = useRef(null)
-  console.log(pages)
 
   const handleButtonClick = event => {
     event.preventDefault()
-    console.table(negPages)
     setPages(negPages)
   }
 
   const startReading = (oldPageIndex, direction) => {
-    // setCount(count + 1)
+   
     firstPage.current.load()
     firstPage.current.play()
-    // Pages[0].src.load()
-//     pages[0].audio.play()
+    
   }
   
   const bookStyle = {
@@ -44,7 +39,7 @@ function BobbyWalk(){
     width: '100%',
     height: '100%'
   }
-  // useEffect(setCount(count + 1))
+  
   //  button onclick bad path updates/replaces state with neg otherwise continue...
 
   let bookAudio = [ first, second, third ]

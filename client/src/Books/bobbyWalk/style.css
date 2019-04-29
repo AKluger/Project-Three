@@ -2,12 +2,6 @@
     position: relative;
     
 }
-/* .pages{
-    margin-top: 7%;
-} */
-/* .page-image {
-
-} */
 .margin{
     margin-top: 5%;
 }
@@ -29,11 +23,6 @@
     pointer-events: none;
     color: black;
     font-family: 'Baumans', cursive; 
-    /* height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 100px;
-    top: 120px; */
 }   
 
 
@@ -41,22 +30,7 @@
     z-index: 100;
     opacity: 1;
     pointer-events: auto;
-    /* display: block;
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px; */
 }
-
-/* .pc-fourteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-} */
-
 .pc-fifteen {
     height: 100px;
     z-index: 11;
@@ -72,23 +46,10 @@
     right: 30px;
     top: 120px;
 }
-/* .theEndStyle{
-    align-Items: 'flex-end';
-    background-Color: '#000';
-    color: '#fffff';
-    display: 'flex';
-    justify-Content: 'center';
-    padding: 5%;
-    width: 200px;
-    height: 300px;
-} */
 .imgsb{
     height: auto;
     width:100%;
 }
-/* .img11{
-    height: 400px;
-} */
 .titlepage{
     height:300px;
 }
@@ -101,36 +62,6 @@
         font-size: 34px;
     }
 } 
-
-/* @media only screen and (max-height: 960px) {
-    .bobby-text {
-        font-size: 21px;
-    }
-    .imgsb {
-        max-height: 90%;
-        max-width: 100%;
-    }
-} */
-
-
-/* ipad landscape */
-/* no scroll required */
-/* @media only screen and (max-height: 768px) {
-    .bobby-text {
-        font-size: 18px;
-    }
-    .imgsb {
-        height: auto;
-        max-width: 100%;
-    }
-} */
-
-/* @media only screen and (max-width: 640px) {
-    .bobby-text {
-        font-size: 15px;
-    }
-} */
-
 /* phone landscape */ 
 /* currently scroll required */
  @media only screen and (max-height: 414px) {
