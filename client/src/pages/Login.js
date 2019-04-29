@@ -57,6 +57,7 @@ class Login extends Component {
         .then(res => {
           if (res.data === 'empty') {
             this.setState({ redirect: false })
+            this.handleLoginErr()
           }
 
           else {
@@ -65,8 +66,8 @@ class Login extends Component {
           }
         })
         .then(this.setState({ email: "", password: "" }))
-        .catch(
-          this.handleLoginErr());
+        // .catch(
+        //   this.handleLoginErr());
     }
   };
 
