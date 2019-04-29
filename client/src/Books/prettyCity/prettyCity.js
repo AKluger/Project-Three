@@ -59,8 +59,10 @@ function PrettyCity() {
         <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
           {pages.map(page => (
             <article key={page.id}>
-              <div className='page-image'>
-                <Image src={page.imageLink} alt={page.imageTitle} className='main imgs' />
+              <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+                <Image src={page.imageLink} alt={page.imageTitle} className='main imgs' key={key++} />
+                <span className='leftArrows'></span><i className="arrow left"></i>
+                <span className='rightArrows'></span><i className="arrow right"></i>
               </div>
               <div className="text-center pretty-text pt-2">
                 {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}

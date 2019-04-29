@@ -225,3 +225,54 @@
         max-width: 100%;
     }
 }
+
+i,
+.left {
+    position: relative;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    bottom: 315px;
+    left: -30px;
+}
+
+i,
+.right {
+    position: relative;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    bottom: 315px;
+    left: 465px;
+}
+  
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.leftArrows {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  bottom: 300px;
+}
+.rightArrows {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  bottom: 300px;
+  left: 500px;
+}
