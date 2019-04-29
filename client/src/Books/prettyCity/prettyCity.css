@@ -1,28 +1,3 @@
-/* .pretty-line {
-    font-size: 40px;
-    color: black;
-    font-family: 'Cabin', sans-serif;
-    position: relative;
-    background-color: #ffffff;
-    opacity: 0.5;
-    
-} */
-
-/* .desk{
-    background-image: url("https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    overflow: auto;
-} */
-
-.pages {
-    /* overflow: hidden; */
-    /* height: 100%;
-    width: 100%; */
-}
-
 .page-container {
     /* padding-top: 93px; */
     height: 100vh;
@@ -234,7 +209,7 @@ i,
     display: inline-block;
     padding: 7px;
     bottom: 315px;
-    left: -30px;
+    left: -4%;
 }
 
 i,
@@ -245,7 +220,7 @@ i,
     display: inline-block;
     padding: 7px;
     bottom: 315px;
-    left: 710px;
+    left: 82%;
 }
   
 .pcLeft {
@@ -274,5 +249,5 @@ i,
   border-radius: 50%;
   display: inline-block;
   bottom: 300px;
-  left: 744px;
+  left: 86%;
 }
