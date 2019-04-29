@@ -2,7 +2,7 @@ import React from 'react'
 import { Modal, Button } from 'react-bootstrap';
 
 
-class instructions extends React.Component {
+class Instructions extends React.Component {
     constructor(props, context) {
       super(props, context);
   
@@ -27,15 +27,15 @@ class instructions extends React.Component {
         <>
           <Modal show={this.state.show} onHide={this.handleClose}>
             <Modal.Header closeButton>
-              <Modal.Title>Modal heading</Modal.Title>
+              <Modal.Title>Game instructions</Modal.Title>
             </Modal.Header>
-            <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+            <Modal.Body>Recyclable items are all around us and around our communities.  In this game they are literally 
+                falling from the sky.  Catch 20 cans in your recycling bin to clean up the community.  Press the start button
+                on the right to start the game.
+            </Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={this.handleClose}>
-                Close
-              </Button>
               <Button variant="primary" onClick={this.handleClose}>
-                Save Changes
+                Play
               </Button>
             </Modal.Footer>
           </Modal>
@@ -44,4 +44,4 @@ class instructions extends React.Component {
     }
 }
   
-export default instructions
+export default Instructions

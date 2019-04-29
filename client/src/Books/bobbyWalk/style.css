@@ -144,7 +144,7 @@
 } 
 
 i,
-.left {
+.bwLeft {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
@@ -155,17 +155,17 @@ i,
 }
 
 i,
-.right {
+.bwRight {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 7px;
     bottom: 245px;
-    left: 465px;
+    left: 708px;
 }
 
-.leftArrows {
+.bwLeftArrows {
   position: relative;
   height: 50px;
   width: 50px;
@@ -174,7 +174,7 @@ i,
   display: inline-block;
   bottom: 230px;
 }
-.rightArrows {
+.bwRightArrows {
   position: relative;
   height: 50px;
   width: 50px;
@@ -182,14 +182,14 @@ i,
   border-radius: 50%;
   display: inline-block;
   bottom: 230px;
-  left: 500px;
+  left: 744px;
 }
   
-.left {
+.bwLeft {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
   }
-.right {
+.bwRight {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }

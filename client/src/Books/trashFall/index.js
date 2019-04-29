@@ -4,14 +4,17 @@ import PagesContainer from "../../components/PagesContainer"
 import Draggable from 'react-draggable'
 import Pages from '../game/gameCity.json'
 import recycleBin from '../../components/tempLibrary/recycle2.png'
-import { Card, Button, Row, Col } from 'react-bootstrap';
-import Instructions from './modal'
+import { Card, Button, Row, Col } from 'react-bootstrap'
+import Instructions from './startModal'
+import Winning from './winModal'
 import './style.css'
 
 
 class trashFall extends React.Component{
   constructor(props) {
     super(props)
+    this.congrats = React.createRef()
+    this.startGame = React.createRef()
     this.trash1 = React.createRef()
     this.trash2 = React.createRef()
     this.trash3 = React.createRef()
@@ -27,6 +30,7 @@ class trashFall extends React.Component{
   }
 
   start = e => {  
+  
     // array of recyclable imgs 
       const fallingSky = [ this.trash1.current, this.trash2.current, 
         this.trash3.current, this.trash4.current, this.trash5.current ]
@@ -49,38 +53,45 @@ class trashFall extends React.Component{
         random.style.visibility = "hidden" 
         let rand = Math.ceil(random.getBoundingClientRect().x/100)*100
         let bin = Math.ceil(this.Bin.current.getBoundingClientRect().x/100)*100
-        console.log(rand)
-        console.log(bin)
-        console.log(random.getBoundingClientRect())
+        // console.log(rand)
+        // console.log(bin)
+        // console.log(random.getBoundingClientRect())
         if(rand === (bin + 100)) this.setState({makes: this.state.makes + 1})
         else this.setState({misses: this.state.misses + 1}) 
       }, 800)
-      
-  }
-  check = () => {
-    // let rand = Math.ceil(random.getBoundingClientRect().x/100)*100
-    let bin = Math.ceil(this.Bin.current.getBoundingClientRect().x/100)*100
-    // console.log(rand)
-    console.log(bin)
+  
   }
 
-    render(){
-      const backgroundStyle = {
-        alignItems: 'flex-end',
-        backgroundColor: '#000',
-        color: '#fff',
-        display: 'flex',
-        justifyContent: 'center',
-        padding: 0,
-        height: '680px',
-        marginTop: '20px'
-      };
-      let trash = ""
+  won = e => {
+    this.congrats.current.handleShow()
+  
+  }
+
+  render(){
+    const backgroundStyle = {
+      alignItems: 'flex-end',
+      backgroundColor: '#000',
+      color: '#fff',
+      display: 'flex',
+      justifyContent: 'center',
+      padding: 0,
+      height: '680px',
+      marginTop: '20px'
+    };
+    let trash = ""
+    
+    if(this.state.makes === 3){
+      this.congrats.current.handleShow()
+      this.setState({makes: 0})
+      this.setState({misses: 0})
+       clearInterval(this.loop)
+    } 
 
       return (
         <div className="pages">
           <Nav/>
           <Instructions />
+          <Winning ref={this.congrats}/>
           <PagesContainer >
               <article>
                 <Row className='page-image' >
@@ -107,7 +118,7 @@ class trashFall extends React.Component{
                       </Card>
                     </Row>
                     <Row className="gamecol">
-                      <Button className='scoreboard' id="startbutton" variant="primary" size="lg" onClick={()=> setInterval(this.start, 3000)}>
+                      <Button className='scoreboard' id="startbutton" variant="primary" size="lg" onClick={()=>this.loop = setInterval(this.start, 3000)} ref={this.startGame}>
                         Start
                       </Button>
                     </Row>
@@ -116,14 +127,13 @@ class trashFall extends React.Component{
                     
                 </Row>
               </article> 
-            {/* onClick={this.pickBin2} */}
           </PagesContainer>
         </div>
         
       );
     }
 }
-//  onClick={this.start}
+
 export default trashFall
 
 // <a href="https://www.freepik.com/free-photos-vectors/food">Food vector created by macrovector - www.freepik.com</a>

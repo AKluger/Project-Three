@@ -61,8 +61,8 @@ function BobbyWalk(){
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   <img src={page.imageLink} alt={page.imageTitle}  className='main imgsb' key={key++}/>
-                  <span className='leftArrows'></span><i className="arrow left"></i>
-                  <span className='rightArrows'></span><i className="arrow right"></i>
+                  <span className='bwLeftArrows'></span><i className="arrow bwLeft"></i>
+                  <span className='bwRightArrows'></span><i className="arrow bwRight"></i>
                 </div>
                 <audio>
                 <source src={page.src} type="audio/mp4" >
