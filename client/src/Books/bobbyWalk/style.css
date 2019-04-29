@@ -143,4 +143,54 @@
     }
 } 
 
+i,
+.bwLeft {
+    position: relative;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    bottom: 245px;
+    left: -30px;
+}
 
+i,
+.bwRight {
+    position: relative;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 7px;
+    bottom: 245px;
+    left: 708px;
+}
+
+.bwLeftArrows {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  bottom: 230px;
+}
+.bwRightArrows {
+  position: relative;
+  height: 50px;
+  width: 50px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  bottom: 230px;
+  left: 744px;
+}
+  
+.bwLeft {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+  }
+.bwRight {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+  

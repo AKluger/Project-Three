@@ -61,6 +61,8 @@ function BobbyWalk(){
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
                   <img src={page.imageLink} alt={page.imageTitle}  className='main imgsb' key={key++}/>
+                  <span className='bwLeftArrows'></span><i className="arrow bwLeft"></i>
+                  <span className='bwRightArrows'></span><i className="arrow bwRight"></i>
                 </div>
                 <audio>
                 <source src={page.src} type="audio/mp4" >
@@ -86,14 +88,6 @@ function BobbyWalk(){
                 <source src={bookAudio[count]} type="audio/mp4" >
                 </source>
           </audio>
-            {/* <audio ref={secondPage}>
-                <source src={second} type="audio/mp4" >
-                </source>
-            </audio>
-            <audio ref={thirdPage}>
-                <source src={third} type="audio/mp4" >
-                </source>
-            </audio> */}
         </div>
         
       );

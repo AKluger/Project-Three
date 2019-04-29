@@ -4,12 +4,17 @@ import PagesContainer from "../../components/PagesContainer"
 import Draggable from 'react-draggable'
 import Pages from '../game/gameCity.json'
 import recycleBin from '../../components/tempLibrary/recycle2.png'
-import { Card, Button } from 'react-bootstrap';
+import { Card, Button, Row, Col } from 'react-bootstrap'
+import Instructions from './startModal'
+import Winning from './winModal'
 import './style.css'
+
 
 class trashFall extends React.Component{
   constructor(props) {
     super(props)
+    this.congrats = React.createRef()
+    this.startGame = React.createRef()
     this.trash1 = React.createRef()
     this.trash2 = React.createRef()
     this.trash3 = React.createRef()
@@ -25,6 +30,7 @@ class trashFall extends React.Component{
   }
 
   start = e => {  
+  
     // array of recyclable imgs 
       const fallingSky = [ this.trash1.current, this.trash2.current, 
         this.trash3.current, this.trash4.current, this.trash5.current ]
@@ -40,75 +46,94 @@ class trashFall extends React.Component{
     // makes img go back to the top of the screen
       setTimeout(() => {
         random.style.transform = "translate(0px, 0px)"
-      }, 1400)
+      }, 1600)
 
     // makes img invisible after they have fallen and get the x vaule both trash and bin
       setTimeout(() => {
         random.style.visibility = "hidden" 
         let rand = Math.ceil(random.getBoundingClientRect().x/100)*100
         let bin = Math.ceil(this.Bin.current.getBoundingClientRect().x/100)*100
-        console.log(rand)
-        console.log(bin)
-        console.log(random.getBoundingClientRect())
-        if(rand === (bin+100)) this.setState({makes: this.state.makes + 1})
+        // console.log(rand)
+        // console.log(bin)
+        // console.log(random.getBoundingClientRect())
+        if(rand === (bin + 100)) this.setState({makes: this.state.makes + 1})
         else this.setState({misses: this.state.misses + 1}) 
-      }, 700)
-
-  }
-  check = () => {
-    // let rand = Math.ceil(random.getBoundingClientRect().x/100)*100
-    let bin = Math.ceil(this.Bin.current.getBoundingClientRect().x/100)*100
-    // console.log(rand)
-    console.log(bin)
+      }, 800)
+  
   }
 
-    render(){
-      const backgroundStyle = {
-        alignItems: 'flex-end',
-        backgroundColor: '#000',
-        color: '#fff',
-        display: 'flex',
-        justifyContent: 'center',
-        padding: 0,
-        height: '680px',
-        marginTop: '20px'
-      };
-      let trash = ""
+  won = e => {
+    this.congrats.current.handleShow()
+  
+  }
+
+  render(){
+    const backgroundStyle = {
+      alignItems: 'flex-end',
+      backgroundColor: '#000',
+      color: '#fff',
+      display: 'flex',
+      justifyContent: 'center',
+      padding: 0,
+      height: '680px',
+      marginTop: '20px'
+    };
+    let trash = ""
+    
+    if(this.state.makes === 3){
+      this.congrats.current.handleShow()
+      this.setState({makes: 0})
+      this.setState({misses: 0})
+       clearInterval(this.loop)
+    } 
 
       return (
         <div className="pages">
           <Nav/>
+          <Instructions />
+          <Winning ref={this.congrats}/>
           <PagesContainer >
               <article>
-                <div className='page-image' >
-                  <img src={Pages[0].imageLink} alt={Pages[0].imageTitle} style={backgroundStyle} />
-                  <Card className='scoreboard'>
-                    <Card.Body>Your score: {this.state.makes}</Card.Body>
-                  </Card>
-                  <Card className='scoreboard'>
-                    <Card.Body>Your misses: {this.state.misses}</Card.Body>
-                  </Card>
-                  <Button className='scoreboard' variant="primary" size="lg" onClick={()=> setInterval(this.start, 3000)}>
-                    Start
-                  </Button>
-                  <Draggable axis="x" >
+                <Row className='page-image' >
+                  <Col>
+                    <img src={Pages[0].imageLink} alt={Pages[0].imageTitle} style={backgroundStyle} />
+                    <Draggable axis="x" >
                       <img src={recycleBin} alt='bin' ref={this.Bin} className='gameBin2' />
-                  </Draggable>
-                  <img src={Pages[0].trash} ref={this.trash1} alt='trash' className='gameTrash2' />
-                  <img src={Pages[0].trash} ref={this.trash2} alt='trash' className='gameTrash3' />
-                  <img src={Pages[0].trash} ref={this.trash3} alt='trash' className='gameTrash4' />
-                  <img src={Pages[0].trash} ref={this.trash4} alt='trash' className='gameTrash5' />
-                  <img src={Pages[0].trash} ref={this.trash5} alt='trash' className='gameTrash6' />   
-                </div>
+                    </Draggable>
+                    <img src={Pages[0].trash} ref={this.trash1} alt='trash' className='gameTrash2' />
+                    <img src={Pages[0].trash} ref={this.trash2} alt='trash' className='gameTrash3' />
+                    <img src={Pages[0].trash} ref={this.trash3} alt='trash' className='gameTrash4' />
+                    <img src={Pages[0].trash} ref={this.trash4} alt='trash' className='gameTrash5' />
+                    <img src={Pages[0].trash} ref={this.trash5} alt='trash' className='gameTrash6' /> 
+                  </Col>
+                  <Col id="scorestyle">
+                    <Row>
+                      <Card className='scoreboard'>
+                        <Card.Body className="scorecard"><b>Score:</b> {this.state.makes}</Card.Body>
+                      </Card>
+                    </Row>
+                    <Row className="gamecol">
+                      <Card className='scoreboard'>
+                        <Card.Body className="scorecard"><b>Missed:</b> {this.state.misses}</Card.Body>
+                      </Card>
+                    </Row>
+                    <Row className="gamecol">
+                      <Button className='scoreboard' id="startbutton" variant="primary" size="lg" onClick={()=>this.loop = setInterval(this.start, 3000)} ref={this.startGame}>
+                        Start
+                      </Button>
+                    </Row>
+                  </Col>
+                  
+                    
+                </Row>
               </article> 
-            {/* onClick={this.pickBin2} */}
           </PagesContainer>
         </div>
         
       );
     }
 }
-//  onClick={this.start}
+
 export default trashFall
 
 // <a href="https://www.freepik.com/free-photos-vectors/food">Food vector created by macrovector - www.freepik.com</a>

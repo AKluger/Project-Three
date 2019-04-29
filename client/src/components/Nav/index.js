@@ -81,7 +81,7 @@ export default class tempNav extends React.Component {
       
     // const content = (!this.props.status || !localStorage.getItem('token')) ? (
       
-      <Navbar className="navbarcol" style={navstyle} expand="lg">
+      <Navbar className="navbarcol" style={navstyle} expand="lg" id="welcome-nav">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
