@@ -1,24 +1,25 @@
 import React, { useState, useRef } from 'react';
-import { useSpring, animated } from 'react-spring'
+// import { useSpring} from 'react-spring'
 import Nav from '../../components/Nav';
 import PagesContainer from "../../components/PagesContainer";
-import {Container, Image, Modal} from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import AudioModal from '../../components/AudioModal';
 import Pages from './prettyCity.json';
 import FlipPage from "react-flip-page";
 import './prettyCity.css'
 
-const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
+// const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
+// const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
 
 function PrettyCity() {
-  const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
+  // const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
   const [pages] = useState(Pages);
+  // let [pageNumber, setPageNumber] = useState(0);
   let [narration, setAudio] = useState(false);
-  const firstPage = useRef(null)
+  const firstPage = useRef(null);
 
   const pageColor = 'linear-gradient(344deg, rgba(255,255,255,1) 0%, rgba(241,241,255,1) 56%, rgba(242,242,239,1) 100%)';
-  
+
   const bookStyle = {
     position: 'relative',
     alignItems: 'flex-end',
@@ -26,20 +27,25 @@ function PrettyCity() {
     height: '100%',
     width: '100%',
     marginBottom: '93px',
-  }; 
+  };
 
   const toggleAudio = e => {
-    console.log(e) 
+    console.log(e)
     setAudio(e)
   }
 
+
   const startReading = () => {
+    // setPageNumber(firstPage.current.id)
     if (narration) {
-    firstPage.current.load()
-    firstPage.current.play()
+      firstPage.current.load()
+      firstPage.current.play()
+      // console.log(pageNumber)
+
+    }
+    if (firstPage.current.id == 17) { narration = false }
+    // else{return}
   }
-  else{return}
-}
 
   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9;
   let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1.2;
@@ -48,9 +54,9 @@ function PrettyCity() {
   return (
     <div className="pages">
       <Nav />
-      <AudioModal audio={toggleAudio}/>
+      <AudioModal audio={toggleAudio} />
       <PagesContainer >
-        <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} showSwipeHint={true} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
+        <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
           {pages.map(page => (
             <article key={page.id}>
               <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
@@ -59,12 +65,12 @@ function PrettyCity() {
                 <span className='rightArrows'></span><i className="arrow right"></i>
               </div>
               <div className="text-center pretty-text pt-2">
-              {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}
+                {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}
               </div>
-              <audio ref={firstPage}>
+              <audio ref={firstPage} id={page.id}>
                 <source src={page.audioLink} type="audio/mp4" >
                 </source>
-                </audio>
+              </audio>
             </article>
           ))}
         </FlipPage>
@@ -80,7 +86,7 @@ function PrettyCity() {
 export default PrettyCity
 
 
-
+// onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
 
 // function PrettyCity() {
 //   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
@@ -95,12 +101,12 @@ export default PrettyCity
 //     width: '100%',
 //     marginBottom: '93px',
 //     // overflow: 'hidden'
-  
+
 //     // minWidth: '90vw',
 //     // minHeight: '100vh'
 
 //   };
-  
+
 //   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9;
 //   let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1.11;
 //   let key = 0;

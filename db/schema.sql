@@ -12,7 +12,7 @@ CREATE TABLE Teachers (
 	city varchar(255) NOT NULL,
 	state varchar(255) NOT NULL,
 	   name varchar(255) NOT NULL,
-    feedback varchar(1000),
+    feedback TEXT,
 	password varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
@@ -34,7 +34,7 @@ CREATE TABLE Books (
 CREATE TABLE Feedback (
 	id int NOT NULL AUTO_INCREMENT,
     email varchar(255) NOT NULL,
-    note varchar(1000) NOT NULL,
+    note TEXT NOT NULL,
 	name varchar(255) NOT NULL,
     FeedbackId int default 1,
 	PRIMARY KEY (id)
