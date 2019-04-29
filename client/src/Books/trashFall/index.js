@@ -5,6 +5,7 @@ import Draggable from 'react-draggable'
 import Pages from '../game/gameCity.json'
 import recycleBin from '../../components/tempLibrary/recycle2.png'
 import { Card, Button, Row, Col } from 'react-bootstrap';
+import Instructions from './modal'
 import './style.css'
 
 
@@ -79,6 +80,7 @@ class trashFall extends React.Component{
       return (
         <div className="pages">
           <Nav/>
+          <Instructions />
           <PagesContainer >
               <article>
                 <Row className='page-image' >
