@@ -36,15 +36,13 @@ function PrettyCity() {
 
 
   const startReading = () => {
-    // setPageNumber(firstPage.current.id)
+
     if (narration) {
       firstPage.current.load()
       firstPage.current.play()
-      // console.log(pageNumber)
 
     }
     if (firstPage.current.id == 17) { narration = false }
-    // else{return}
   }
 
   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9;
@@ -59,7 +57,7 @@ function PrettyCity() {
         <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
           {pages.map(page => (
             <article key={page.id}>
-              <div className='page-image' onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+              <div className='page-image'>
                 <Image src={page.imageLink} alt={page.imageTitle} className='main imgs' key={key++} />
                 <span className='leftArrows'></span><i className="arrow left"></i>
                 <span className='rightArrows'></span><i className="arrow right"></i>
@@ -80,8 +78,6 @@ function PrettyCity() {
   );
 
 }
-
-// height={JSON.stringify(height) - 102} width={JSON.stringify(width)}
 
 export default PrettyCity
 
