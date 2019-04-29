@@ -59,8 +59,8 @@ function PrettyCity() {
             <article key={page.id}>
               <div className='page-image'>
                 <Image src={page.imageLink} alt={page.imageTitle} className='main imgs' key={key++} />
-                <span className='leftArrows'></span><i className="arrow left"></i>
-                <span className='rightArrows'></span><i className="arrow right"></i>
+                <span className='pcLeftArrows'></span><i className="arrow pcLeft"></i>
+                <span className='pcRightArrows'></span><i className="arrow pcRight"></i>
               </div>
               <div className="text-center pretty-text pt-2">
                 {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}

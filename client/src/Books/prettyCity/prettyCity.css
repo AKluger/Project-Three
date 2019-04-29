@@ -227,7 +227,7 @@
 }
 
 i,
-.left {
+.pcLeft {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
@@ -238,26 +238,26 @@ i,
 }
 
 i,
-.right {
+.pcRight {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 7px;
     bottom: 315px;
-    left: 465px;
+    left: 710px;
 }
   
-.left {
+.pcLeft {
   transform: rotate(135deg);
   -webkit-transform: rotate(135deg);
 }
-.right {
+.pcRight {
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
 
-.leftArrows {
+.pcLeftArrows {
   position: relative;
   height: 50px;
   width: 50px;
@@ -266,7 +266,7 @@ i,
   display: inline-block;
   bottom: 300px;
 }
-.rightArrows {
+.pcRightArrows {
   position: relative;
   height: 50px;
   width: 50px;
@@ -274,5 +274,5 @@ i,
   border-radius: 50%;
   display: inline-block;
   bottom: 300px;
-  left: 500px;
+  left: 744px;
 }
