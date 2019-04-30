@@ -4,7 +4,7 @@ import { Button, Col, Container, Row, Form, Text } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import { DivWithErrorHandling } from "../components/ErrorDiv/ErrorDiv.js";
 import API from "../utils/API";
-import { Input, TextArea, LoginBtn, ErrorBox } from "../components/LoginForm";
+import { Input, TextArea, LoginBtn, ErrorBox, SuccessBox } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
 
@@ -19,7 +19,8 @@ class Login extends Component {
     redirect: false,
     hash: "",
     showError: false,
-    errorMsg: ""
+    errorMsg: "",
+    success: false
   };
 
   componentWillMount() {
@@ -57,20 +58,21 @@ class Login extends Component {
       })
         .then(res => {
           if (res.data === 'empty') {
-            this.setState({ redirect: false, errorMsg: "Invalid Credentials" })
+            this.setState({ redirect: false, errorMsg: "Invalid email or password. Please try again." })
             console.log(this.state.errorMsg)
           }
 
           else {
             localStorage.setItem('token', res.data.token)
+            this.setState({success: true})
+            setTimeout(() => {
+              this.setState({
+                  redirect: true,
+                })
+              }, 2000)
           }
         })
-        .then(this.setState({ email: "", password: "" }))
-        .then(setTimeout(() => {
-          this.setState({
-              redirect: true,
-            })
-          }, 2000))
+        .then(this.setState({ email: "", password: ""}))
         .catch(
           this.handleLoginErr());
     }
@@ -108,6 +110,9 @@ class Login extends Component {
                 <ErrorBox 
                   error={this.state.errorMsg}> 
                 </ErrorBox>
+                <SuccessBox 
+                  success={this.state.success}> 
+                </SuccessBox>
                 <Button
                   disabled={!(this.state.email && this.state.password)}
                   onClick={this.handleFormSubmit}

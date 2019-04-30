@@ -5,7 +5,7 @@ import {Button, Col, Container, Row, Jumbotron, Form, Text} from 'react-bootstra
 import Nav from "../components/Nav";
 import API from "../utils/API";
 import { Link } from "react-router-dom";
-import { Input, TextArea, LoginBtn, ErrorBox } from "../components/LoginForm";
+import { Input, TextArea, LoginBtn, ErrorBox, SuccessBox } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
 
@@ -22,7 +22,8 @@ class SignUp extends Component {
     name: "",
     redo: "",
     hash: "",
-    errorMsg: ""
+    errorMsg: "",
+    successMsg: false
   };
 
   setRedirect = () => {
@@ -74,7 +75,7 @@ class SignUp extends Component {
                 }, 2000)
             }
           })
-          .then(this.setState({email: "", school: "", password: "", state: "", city: "", name: ""}))
+          .then(this.setState({email: "", school: "", password: "", state: "", city: "", name: "", success: true}))
           .catch(err => this.setState({ errorMsg: "User already exists"}));
       }
     }
@@ -92,7 +93,7 @@ class SignUp extends Component {
             <Row>
             <Col md={{ span: 4, offset: 4 }} className="text-center pt-4">
             <span className="headerText mb-2"> Sign-Up </span>
-                <Form>
+                <Form className="signup-form">
                 <Input
                     value={this.state.email}
                     onChange={this.handleInputChange}
@@ -133,13 +134,16 @@ class SignUp extends Component {
                 <ErrorBox 
                   error={this.state.errorMsg}> 
                 </ErrorBox>
-                <LoginBtn
+                <SuccessBox 
+                  success={this.state.success}> 
+                </SuccessBox>
+                <Button
                     disabled={!(this.state.email && this.state.password && this.state.city && this.state.state)}
                     onClick={this.handleFormSubmit}
                     id="login-btn"
                 >
                     Sign-Up
-                </LoginBtn>
+                </Button>
                 </Form>
             </Col>
             </Row>
