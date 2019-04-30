@@ -7,9 +7,6 @@ import PosPages from './bobbyWalkPos.json'
 import negPages from './bobbyWalkNeg.json'
 import FlipPage from "react-flip-page"
 import {  Button, Row, Col, Container } from 'react-bootstrap'
-import first from './audio/pageOne.mp4'
-import second from './audio/pageTwo.mp4'
-import third from './audio/pageThree.mp4'
 import './style.css'
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
@@ -42,7 +39,6 @@ function BobbyWalk(){
   
   //  button onclick bad path updates/replaces state with neg otherwise continue...
 
-  let bookAudio = [ first, second, third ]
   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9
   let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1
   let key = 0
@@ -59,10 +55,6 @@ function BobbyWalk(){
                   <span className='bwLeftArrows'></span><i className="arrow bwLeft"></i>
                   <span className='bwRightArrows'></span><i className="arrow bwRight"></i>
                 </div>
-                <audio>
-                <source src={page.src} type="audio/mp4" >
-                </source>
-                </audio>
                 
                   <div className="text-center bobby-text">{page.text.map(line=>(<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
                   <Row className="text-center">
@@ -79,10 +71,6 @@ function BobbyWalk(){
           ))} 
           </FlipPage>
           </PagesContainer>
-          <audio ref={firstPage}>
-                <source src={bookAudio[count]} type="audio/mp4" >
-                </source>
-          </audio>
         </div>
         
       );
