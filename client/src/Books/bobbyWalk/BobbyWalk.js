@@ -21,13 +21,6 @@ function BobbyWalk(){
     event.preventDefault()
     setPages(negPages)
   }
-
-  const startReading = (oldPageIndex, direction) => {
-   
-    firstPage.current.load()
-    firstPage.current.play()
-    
-  }
   
   const bookStyle = {
     position: 'relative',
@@ -47,7 +40,7 @@ function BobbyWalk(){
         <div className="pages">
           <Nav/>
           <PagesContainer id="pageContainer">
-          <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
+          <FlipPage orientation='horizontal' flipOnTouch={true}  height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
           {pages.map(page => (
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
