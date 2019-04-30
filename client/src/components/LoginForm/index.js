@@ -50,7 +50,7 @@ export function ErrorBox(props) {
     ) : ( 
       <div id="alert" className="pb-2" role="alert">
         {/* <span className="sr-only" {...props}>Error:</span> {props.error} <span className="msg"> </span> */}
-        <Loader type="Oval" color="blue" height={80} width={80} />
+        <Loader type="Oval" color="blue" height={40} width={40} />
       </div>
     )
       return (
