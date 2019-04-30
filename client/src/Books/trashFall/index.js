@@ -77,7 +77,7 @@ class trashFall extends React.Component{
     };
     let trash = ""
     
-    if(this.state.makes === 3){
+    if(this.state.makes === 10){
       this.congrats.current.handleShow()
       this.setState({makes: 0})
       this.setState({misses: 0})
