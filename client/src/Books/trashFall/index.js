@@ -53,9 +53,6 @@ class trashFall extends React.Component{
         random.style.visibility = "hidden" 
         let rand = Math.ceil(random.getBoundingClientRect().x/100)*100
         let bin = Math.ceil(this.Bin.current.getBoundingClientRect().x/100)*100
-        // console.log(rand)
-        // console.log(bin)
-        // console.log(random.getBoundingClientRect())
         if(rand === (bin + 100)) this.setState({makes: this.state.makes + 1})
         else this.setState({misses: this.state.misses + 1}) 
       }, 800)
@@ -80,7 +77,7 @@ class trashFall extends React.Component{
     };
     let trash = ""
     
-    if(this.state.makes === 3){
+    if(this.state.makes === 10){
       this.congrats.current.handleShow()
       this.setState({makes: 0})
       this.setState({misses: 0})

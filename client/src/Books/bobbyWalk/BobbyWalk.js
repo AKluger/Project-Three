@@ -7,9 +7,6 @@ import PosPages from './bobbyWalkPos.json'
 import negPages from './bobbyWalkNeg.json'
 import FlipPage from "react-flip-page"
 import {  Button, Row, Col, Container } from 'react-bootstrap'
-import first from './audio/pageOne.mp4'
-import second from './audio/pageTwo.mp4'
-import third from './audio/pageThree.mp4'
 import './style.css'
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
@@ -19,22 +16,10 @@ function BobbyWalk(){
   const [pages, setPages] = useState([...Pages, ...PosPages])
   const [count, setCount] = useState(-1)
   const firstPage = useRef(null)
-  // const secondPage = useRef(null)
-  // const thirdPage = useRef(null)
-  console.log(pages)
 
   const handleButtonClick = event => {
     event.preventDefault()
-    console.table(negPages)
     setPages(negPages)
-  }
-
-  const startReading = (oldPageIndex, direction) => {
-    // setCount(count + 1)
-    firstPage.current.load()
-    firstPage.current.play()
-    // Pages[0].src.load()
-//     pages[0].audio.play()
   }
   
   const bookStyle = {
@@ -44,10 +29,9 @@ function BobbyWalk(){
     width: '100%',
     height: '100%'
   }
-  // useEffect(setCount(count + 1))
+  
   //  button onclick bad path updates/replaces state with neg otherwise continue...
 
-  let bookAudio = [ first, second, third ]
   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9
   let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1
   let key = 0
@@ -56,7 +40,7 @@ function BobbyWalk(){
         <div className="pages">
           <Nav/>
           <PagesContainer id="pageContainer">
-          <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
+          <FlipPage orientation='horizontal' flipOnTouch={true}  height={JSON.stringify(height)} width={JSON.stringify(width)} style={bookStyle}>
           {pages.map(page => (
               <article  key={page.id}>
                 <div className='page-image' key={key++} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
@@ -64,19 +48,15 @@ function BobbyWalk(){
                   <span className='bwLeftArrows'></span><i className="arrow bwLeft"></i>
                   <span className='bwRightArrows'></span><i className="arrow bwRight"></i>
                 </div>
-                <audio>
-                <source src={page.src} type="audio/mp4" >
-                </source>
-                </audio>
                 
                   <div className="text-center bobby-text">{page.text.map(line=>(<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
-                  <Row>
-                    <Col sm={4}>
-                    <Button  variant="outline-success" className={page.cssClass}> Bobby wants to be that Special Somebody</Button>
+                  <Row className="text-center">
+                    <Col   sm={4}>
+                    <Button  variant="outline-success" className={page.cssClass} id="butmargin"> Bobby wants to be that Special Somebody</Button>
                     </Col>
-                    <Col sm={2}></Col>
-                    <Col sm={4}>
-                    <Button  variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass}> Bobby does <b>NOT</b> want be that Special Somebody</Button>
+                    <Col sm={4}></Col>
+                    <Col  sm={4}>
+                    <Button  variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass} id="butmargin"> Bobby does <b>NOT</b> want be that Special Somebody</Button>
                     </Col>
                   </Row>
               </article>
@@ -84,10 +64,6 @@ function BobbyWalk(){
           ))} 
           </FlipPage>
           </PagesContainer>
-          <audio ref={firstPage}>
-                <source src={bookAudio[count]} type="audio/mp4" >
-                </source>
-          </audio>
         </div>
         
       );
