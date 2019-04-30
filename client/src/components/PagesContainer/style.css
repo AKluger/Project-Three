@@ -1,5 +1,5 @@
 .desk{
-    background-image: url("https://images.pexels.com/photos/172296/pexels-photo-172296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-image: url("./brown-design-hardwood-955454.jpg");
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -7,14 +7,7 @@
     overflow: auto;
     min-height: 100vh;
     width: 100% auto;
-        /* padding-top: 93px; */
-        /* padding-bottom: 93px; */
-    /* background: red; */
-    /* height: 100%; */
-    /* background-repeat: no-repeat; */
-     /* height: 18cm; */
-    /* max-width:100%;  */
-      /* padding: 5%; */
+
    
 }
 
