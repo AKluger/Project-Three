@@ -65,13 +65,13 @@ function BobbyWalk(){
                 </audio>
                 
                   <div className="text-center bobby-text">{page.text.map(line=>(<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
-                  <Row>
-                    <Col sm={4}>
-                    <Button  variant="outline-success" className={page.cssClass}> Bobby wants to be that Special Somebody</Button>
+                  <Row className="text-center">
+                    <Col   sm={4}>
+                    <Button  variant="outline-success" className={page.cssClass} id="butmargin"> Bobby wants to be that Special Somebody</Button>
                     </Col>
-                    <Col sm={2}></Col>
-                    <Col sm={4}>
-                    <Button  variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass}> Bobby does <b>NOT</b> want be that Special Somebody</Button>
+                    <Col sm={4}></Col>
+                    <Col  sm={4}>
+                    <Button  variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass} id="butmargin"> Bobby does <b>NOT</b> want be that Special Somebody</Button>
                     </Col>
                   </Row>
               </article>

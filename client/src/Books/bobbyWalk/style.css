@@ -124,4 +124,9 @@ i,
   transform: rotate(-45deg);
   -webkit-transform: rotate(-45deg);
 }
-  
+#butmargin{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
