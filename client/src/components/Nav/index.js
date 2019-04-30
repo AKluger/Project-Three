@@ -29,7 +29,7 @@ export default class tempNav extends React.Component {
       axios.defaults.headers.common['Authorization'] = token;
       const decoded = jwtDecode(token);
       this.setState({
-        name: decoded.name.toUpperCase()
+        // name: decoded.name.toUpperCase()
       })
 
     }
