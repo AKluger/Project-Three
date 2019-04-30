@@ -1,0 +1,60 @@
+.bookstyle {
+    height: 300px;
+    width: 200px;
+    box-shadow: 3px 3px #94632b, 10px 10px #ffffff, 15px 15px #94632b;
+    border-radius: 0px 5px 0px 10px;
+}
+/* .gamestyle {
+    height: 300px;
+    width: 300px;
+    box-shadow: 3px 3px black, 5px 5px rgb(71, 70, 70), 8px 8px black;
+    border-radius: 0px 5px 10px 10px;
+} */
+.kidstyle {
+    height: 100px;
+    width: 150px;
+    margin-top: 140px;
+}
+.binstyle {
+    height: 150px;
+    position: relative;
+    left: 80px;
+    bottom: 100px;
+}
+.age-style {
+    height: 90px;
+    position: relative;
+    right: 100px;
+    bottom: 250px;
+    z-index: 3;
+}
+.libmargin{
+    margin-top: 5%;
+}
+
+@media only screen and (min-width: 1220px)   {
+.bookstyle {
+    height: 420px;
+    width: 310px;
+     box-shadow: 3px 3px #94632b, 10px 10px #ffffff, 15px 15px #94632b;
+     border-radius: 0px 5px 3px 10px;
+     margin: 7%;
+}
+}
+
+ @media only screen and (max-width: 640px)   {
+
+    .bookstyle {
+        height: 175px;
+        width: 125px;
+        margin-top: 5%;
+        box-shadow: 3px 3px #94632b, 7px 7px #ffffff, 10px 10px #94632b;
+        border-radius: 10px 5px 0px 10px; 
+    }
+    /* .gamestyle {
+        height: 200px;
+        width: 200px;
+        box-shadow: 3px 3px black, 5px 5px rgb(71, 70, 70), 8px 8px black;
+        border-radius: 0px 5px 10px 10px;
+    } */
+} 

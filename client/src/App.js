@@ -10,12 +10,10 @@ import Educator from './pages/Educator.js'
 import Welcome from './pages/Welcome.js'
 import Resources from './pages/Resources.js'
 import About from './pages/About.js'
-import Nav from './components/Nav'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import trashFall from './Books/trashFall'
 import './App.css';
-import Login2 from "./pages/Login2";
 library.add(faUser)
 
 class App extends Component {

@@ -1,20 +1,14 @@
 import React from 'react'
 import Nav from '../Nav'
-import Jumbotron from '../Jumbotron'
-import Library from '../tempLibrary'
+import Library from '../Library'
 import "./style.css"
-
 
 const Landing = () => {
     return(
-        // <div className="wrapper" >
-        
         <div className="wrapperImg"> 
           <Nav/> 
             <Library />
         </div>
-        
-        // </div>
     )
 }
 

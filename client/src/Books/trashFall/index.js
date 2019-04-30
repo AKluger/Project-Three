@@ -3,7 +3,7 @@ import Nav from '../../components/Nav'
 import PagesContainer from "../../components/PagesContainer"
 import Draggable from 'react-draggable'
 import Pages from '../game/gameCity.json'
-import recycleBin from '../../components/tempLibrary/recycle2.png'
+import recycleBin from '../../components/Library/recycle2.png'
 import { Card, Button, Row, Col } from 'react-bootstrap'
 import Instructions from './startModal'
 import Winning from './winModal'
@@ -75,7 +75,7 @@ class trashFall extends React.Component{
       height: '680px',
       marginTop: '20px'
     };
-    let trash = ""
+    // let trash = ""
     
     if(this.state.makes === 10){
       this.congrats.current.handleShow()

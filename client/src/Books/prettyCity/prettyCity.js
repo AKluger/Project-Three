@@ -1,3 +1,4 @@
+/* eslint eqeqeq: "off" */
 import React, { useState, useRef } from 'react';
 import Nav from '../../components/Nav';
 import PagesContainer from "../../components/PagesContainer";
