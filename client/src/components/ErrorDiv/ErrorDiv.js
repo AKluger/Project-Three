@@ -1,11 +1,19 @@
 import React from "react";
+import { AutoComplete } from "antd";
+
 
 
 
 export const withErrorHandling = WrappedComponent => ({ showError, children }) => {
-    return (
+  
+  const style = {
+    backgroundColor: "white",
+    marginRight: "20px"
+  }
+  
+  return (
       <WrappedComponent>
-        {showError && <div className="error-message">Invalid Credentials.</div>}
+        {showError && <div style={style} className="error-message">Invalid Credentials.</div>}
         {children}
       </WrappedComponent>
     );

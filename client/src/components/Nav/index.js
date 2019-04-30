@@ -1,4 +1,5 @@
 import React from 'react'
+import jwtDecode from 'jwt-decode'
 import axios from 'axios'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './style.css'
@@ -20,6 +21,7 @@ export default class tempNav extends React.Component {
       isOpen: false,
       isLoggedIn: false,
       redirect: false,
+      name: "",
 
     };
   }
@@ -28,6 +30,11 @@ export default class tempNav extends React.Component {
     const token = localStorage.getItem("token") || null;
     if(token){
       axios.defaults.headers.common['Authorization'] = token;
+      const decoded = jwtDecode(token);
+      this.setState({
+        name: decoded.name.toUpperCase()
+      })
+
     }
     // console.log(localStorage.getItem('token'));
     this.tokenExists();
@@ -125,16 +132,14 @@ export default class tempNav extends React.Component {
             <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
           </Nav>
           <Nav>
-
-
-        <div className="glyph">
+            <div>
            <Button
               href="/login"
               id="logout-nav"
             >
               Logout
             </Button>
-          </div>
+            </div>
         </Nav>
      
     </Navbar.Collapse>

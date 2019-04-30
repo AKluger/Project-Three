@@ -24,53 +24,52 @@ module.exports = function(app) {
 app.get('/library', passport.authenticate('token', {session: false}))
 
 app.post("/api/teachers", function(req, res) { 
-    password = req.body.password;
-    bcrypt.genSalt(10, (err, salt) => {
-      bcrypt.hash(password, salt, (err, hash) => {
-          if (err) throw err;
-          password = hash;
-              db.Teacher.create({
-                email: req.body.email,
-                school: req.body.school,
-                city: req.body.city,
-                state: req.body.state,
-                password: password,
-                name: req.body.name
-              })
-              .then(teacher => {
-                jwt.sign( 
-                  // { id: teacher.id },                  
-                  // { id: teacher.id, email: teacher.email },                  
-                  { id: teacher.id, email: teacher.email, name: teacher.name },                         
-                  // { email: teacher.email },
-                  config.get('JwtSecret'),
-                  { expiresIn: 3600 },
-                  (err, token) => {
-                    if(err) throw err;
-                    // localStorage.setItem('token', token)
-                    console.log(token)
-                    res.json({
-                      token,
-                      teacher: {
-                        id: teacher.id,
-                        email: teacher.email,
-                        name: teacher.name
-                      }
-                    })
-                  }
+      password = req.body.password;
+      bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(password, salt, (err, hash) => {
+            if (err) throw err;
+            password = hash;
+                db.Teacher.create({
+                  email: req.body.email,
+                  school: req.body.school,
+                  city: req.body.city,
+                  state: req.body.state,
+                  password: password,
+                  name: req.body.name
+                })
+                .then(teacher => {
+                  // if (!teacher) {return res.send('empty')}
+                  jwt.sign( 
+                    // { id: teacher.id },                  
+                    // { id: teacher.id, email: teacher.email },                  
+                    { id: teacher.id, email: teacher.email, name: teacher.name },                         
+                    // { email: teacher.email },
+                    config.get('JwtSecret'),
+                    { expiresIn: 3600 },
+                    (err, token) => {
+                      if(err) throw err;
+                      // localStorage.setItem('token', token)
+                      console.log(token)
+                      res.json({
+                        token,
+                        teacher: {
+                          id: teacher.id,
+                          email: teacher.email,
+                          name: teacher.name
+                        }
+                      })
+                    }
 
-                )
-                // console.log(teacher) 
-
-              // .then(teacher => console.log(teacher) )
+                  )
+                })
+                .catch(function(err) {
+                  res.status(422).json(err.errors[0].message);
+                });
               })
-              .catch(function(err) {
-                // console.log(err);
-                res.status(422).json(err.errors[0].message);
-              });
-            })
-      })
-    })
+        })
+  })
+  
+// }
 
     app.get("/api/teachers/", function(req, res) {
       db.Teacher.findAll({
