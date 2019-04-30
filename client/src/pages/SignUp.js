@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-
 import './style.css'
-import {Button, Col, Container, Row, Jumbotron, Form, Text} from 'react-bootstrap';
+import {Button, Col, Container, Row, Form} from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Input, TextArea, LoginBtn, ErrorBox, SuccessBox } from "../components/LoginForm";
+import { Input, ErrorBox, SuccessBox } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
 

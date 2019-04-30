@@ -95,7 +95,7 @@
 }
 .gamecol{
     margin-bottom: 2px;
-    margin-top:2px;
+    margin-top:5px;
 }
 .scorecard{
     background-color: #ffffff;
@@ -106,4 +106,12 @@
 }
 #startbutton{
     font-size: 30px;
+    margin-top: 5px;
+    background-color: rgb(36, 36, 214);
+    border: none;
+}
+
+#startbutton:hover {
+    background-color: rgb(15, 194, 15);
+    border: none;
 }

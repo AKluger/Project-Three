@@ -45,7 +45,8 @@ p, h2, h5, .card-deck {
  }
 
  .creator button:hover {
-     color: #045de9}
+     color: #0520bba8;
+     box-shadow: 0 0 10px rgb(36, 36, 214);}
 
  #login-btn, #form-button {
      background-color: #ffffff;

@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import './style.css'
-import { Button, Col, Container, Row, Form, Text } from 'react-bootstrap';
+import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import Nav from "../components/Nav";
-import { DivWithErrorHandling } from "../components/ErrorDiv/ErrorDiv.js";
 import API from "../utils/API";
-import { Input, TextArea, LoginBtn, ErrorBox, SuccessBox } from "../components/LoginForm";
+import { Input, ErrorBox, SuccessBox } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
 
@@ -59,7 +58,6 @@ class Login extends Component {
         .then(res => {
           if (res.data === 'empty') {
             this.setState({ redirect: false, errorMsg: "Invalid email or password. Please try again." })
-            console.log(this.state.errorMsg)
           }
 
           else {
@@ -80,7 +78,6 @@ class Login extends Component {
 
 
   render() {
-    console.log(this.state.redirect)
     if (this.state.redirect) {
       return <Redirect to='/educator' />
     }

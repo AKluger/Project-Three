@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from "../components/Nav";
-import {Button, Col, Card, Row, Jumbotron, ListGroup, Container} from 'react-bootstrap';
+import {Button, Card, Row, Jumbotron, Container} from 'react-bootstrap';
 
 function Resources() {
 

@@ -1,12 +1,9 @@
 import React from 'react'
 import jwtDecode from 'jwt-decode'
 import axios from 'axios'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './style.css'
-import { Navbar, Nav, NavDropdown, Button } from 'react-bootstrap';
+import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom'
-import { Input, TextArea, LoginBtn } from "../LoginForm";
-
 
 const navstyle = {
   paddingBottom: 0
@@ -53,11 +50,9 @@ export default class tempNav extends React.Component {
   }
 
   tokenExists() {
-    // localStorage.getItem('token')
-    // console.log(localStorage.getItem('token'))
     if(localStorage.getItem('token')) {
       this.setState({isLoggedIn: true}, () => {
-        console.log(this.state)
+        // console.log(this.state)
         // debugger
       })
     }
@@ -69,7 +64,7 @@ export default class tempNav extends React.Component {
     // if(localStorage.getItem('token')==null) {
       this.setState({isLoggedIn: false})
       this.setState({redirect: true})
-      console.log(this.state.isLoggedIn)
+      // console.log(this.state.isLoggedIn)
     // }
   }
 
@@ -81,8 +76,8 @@ export default class tempNav extends React.Component {
       return <Redirect to='/signup' />
     }
     // debugger
-    console.log(`Logged In: ${this.props.status}`) 
-    console.log(`Token in Storage?: ${localStorage.getItem('token')}`)
+    // console.log(`Logged In: ${this.props.status}`) 
+    // console.log(`Token in Storage?: ${localStorage.getItem('token')}`)
     // const content = !this.props.status || !localStorage.getItem('token') ? (
     const content = (!localStorage.getItem('token') || false) ? (
       

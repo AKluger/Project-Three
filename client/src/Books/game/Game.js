@@ -1,12 +1,13 @@
+/* eslint no-eval: 0 */
 import React, { useState } from 'react';
 import { useSpring, animated } from 'react-spring'
 import Nav from '../../components/Nav';
 import PagesContainer from "../../components/PagesContainer";
 import Pages from './gameCity.json';
 import Start from '../../components/Modal';
-import recycleBin from '../../components/tempLibrary/recycle2.png'
-import trashBin from '../../components/tempLibrary/trashCan.png'
-import bubble from '../../components/tempLibrary/speech_bubble.png'
+import recycleBin from '../../components/Library/recycle2.png'
+import trashBin from '../../components/Library/trashCan.png'
+import bubble from '../../components/Library/speech_bubble.png'
 import './style.css'
 
 
