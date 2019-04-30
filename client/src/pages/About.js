@@ -3,7 +3,10 @@ import axios from 'axios'
 import { Col, Container, Row, Jumbotron, Card, CardDeck } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import './style.css';
-
+import alex from './images/alex_youth.jpg';
+import monet from './images/monet_youth.jpg';
+import ron from './images/ronald_youth.jpg';
+import troy from './images/troy_youth.jpg';
 class About extends React.Component {
 
     state = {
@@ -18,7 +21,6 @@ class About extends React.Component {
         }
 
     }
-
 
 
     render() {
@@ -39,7 +41,7 @@ class About extends React.Component {
                     <Row className="justify-content-md-center">
                         <CardDeck className="p-4">
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="https://avatars3.githubusercontent.com/u/43094922?s=460&v=4" />
+                                <Card.Img variant="top" className="creator-image" src={troy} alt="Troy Wynn" />
                                 <Card.Body>
                                     <Card.Title>Troy Wynn</Card.Title>
                                     <Card.Text></Card.Text>
@@ -47,7 +49,7 @@ class About extends React.Component {
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="https://avatars1.githubusercontent.com/u/43653627?s=400&v=4" />
+                                <Card.Img variant="top" src={monet} alt="Monet Thigpen" />
                                 <Card.Body>
                                     <Card.Title>Monet Thigpen</Card.Title>
                                     <Card.Text>
@@ -56,7 +58,7 @@ class About extends React.Component {
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="https://avatars1.githubusercontent.com/u/42947972?s=460&v=4" />
+                                <Card.Img variant="top" className="creator-image" src={alex} alt="Alex Kluger" />
                                 <Card.Body>
                                     <Card.Title>Alex Kluger</Card.Title>
                                     <Card.Text>
@@ -65,7 +67,7 @@ class About extends React.Component {
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
-                                <Card.Img variant="top" src="https://avatars3.githubusercontent.com/u/42901139?s=400&v=4" />
+                                <Card.Img variant="top" className="creator-image" src={ron} alt="Ronald Glover" />
                                 <Card.Body>
                                     <Card.Title>Ronald Glover</Card.Title>
                                     <Card.Text>
@@ -77,7 +79,6 @@ class About extends React.Component {
                     </Row>
                 </Container>
             </>
-
         );
     }
 }
