@@ -21,7 +21,7 @@ module.exports = function(app) {
 // TEACHER API // 
 // TEACHER API // 
 
-app.get('/library', passport.authenticate('token', {session: false}))
+// app.get('/library', passport.authenticate('token', {session: false}))
 
 app.post("/api/teachers", function(req, res) { 
       password = req.body.password;
