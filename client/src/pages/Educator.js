@@ -26,7 +26,7 @@ class Educator extends Component {
     if (token) {
       axios.defaults.headers.common['Authorization'] = token;
       const decoded = jwtDecode(token);
-      console.log(decoded);
+      // console.log(decoded);
       this.setState({
         email: decoded.email,
         id: decoded.id,

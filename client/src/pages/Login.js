@@ -4,7 +4,7 @@ import { Button, Col, Container, Row, Form, Text } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import { DivWithErrorHandling } from "../components/ErrorDiv/ErrorDiv.js";
 import API from "../utils/API";
-import { Input, TextArea, LoginBtn } from "../components/LoginForm";
+import { Input, TextArea, LoginBtn, ErrorBox } from "../components/LoginForm";
 import { Redirect } from 'react-router-dom'
 import axios from "axios";
 
@@ -18,7 +18,8 @@ class Login extends Component {
     password: "",
     redirect: false,
     hash: "",
-    showError: false
+    showError: false,
+    errorMsg: ""
   };
 
   componentWillMount() {
@@ -56,18 +57,22 @@ class Login extends Component {
       })
         .then(res => {
           if (res.data === 'empty') {
-            this.setState({ redirect: false })
-            this.handleLoginErr()
+            this.setState({ redirect: false, errorMsg: "Invalid Credentials" })
+            console.log(this.state.errorMsg)
           }
 
           else {
             localStorage.setItem('token', res.data.token)
-            this.setState({ redirect: true })
           }
         })
         .then(this.setState({ email: "", password: "" }))
-        // .catch(
-        //   this.handleLoginErr());
+        .then(setTimeout(() => {
+          this.setState({
+              redirect: true,
+            })
+          }, 2000))
+        .catch(
+          this.handleLoginErr());
     }
   };
 
@@ -78,8 +83,9 @@ class Login extends Component {
       return <Redirect to='/educator' />
     }
 
+
     return (
-      <DivWithErrorHandling showError={this.state.showError}>
+      <div>
         <Nav />
         <Container fluid >
           <Row>
@@ -99,6 +105,9 @@ class Login extends Component {
                   placeholder="Password"
                   type="password"
                 />
+                <ErrorBox 
+                  error={this.state.errorMsg}> 
+                </ErrorBox>
                 <Button
                   disabled={!(this.state.email && this.state.password)}
                   onClick={this.handleFormSubmit}
@@ -106,12 +115,13 @@ class Login extends Component {
                 >
                   Sign-In
                 </Button>
+                
               </Form>
             </Col>
           </Row>
 
         </Container>
-      </DivWithErrorHandling>
+      </div>
 
     );
   }
