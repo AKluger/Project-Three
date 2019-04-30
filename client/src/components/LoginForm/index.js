@@ -31,7 +31,7 @@ export function ErrorBox(props) {
         <span className="sr-only" {...props}>Error:</span> <span className="msg"> </span>
     </div>
   ) : ( 
-    <div id="alert" className="" role="alert">
+    <div id="alert" className="alert alert-danger" role="alert">
       <span className="sr-only" {...props}>Error:</span> {props.error} <span className="msg"> </span>
     </div>
   )

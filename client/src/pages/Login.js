@@ -64,6 +64,7 @@ class Login extends Component {
 
           else {
             localStorage.setItem('token', res.data.token)
+            this.setState({success: true})
             setTimeout(() => {
               this.setState({
                   redirect: true,
@@ -71,7 +72,7 @@ class Login extends Component {
               }, 2000)
           }
         })
-        .then(this.setState({ email: "", password: "", success: true}))
+        .then(this.setState({ email: "", password: ""}))
         .catch(
           this.handleLoginErr());
     }
