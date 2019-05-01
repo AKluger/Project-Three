@@ -31,13 +31,19 @@
      color: white;
  }
 
- .creator button {
+ .creator a {
      background-color: #ffffff;
      background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
      color: rgb(36, 36, 214);
+     /* cursor: pointer; */
+     
  }
+/* 
+ .btn {
+    cursor: pointer;
+ } */
 
- .creator button:hover {
+ .creator a:hover {
      color: #0520bba8;
      box-shadow: 0 0 10px rgb(36, 36, 214);
  }
