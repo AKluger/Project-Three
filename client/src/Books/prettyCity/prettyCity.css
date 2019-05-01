@@ -1,18 +1,12 @@
 .page-container {
-    /* padding-top: 93px; */
     height: 100vh;
     width: 100%;
-    /* overflow: hidden; */
-
 }
 .pretty-line {
     font-size: 40px;
     color: black;
     font-family: 'Cabin', sans-serif;
     position: relative;
-    /* background-color: #ffffff; */
-    /* opacity: 0.1; */
-    
 }
 
 .margin{
