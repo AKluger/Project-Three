@@ -29,7 +29,6 @@ function PrettyCity() {
     setAudio(e)
   }
 
-
   const startReading = () => {
 
     if (narration) {
@@ -43,6 +42,8 @@ function PrettyCity() {
   let width = window.innerWidth > 900 ? window.innerWidth * .6 : window.innerWidth * .9;
   let height = window.innerHeight < 768 ? window.innerHeight * 1.2 : window.innerHeight * 1.2;
   let key = 0;
+
+
 
   return (
     <div className="pages">

@@ -44,6 +44,7 @@ class About extends React.Component {
                                 <Card.Img variant="top" className="creator-image" src={troy} alt="Troy Wynn" />
                                 <Card.Body>
                                     <Card.Title>Troy Wynn</Card.Title>
+                                    <Card.Subtitle className="mb-2" >Back-End Engineer</Card.Subtitle>
                                     <Card.Text></Card.Text>
                                     <button className="btn creator-btn" href="http://troy-wynn.com/" target="_blank" rel="noopener noreferrer">Portfolio</button >
                                 </Card.Body>
@@ -52,6 +53,7 @@ class About extends React.Component {
                                 <Card.Img variant="top" src={monet} alt="Monet Thigpen" />
                                 <Card.Body>
                                     <Card.Title>Monet Thigpen</Card.Title>
+                                    <Card.Subtitle className="mb-2" >Front-End Developer, UI Designer &amp; Author</Card.Subtitle>
                                     <Card.Text>
                                     </Card.Text>
                                     <button className="btn creator-btn" href="http://www.monetthigpen.com" target="_blank" rel="noopener noreferrer">Portfolio</button >
@@ -61,6 +63,7 @@ class About extends React.Component {
                                 <Card.Img variant="top" className="creator-image" src={alex} alt="Alex Kluger" />
                                 <Card.Body>
                                     <Card.Title>Alex Kluger</Card.Title>
+                                    <Card.Subtitle className="mb-2" >Project Manager &amp; Author</Card.Subtitle>
                                     <Card.Text>
                                     </Card.Text>
                                     <button className="btn creator-btn" href="http://www.alexkluger.com" target="_blank" rel="noopener noreferrer">Portfolio</button >
@@ -70,6 +73,7 @@ class About extends React.Component {
                                 <Card.Img variant="top" className="creator-image" src={ron} alt="Ronald Glover" />
                                 <Card.Body>
                                     <Card.Title>Ronald Glover</Card.Title>
+                                    <Card.Subtitle className="mb-2" >React Developer</Card.Subtitle>
                                     <Card.Text>
                                     </Card.Text>
                                     <button className="btn creator-btn" href="http://www.ronaldglover.dev" target="_blank" rel="noopener noreferrer">Portfolio</button >
