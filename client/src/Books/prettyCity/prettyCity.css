@@ -195,6 +195,9 @@
     }
 }
 
+/* 
+@media only screen and (max-width: 1440px)
+and (min-width: 1440px;) { */
 i,
 .pcLeft {
     position: relative;
@@ -245,3 +248,4 @@ i,
   bottom: 300px;
   left: 86%;
 }
+/* } */
