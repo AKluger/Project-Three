@@ -46,7 +46,7 @@ class About extends React.Component {
                                     <Card.Title>Troy Wynn</Card.Title>
                                     <Card.Subtitle className="mb-2" >Back-End Engineer</Card.Subtitle>
                                     <Card.Text></Card.Text>
-                                    <button className="btn creator-btn" href="http://troy-wynn.com/" target="_blank" rel="noopener noreferrer">Portfolio</button >
+                                    <a className="btn creator-btn" href="http://troy-wynn.com/" target="_blank" rel="noopener noreferrer">Portfolio</a >
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
@@ -56,7 +56,7 @@ class About extends React.Component {
                                     <Card.Subtitle className="mb-2" >Front-End Developer, UI Designer &amp; Author</Card.Subtitle>
                                     <Card.Text>
                                     </Card.Text>
-                                    <button className="btn creator-btn" href="http://www.monetthigpen.com" target="_blank" rel="noopener noreferrer">Portfolio</button >
+                                    <a className="btn creator-btn" href="http://www.monetthigpen.com" target="_blank" rel="noopener noreferrer">Portfolio</a >
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
@@ -66,7 +66,7 @@ class About extends React.Component {
                                     <Card.Subtitle className="mb-2" >Project Manager &amp; Author</Card.Subtitle>
                                     <Card.Text>
                                     </Card.Text>
-                                    <button className="btn creator-btn" href="http://www.alexkluger.com" target="_blank" rel="noopener noreferrer">Portfolio</button >
+                                    <a className="btn creator-btn" href="http://www.alexkluger.com" target="_blank" rel="noopener noreferrer">Portfolio</a >
                                 </Card.Body>
                             </Card>
                             <Card style={{ width: '18rem' }} className="creator">
@@ -76,7 +76,7 @@ class About extends React.Component {
                                     <Card.Subtitle className="mb-2" >React Developer</Card.Subtitle>
                                     <Card.Text>
                                     </Card.Text>
-                                    <button className="btn creator-btn" href="http://www.ronaldglover.dev" target="_blank" rel="noopener noreferrer">Portfolio</button >
+                                    <a className="btn creator-btn" href="http://www.ronaldglover.dev" target="_blank" rel="noopener noreferrer">Portfolio</a >
                                 </Card.Body>
                             </Card>
                         </CardDeck>
