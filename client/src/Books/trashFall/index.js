@@ -38,7 +38,7 @@ class trashFall extends React.Component{
     // random is a random img
       const random = fallingSky[Math.floor(Math.random()*fallingSky.length)];
 
-    // makes img visible and makes it falls
+    // makes img visible and makes it fall
       random.style.visibility = "visible"
       random.style.transition = "ease 1.5s"
       random.style.transform = "translate(0px, 490px)"
@@ -48,12 +48,14 @@ class trashFall extends React.Component{
         random.style.transform = "translate(0px, 0px)"
       }, 1600)
 
-    // makes img invisible after they have fallen and get the x vaule both trash and bin
+    // makes img invisible after they have fallen and get the x value of both trash and bin
       setTimeout(() => {
         random.style.visibility = "hidden" 
         let rand = Math.ceil(random.getBoundingClientRect().x/100)*100
         let bin = Math.ceil(this.Bin.current.getBoundingClientRect().x/100)*100
-        if(rand === (bin + 100)) this.setState({makes: this.state.makes + 1})
+        let size = 100
+        if(window.innerWidth === 1440) size = 0;
+        if(rand === (bin + size)) this.setState({makes: this.state.makes + 1})
         else this.setState({misses: this.state.misses + 1}) 
       }, 800)
   
@@ -76,7 +78,7 @@ class trashFall extends React.Component{
       marginTop: '20px'
     };
     // let trash = ""
-    
+
     if(this.state.makes === 10){
       this.congrats.current.handleShow()
       this.setState({makes: 0})
@@ -93,7 +95,7 @@ class trashFall extends React.Component{
               <article>
                 <Row className='page-image' >
                   <Col>
-                    <img src={Pages[0].imageLink} alt={Pages[0].imageTitle} style={backgroundStyle} />
+                    <img src={Pages[0].imageLink} alt={Pages[0].imageTitle} id="backgroundStyle" />
                     <Draggable axis="x" >
                       <img src={recycleBin} alt='bin' ref={this.Bin} className='gameBin2' />
                     </Draggable>

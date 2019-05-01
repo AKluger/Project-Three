@@ -115,3 +115,28 @@
     background-color: rgb(15, 194, 15);
     border: none;
 }
+
+#backgroundStyle {
+    align-items: 'flex-end';
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    height: 680px;
+    margin-top: 20px;
+  };
+
+  /* for ipad landscape just doesnt work.. */
+@media only screen and (max-height: 800px) 
+and (max-width : 1025px) 
+ { 
+    .gameBin2 {
+        top: 460px;
+
+    }
+    #backgroundStyle {
+
+        height: 580px;
+      };
+}
