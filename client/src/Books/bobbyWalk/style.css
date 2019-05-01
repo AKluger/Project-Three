@@ -1,8 +1,8 @@
 .page {
     position: relative;
-    
 }
-.margin{
+
+.margin {
     margin-top: 5%;
 }
 
@@ -10,7 +10,6 @@
     color: rgb(51, 67, 214);
     font-family: 'Baumans', cursive;
     font-size: 21px;
-       
 }
 
 .main {
@@ -22,15 +21,15 @@
     opacity: 0;
     pointer-events: none;
     color: black;
-    font-family: 'Baumans', cursive; 
-}   
-
+    font-family: 'Baumans', cursive;
+}
 
 .pc13 {
     z-index: 100;
     opacity: 1;
     pointer-events: auto;
 }
+
 .pc-fifteen {
     height: 100px;
     z-index: 11;
@@ -46,14 +45,17 @@
     right: 30px;
     top: 120px;
 }
-.imgsb{
+
+.imgsb {
     height: auto;
-    width:100%;
+    width: 100%;
 }
-.titlepage{
-    height:300px;
+
+.titlepage {
+    height: 300px;
 }
- @media only screen and (min-height: 1200px) {
+
+@media only screen and (min-height: 1200px) {
     .imgsb {
         max-height: 80%;
         max-width: 100%;
@@ -61,10 +63,13 @@
     .bobby-text {
         font-size: 34px;
     }
-} 
-/* phone landscape */ 
+}
+
+/* phone landscape */
+
 /* currently scroll required */
- @media only screen and (max-height: 414px) {
+
+@media only screen and (max-height: 414px) {
     .bobby-text {
         font-size: 10px;
     }
@@ -72,10 +77,9 @@
         height: 200px;
         max-width: 100%;
     }
-} 
+}
 
-i,
-.bwLeft {
+i, .bwLeft {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
@@ -85,8 +89,7 @@ i,
     left: -30px;
 }
 
-i,
-.bwRight {
+i, .bwRight {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
@@ -97,39 +100,93 @@ i,
 }
 
 .bwLeftArrows {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  bottom: 230px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    bottom: 230px;
 }
+
 .bwRightArrows {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  bottom: 230px;
-  left: 744px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+    bottom: 230px;
+    left: 744px;
 }
-  
+
 .bwLeft {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-  }
-.bwRight {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
 }
-#butmargin{
+
+.bwRight {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+#butmargin {
     margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
+
 .page-image {
-    margin-bottom: -40px
+    margin-bottom: -40px;
+}
+
+@media only screen and (max-height: 768px) {
+    i, .bwLeft {
+        bottom: 255px;
+        left: -4%;
+    }
+    i, .bwRight {
+        bottom: 255px;
+        left: 74%;
+    }
+    .bwLeftArrows {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        bottom: 240px;
+        left: 7px;
+    }
+    .bwRightArrows {
+        left: 80%;
+        bottom: 240px;
+    }
+}
+
+@media only screen and (min-height: 1200px) {
+    i, .bwLeft {
+        bottom: 355px;
+        left: -1%;
+    }
+    i, .bwRight {
+        bottom: 355px;
+        left: 89%;
+    }
+    .bwLeftArrows {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        bottom: 340px;
+        left: 15px;
+    }
+    .bwRightArrows {
+        left: 91.5%;
+        bottom: 340px;
+    }
 }

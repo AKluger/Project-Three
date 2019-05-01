@@ -126,17 +126,3 @@
     height: 680px;
     margin-top: 20px;
   };
-
-  /* for ipad landscape just doesnt work.. */
-@media only screen and (max-height: 800px) 
-and (max-width : 1025px) 
- { 
-    .gameBin2 {
-        top: 460px;
-
-    }
-    #backgroundStyle {
-
-        height: 580px;
-      };
-}
