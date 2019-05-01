@@ -190,3 +190,53 @@ i, .bwRight {
         bottom: 340px;
     }
 }
+
+@media only screen and (max-width: 640px) {
+    .page-image {
+        margin-bottom: 0px;
+    }
+    i, .bwLeft {
+        display: none;
+    }
+    i, .bwRight {
+        display: none;
+    }
+    .bwLeftArrows {
+        display: none;
+    }
+    .bwRightArrows {
+        display: none;
+    }
+    .imgs {
+        height: 200px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+/* phone landscape */
+
+/* currently scroll required */
+
+@media only screen and (max-height: 414px) {
+    .page-image {
+        margin-bottom: 0px;
+    }
+    .imgs {
+        height: 200px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    i, .bwLeft {
+        display: none;
+    }
+    i, .bwRight {
+        display: none;
+    }
+    .bwLeftArrows {
+        display: none;
+    }
+    .bwRightArrows {
+        display: none;
+    }
+}
