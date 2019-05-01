@@ -2,6 +2,7 @@
     height: 100vh;
     width: 100%;
 }
+
 .pretty-line {
     font-size: 40px;
     color: black;
@@ -9,7 +10,7 @@
     position: relative;
 }
 
-.margin{
+.margin {
     margin-top: 5%;
 }
 
@@ -142,14 +143,12 @@
 }
 
 .imgs {
-     height: auto;
-     width: 100%; 
-     margin-bottom: -40px;
-
+    height: auto;
+    width: 100%;
+    margin-bottom: -40px;
 }
 
-i,
-.pcLeft {
+i, .pcLeft {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
@@ -159,8 +158,7 @@ i,
     left: -4%;
 }
 
-i,
-.pcRight {
+i, .pcRight {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
@@ -169,36 +167,38 @@ i,
     bottom: 315px;
     left: 82%;
 }
-  
+
 .pcLeft {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
+
 .pcRight {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 .pcLeftArrows {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-  border-radius: 50%;
-  display: inline-block;
-  bottom: 300px;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    border-radius: 50%;
+    display: inline-block;
+    bottom: 300px;
 }
+
 .pcRightArrows {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-   background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-  border-radius: 50%;
-  display: inline-block;
-  bottom: 300px;
-  left: 86%;
+    position: relative;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+    border-radius: 50%;
+    display: inline-block;
+    bottom: 300px;
+    left: 86%;
 }
 
 @media only screen and (max-height: 1200px) {
@@ -218,9 +218,10 @@ i,
     }
 }
 
-
 /* ipad landscape */
+
 /* no scroll required */
+
 @media only screen and (max-height: 768px) {
     .pretty-line {
         font-size: 28px;
@@ -228,43 +229,59 @@ i,
     .imgs {
         height: auto;
         max-width: 100%;
+        margin-bottom: -15px;
     }
-    i,
-.pcLeft {
-    bottom: 293px;
-    left: -4%;
-}
-
-i,
-.pcRight {
-    bottom: 293px;
-    left: 74%;
-}
-  
-.pcLeftArrows {
-  position: relative;
-  height: 50px;
-  width: 50px;
-  background-color: white;
-  border-radius: 50%;
-  display: inline-block;
-  bottom: 278px;
-  left: 7px;
-}
-.pcRightArrows {
-  left: 80%;
-  bottom: 278px;
-}
+    i, .pcLeft {
+        bottom: 293px;
+        left: -4%;
+    }
+    i, .pcRight {
+        bottom: 293px;
+        left: 74%;
+    }
+    .pcLeftArrows {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        background-color: white;
+        border-radius: 50%;
+        display: inline-block;
+        bottom: 278px;
+        left: 7px;
+    }
+    .pcRightArrows {
+        left: 80%;
+        bottom: 278px;
+    }
 }
 
 @media only screen and (max-width: 640px) {
     .pretty-line {
         font-size: 22px;
     }
+    i, .pcLeft {
+        display: none;
+    }
+    i, .pcRight {
+        display: none;
+    }
+    .pcLeftArrows {
+        display: none;
+    }
+    .pcRightArrows {
+        display: none;
+    }
+    .imgs {
+        height: 200px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
 }
 
-/* phone landscape */ 
+/* phone landscape */
+
 /* currently scroll required */
+
 @media only screen and (max-height: 414px) {
     .pretty-line {
         font-size: 18px;
@@ -272,6 +289,19 @@ i,
     .imgs {
         height: 200px;
         max-width: 100%;
+        margin-bottom: 30px;
+    }
+    i, .pcLeft {
+        display: none;
+    }
+    i, .pcRight {
+        display: none;
+    }
+    .pcLeftArrows {
+        display: none;
+    }
+    .pcRightArrows {
+        display: none;
     }
 }
 
