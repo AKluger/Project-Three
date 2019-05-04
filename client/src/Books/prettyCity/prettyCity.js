@@ -91,7 +91,7 @@ function PrettyCity() {
           <span className='pcRightArrows'><i className="arrow pcRight"></i></span>
           </div>
         </div>
-        <div className="text-center pretty-text pt-2">
+        <div className="text-center pretty-text pt-5">
           {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}
         </div>
         <audio ref={firstPage} id={page.id}>

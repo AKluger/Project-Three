@@ -61,7 +61,7 @@
     position: absolute;
     height: 50px;
     width: 50px;
-    background-color: white;
+    /* background-color: white; */
     background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
     border-radius:50%;
     /* display: inline-block; */
@@ -76,14 +76,14 @@
     position: absolute;
     height: 50px;
     width: 50px;
-    background-color: white;
+    /* background-color: white; */
     background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
     border-radius: 50%;
     bottom: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
-    left: 94%;
+    left: 93.2%;
 }
 
 /* .pcRightArrows > * {
@@ -98,20 +98,20 @@
   } */
 
 @media only screen and (max-height: 1200px) {
-    .imgs {
+    /* .imgs {
         max-height: 80%;
         max-width: 100%;
-    }
+    } */
 }
 
 @media only screen and (max-height: 960px) {
     .pretty-line {
         font-size: 28px;
     }
-    .imgs {
+    /* .imgs {
         max-height: 90%;
         max-width: 100%;
-    }
+    } */
 }
 
 /* ipad landscape */
@@ -167,11 +167,11 @@
     .pcRightArrows {
         display: none;
     } */
-    .imgs {
+    /* .imgs {
         height: 200px;
         max-width: 100%;
         margin-bottom: 30px;
-    }
+    } */
 }
 
 /* phone landscape */
@@ -198,32 +198,5 @@
     }
     .pcRightArrows {
         display: none;
-    }
-}
-
-@media only screen and (min-height: 1200px) {
-    i, .pcLeft {
-        bottom: 370px;
-        left: -2%;
-    }
-    i, .pcRight {
-        bottom: 370px;
-        left: 84.2%;
-    }
-    .pcLeftArrows {
-        position: relative;
-        height: 80px;
-        width: 80px;
-        background-color: white;
-        border-radius: 50%;
-        display: inline-block;
-        bottom: 340px;
-        left: 15px;
-    }
-    .pcRightArrows {
-        height: 80px;
-        width: 80px;
-        left: 87.5%;
-        bottom: 340px;
     }
 }

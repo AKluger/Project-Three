@@ -142,11 +142,11 @@
 }
 
 @media only screen and (max-height: 768px) {
-    i, .bwLeft {
+    .bwLeft {
         bottom: 255px;
         left: -4%;
     }
-    i, .bwRight {
+    .bwRight {
         bottom: 255px;
         left: 74%;
     }
@@ -167,11 +167,11 @@
 }
 
 @media only screen and (min-height: 1200px) {
-    i, .bwLeft {
+    .bwLeft {
         bottom: 355px;
         left: -1%;
     }
-    i, .bwRight {
+    .bwRight {
         bottom: 355px;
         left: 89%;
     }
@@ -195,10 +195,10 @@
     .page-image {
         margin-bottom: 0px;
     }
-    i, .bwLeft {
+    .bwLeft {
         display: none;
     }
-    i, .bwRight {
+    .bwRight {
         display: none;
     }
     .bwLeftArrows {
