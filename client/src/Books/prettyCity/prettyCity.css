@@ -3,6 +3,11 @@
     width: 100%;
 }
 
+.page-image  {
+    min-height: 70vh;
+    width: auto;
+}
+
 .pretty-line {
     font-size: 40px;
     color: black;
@@ -14,192 +19,83 @@
     margin-top: 5%;
 }
 
-.pc-one {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 100px;
-    top: 120px;
-}
-
-.pc-two {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 70px;
-    top: 120px;
-}
-
-.pc-three {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 100px;
-}
-
-.pc-four {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 160px;
-}
-
-.pc-five {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-six {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-seven {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-eight {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-nine {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-ten {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-eleven {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-twelve {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-thirteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-fourteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-fifteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
-.pc-sixteen {
-    height: 100px;
-    z-index: 11;
-    position: absolute;
-    right: 30px;
-    top: 120px;
-}
-
 .imgs {
-    height: auto;
+    min-height: 70vh;
     width: 100%;
-    margin-bottom: -20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* margin-bottom: -20px; */
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
 }
 
-i, .pcLeft {
+.pcLeft {
+    position: relative;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    /* display: inline-block; */
+    padding: 7px;
+}
+
+.pcRight {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 7px;
-    bottom: 315px;
-    left: -4%;
-}
-
-i, .pcRight {
-    position: relative;
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    display: inline-block;
-    padding: 7px;
-    bottom: 315px;
-    left: 82%;
 }
 
 .pcLeft {
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
-}
+} 
 
 .pcRight {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
-}
+} 
 
 .pcLeftArrows {
-    position: relative;
+    position: absolute;
     height: 50px;
     width: 50px;
     background-color: white;
     background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
-    border-radius: 50%;
-    display: inline-block;
-    bottom: 300px;
+    border-radius:50%;
+    /* display: inline-block; */
+    bottom: 70%;
+    left: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pcRightArrows {
-    position: relative;
+    position: absolute;
     height: 50px;
     width: 50px;
     background-color: white;
     background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
     border-radius: 50%;
-    display: inline-block;
-    bottom: 300px;
-    left: 86%;
+    bottom: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 94%;
 }
+
+/* .pcRightArrows > * {
+    margin: 0;
+    border: solid black;
+    border-width: 0 5px 5px 0;
+    width: 100%;
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } */
 
 @media only screen and (max-height: 1200px) {
     .imgs {
@@ -226,7 +122,7 @@ i, .pcRight {
     .pretty-line {
         font-size: 28px;
     }
-    .imgs {
+    /* .imgs {
         height: auto;
         max-width: 100%;
         margin-bottom: -15px;
@@ -252,14 +148,14 @@ i, .pcRight {
     .pcRightArrows {
         left: 80%;
         bottom: 278px;
-    }
+    } */
 }
 
 @media only screen and (max-width: 640px) {
     .pretty-line {
         font-size: 22px;
     }
-    i, .pcLeft {
+    /* i, .pcLeft {
         display: none;
     }
     i, .pcRight {
@@ -270,7 +166,7 @@ i, .pcRight {
     }
     .pcRightArrows {
         display: none;
-    }
+    } */
     .imgs {
         height: 200px;
         max-width: 100%;

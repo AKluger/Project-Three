@@ -79,7 +79,7 @@
     }
 }
 
-i, .bwLeft {
+.bwLeft {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
@@ -89,7 +89,7 @@ i, .bwLeft {
     left: -30px;
 }
 
-i, .bwRight {
+.bwRight {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
