@@ -5,6 +5,7 @@ import API from "../utils/API";
 import axios from 'axios'
 import jwtDecode from 'jwt-decode'
 import FeedbackCard from "../components/FeedbackCard/Feedback.js"
+import { Redirect } from 'react-router-dom'
 import './style.css'
 
 class Educator extends Component {
@@ -39,7 +40,12 @@ class Educator extends Component {
   }
 
   componentDidMount() {
-    this.loadFeedback();
+    // this.loadFeedback();
+    const token = localStorage.getItem("token") || null;
+    console.log(token)
+    if (!token) {
+      this.setState({redirect: true});
+    }
   }
 
   loadFeedback = () => {
@@ -79,6 +85,15 @@ class Educator extends Component {
   };
 
   render() {
+
+    if (this.state.redirect) {
+      // if (this.state.redirect) {
+        return <Redirect to='/' />
+      // }
+  
+    }
+
+
     return (
       <div>
         <Nav status={true} />
