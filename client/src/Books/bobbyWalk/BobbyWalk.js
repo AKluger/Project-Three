@@ -37,12 +37,14 @@ function BobbyWalk() {
           {pages.map(page => (
             <article key={page.id}>
               <div className='page-image' key={key++}>
-                <img src={page.imageLink} alt={page.imageTitle} className='main imgsb' key={key++} />
-                <span className='bwLeftArrows'></span><i className="arrow bwLeft"></i>
-                <span className='bwRightArrows'></span><i className="arrow bwRight"></i>
+              <div style={{backgroundImage: `url(${page.imageLink})`}} alt={page.imageTitle} className='main imgsb' key={key++}>
+                {/* <img src={page.imageLink} alt={page.imageTitle} className='main imgsb' key={key++} /> */}
+                <span className='bwLeftArrows'><i className="arrow bwLeft"></i></span>
+                <span className='bwRightArrows'><i className="arrow bwRight"></i></span>
+                </div>
               </div>
 
-              <div className="text-center bobby-text">{page.text.map(line => (<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
+              <div className="text-center bobby-text-div">{page.text.map(line => (<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
               <Row className="text-center">
                 <Col sm={4}>
                   <Button variant="outline-success" className={page.cssClass} id="butmargin"> Bobby wants to be that Special Somebody</Button>

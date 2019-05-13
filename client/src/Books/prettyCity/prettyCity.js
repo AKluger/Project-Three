@@ -46,33 +46,66 @@ function PrettyCity() {
 
 
   return (
-    <div className="pages">
-      <Nav />
-      <AudioModal audio={toggleAudio} />
-      <PagesContainer >
-        <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
-          {pages.map(page => (
-            <article key={page.id}>
-              <div className='page-image'>
-                <Image src={page.imageLink} alt={page.imageTitle} className='main imgs' key={key++} />
-                <span className='pcLeftArrows'></span><i className="arrow pcLeft"></i>
-                <span className='pcRightArrows'></span><i className="arrow pcRight"></i>
-              </div>
-              <div className="text-center pretty-text pt-2">
-                {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}
-              </div>
-              <audio ref={firstPage} id={page.id}>
-                <source src={page.audioLink} type="audio/mp4" >
-                </source>
-              </audio>
-            </article>
-          ))}
-        </FlipPage>
-      </PagesContainer>
-    </div>
+//     <div className="pages">
+//       <Nav />
+//       <AudioModal audio={toggleAudio} />
+//       <PagesContainer >
+//         <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
+//           {pages.map(page => (
+//             <article key={page.id}>
+//               <div className='page-image'>
+//                 <Image src={page.imageLink} alt={page.imageTitle} className='main imgs' key={key++} />
+//                 <span className='pcLeftArrows'></span><i className="arrow pcLeft"></i>
+//                 <span className='pcRightArrows'></span><i className="arrow pcRight"></i>
+//               </div>
+//               <div className="text-center pretty-text pt-2">
+//                 {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}
+//               </div>
+//               <audio ref={firstPage} id={page.id}>
+//                 <source src={page.audioLink} type="audio/mp4" >
+//                 </source>
+//               </audio>
+//             </article>
+//           ))}
+//         </FlipPage>
+//       </PagesContainer>
+//     </div>
 
-  );
+//   );
 
-}
+// }
 
-export default PrettyCity
+// export default PrettyCity
+
+
+<div className="pages">
+<Nav />
+<AudioModal audio={toggleAudio} />
+<PagesContainer >
+  <FlipPage orientation='horizontal' flipOnTouch={true} onPageChange={startReading} height={JSON.stringify(height)} width={JSON.stringify(width)} pageBackground={pageColor} style={bookStyle}>
+    {pages.map(page => (
+      <article key={page.id}>
+        <div className='page-image'>
+          <div style={{backgroundImage: `url(${page.imageLink})`}} alt={page.imageTitle} className='main imgs' key={key++}>
+          <span className='pcLeftArrows'><i className="arrow pcLeft"></i></span>
+          <span className='pcRightArrows'><i className="arrow pcRight"></i></span>
+          </div>
+        </div>
+        <div className="text-center pretty-text pretty-text-div">
+          {page.text.map(line => (<h2 className=" pretty-line" key={key++}>{line}</h2>))}
+        </div>
+        <audio ref={firstPage} id={page.id}>
+          <source src={page.audioLink} type="audio/mp4" >
+          </source>
+        </audio>
+      </article>
+    ))}
+  </FlipPage>
+</PagesContainer>
+</div>
+
+);
+
+    }
+
+    export default PrettyCity
