@@ -12,8 +12,6 @@
     "bcryptjs": "^2.4.3",
     "client": "0.0.1",
     "delay": "^4.2.0",
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
@@ -25,8 +23,7 @@
     "react-pose-text": "^3.1.0",
     "react-router-dom": "^5.0.0",
     "react-scripts": "2.1.8",
-    "react-spring": "8.0.5",
-    "react-test-renderer": "^16.8.6"
+    "react-spring": "8.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +40,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.0",
+    "react-test-renderer": "^16.8.6"
+  }
 }
