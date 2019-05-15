@@ -2,7 +2,6 @@
 import React, { useState, useRef } from 'react';
 import Nav from '../../components/Nav';
 import PagesContainer from "../../components/PagesContainer";
-import { Image } from "react-bootstrap";
 import AudioModal from '../../components/AudioModal';
 import Pages from './prettyCity.json';
 import FlipPage from "react-flip-page";

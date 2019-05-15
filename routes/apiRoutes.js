@@ -93,8 +93,6 @@ app.post("/api/teachers", function(req, res) {
 
 
   // Feedback 
-  // Feedback  
-  // Feedback  
 
   app.get("/api/feedback", function(req, res) {
     console.log(req.body)
@@ -108,7 +106,6 @@ app.post("/api/teachers", function(req, res) {
   app.get("/api/posts/:id", function(req, res) {
     // Here we add an "include" property to our options in our findOne query
     // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Author
     db.Feedback.findOne({
       where: {
         id: req.params.id
@@ -148,8 +145,6 @@ app.post("/api/teachers", function(req, res) {
       });
       
   // AUTH API // 
-  // AUTH API // 
-  // AUTH API // 
 
   app.post("/api/login/", function(req, res) {
     const { password, email } = req.body
@@ -160,7 +155,6 @@ app.post("/api/teachers", function(req, res) {
       }
     })
       .then(teacher => {
-        // console.log(teacher)
         if (!teacher) {return res.send('empty')}
         // if (!teacher) {return res.status(400).json({msg: 'Invalid Credentials'})
         // console.log(teacher.password)
@@ -194,11 +188,9 @@ app.post("/api/teachers", function(req, res) {
 
 
    app.get("/api/signup", function(req, res) {
-    // console.log(req.user.avi);
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
-      console.log("Hi, I'm here")
     }
     else {
       res.json({

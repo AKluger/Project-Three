@@ -44,7 +44,7 @@ class Educator extends Component {
     const token = localStorage.getItem("token") || null;
     console.log(token)
     if (!token) {
-      this.setState({redirect: true});
+      this.setState({ redirect: true });
     }
   }
 
@@ -79,7 +79,6 @@ class Educator extends Component {
       })
         .then(this.setState({ feedback: "" }))
         .then(setTimeout(() => { this.loadFeedback() }, 500))
-        //   .then(event.target.reset())
         .catch(err => console.log(err));
     }
   };
@@ -87,10 +86,8 @@ class Educator extends Component {
   render() {
 
     if (this.state.redirect) {
-      // if (this.state.redirect) {
-        return <Redirect to='/' />
-      // }
-  
+      return <Redirect to='/' />
+
     }
 
 
