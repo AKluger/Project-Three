@@ -39,19 +39,19 @@ function BobbyWalk() {
               <div className='page-image' key={key++}>
               <div style={{backgroundImage: `url(${page.imageLink})`}} alt={page.imageTitle} className='main imgsb' key={key++}>
                 {/* <img src={page.imageLink} alt={page.imageTitle} className='main imgsb' key={key++} /> */}
-                <span className='bwLeftArrows'><i className="arrow bwLeft"></i></span>
-                <span className='bwRightArrows'><i className="arrow bwRight"></i></span>
+                <span className='bwLeftArrows'><i className="bwLeft"></i></span>
+                <span className='bwRightArrows'><i className="bwRight"></i></span>
                 </div>
               </div>
 
               <div className="text-center bobby-text-div">{page.text.map(line => (<h2 className="bobby-text" key={key++}>{line}</h2>))}</div>
               <Row className="text-center">
                 <Col sm={4}>
-                  <Button variant="outline-success" className={page.cssClass} id="butmargin"> Bobby wants to be that Special Somebody</Button>
+                  <Button variant="outline-success" className={page.cssClass} id="btn-margin"> Bobby wants to be that Special Somebody</Button>
                 </Col>
                 <Col sm={4}></Col>
                 <Col sm={4}>
-                  <Button variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass} id="butmargin"> Bobby does <b>NOT</b> want be that Special Somebody</Button>
+                  <Button variant="outline-secondary" onClick={handleButtonClick} className={page.cssClass} id="btn-margin"> Bobby does <b>NOT</b> want be that Special Somebody</Button>
                 </Col>
               </Row>
             </article>

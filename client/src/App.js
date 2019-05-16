@@ -13,7 +13,7 @@ import About from './pages/About.js'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import trashFall from './Books/trashFall'
-import './App.css';
+import './App.scss';
 library.add(faUser)
 
 class App extends Component {

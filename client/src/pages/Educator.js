@@ -6,7 +6,7 @@ import axios from 'axios'
 import jwtDecode from 'jwt-decode'
 import FeedbackCard from "../components/FeedbackCard/Feedback.js"
 import { Redirect } from 'react-router-dom'
-import './style.css'
+import './style.scss'
 
 class Educator extends Component {
 

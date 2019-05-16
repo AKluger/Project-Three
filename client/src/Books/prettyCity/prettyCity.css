@@ -32,7 +32,7 @@
 }
 
 .pretty-text-div {
-    padding-top: 5%;
+    padding-top: 1%;
 }
 
 .pcLeft {
@@ -41,6 +41,8 @@
     border-width: 0 5px 5px 0;
     /* display: inline-block; */
     padding: 7px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 .pcRight {
@@ -51,10 +53,9 @@
     padding: 7px;
 }
 
-.pcLeft {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-} 
+/* .pcLeft {
+
+}  */
 
 .pcRight {
     transform: rotate(-45deg);
@@ -87,20 +88,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* left: 93.2%; */
     right: 1%;
 }
-
-/* .pcRightArrows > * {
-    margin: 0;
-    border: solid black;
-    border-width: 0 5px 5px 0;
-    width: 100%;
-    flex: 1 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
 
 @media only screen and (max-height: 1200px) {
     /* .imgs {

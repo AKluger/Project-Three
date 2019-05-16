@@ -1,7 +1,7 @@
 import React from 'react'
 import jwtDecode from 'jwt-decode'
 import axios from 'axios'
-import './style.css'
+import './style.scss'
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import { Redirect } from 'react-router-dom'
 
@@ -25,7 +25,7 @@ export default class tempNav extends React.Component {
 
   componentDidMount() {
     const token = localStorage.getItem("token") || null;
-    if(token){
+    if (token) {
       axios.defaults.headers.common['Authorization'] = token;
       const decoded = jwtDecode(token);
       this.setState({
@@ -50,21 +50,21 @@ export default class tempNav extends React.Component {
   }
 
   tokenExists() {
-    if(localStorage.getItem('token')) {
-      this.setState({isLoggedIn: true}, () => {
+    if (localStorage.getItem('token')) {
+      this.setState({ isLoggedIn: true }, () => {
         // console.log(this.state)
         // debugger
       })
     }
     // this.setState({isLoggedIn: false})
-    }
-  
+  }
+
 
   logoutUser() {
     // if(localStorage.getItem('token')==null) {
-      this.setState({isLoggedIn: false})
-      this.setState({redirect: true})
-      // console.log(this.state.isLoggedIn)
+    this.setState({ isLoggedIn: false })
+    this.setState({ redirect: true })
+    // console.log(this.state.isLoggedIn)
     // }
   }
 
@@ -76,13 +76,11 @@ export default class tempNav extends React.Component {
       return <Redirect to='/signup' />
     }
     // debugger
-    // console.log(`Logged In: ${this.props.status}`) 
-    // console.log(`Token in Storage?: ${localStorage.getItem('token')}`)
-    // const content = !this.props.status || !localStorage.getItem('token') ? (
+
     const content = (!localStorage.getItem('token') || false) ? (
-      
-    // const content = (!this.props.status || !localStorage.getItem('token')) ? (
-      
+
+      // const content = (!this.props.status || !localStorage.getItem('token')) ? (
+
       <Navbar className="navbarcol" style={navstyle} expand="lg" id="welcome-nav">
         <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -97,17 +95,17 @@ export default class tempNav extends React.Component {
           <Nav>
 
             <div className="glyph">
-                <Button
-                  href="/login"
-                  id="login-nav"
-                >
-                  Sign-In
+              <Button
+                href="/login"
+                id="login-nav"
+              >
+                Sign-In
                 </Button>
-                <Button
-                  href="/signup"
-                  id="signin-nav"
-                >
-                  Sign-Up
+              <Button
+                href="/signup"
+                id="signin-nav"
+              >
+                Sign-Up
                 </Button>
             </div>
           </Nav>
@@ -115,35 +113,35 @@ export default class tempNav extends React.Component {
         </Navbar.Collapse>
       </Navbar>
     ) : (
-    <Navbar className="navbarcol" style={navstyle} expand="lg">
-        <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
-            <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
-            <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
-            {/* <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link> */}
-            <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
-          </Nav>
-          <Nav>
-            <div>
-           <Button
-              href="/login"
-              id="logout-nav"
-            >
-              Logout
+        <Navbar className="navbarcol" style={navstyle} expand="lg">
+          <Navbar.Brand className="jump" href="/"><span className="logotxt">WINC</span></Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/"><span className="navtxt">Home   </span></Nav.Link>
+              <Nav.Link href="/library"><span className="navtxt">Library   </span></Nav.Link>
+              <Nav.Link href="/educator"><span className="navtxt">Educator   </span></Nav.Link>
+              {/* <Nav.Link href="/resources"><span className="navtxt">Resources   </span></Nav.Link> */}
+              <Nav.Link href="/about"><span className="navtxt">About Us</span></Nav.Link>
+            </Nav>
+            <Nav>
+              <div>
+                <Button
+                  href="/login"
+                  id="logout-nav"
+                >
+                  Logout
             </Button>
-            </div>
-        </Nav>
-     
-    </Navbar.Collapse>
-    </Navbar>
-    );
-    return (
-        <div>
-          {content}
-        </div>
+              </div>
+            </Nav>
+
+          </Navbar.Collapse>
+        </Navbar>
       );
-    }
+    return (
+      <div>
+        {content}
+      </div>
+    );
+  }
 }

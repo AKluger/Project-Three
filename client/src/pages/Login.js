@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './style.css'
+import './style.scss'
 import { Button, Col, Container, Row, Form } from 'react-bootstrap';
 import Nav from "../components/Nav";
 import API from "../utils/API";
