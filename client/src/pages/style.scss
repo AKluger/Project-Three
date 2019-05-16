@@ -1,0 +1,166 @@
+/* assigning our brand colors to variables here */
+$blue: rgb(36, 36, 214);
+$light-blue: rgb(139, 222, 233);
+$magenta: rgb(175, 29, 148);
+$btn-gradient: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+
+body {
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #ececec 10%, $light-blue 74%);
+}
+
+p,
+h2,
+h5,
+.card-deck {
+  font-family: "Cabin", sans-serif;
+}
+
+.about-p {
+  font-size: 1.2em;
+}
+.educator {
+  max-height: 90vh;
+  font-family: "Cabin", sans-serif;
+}
+
+/* educator jumbotron */
+#hero-educator {
+  background-image: url("./images/educator.jpg");
+  background-size: cover;
+  min-height: 70vh;
+}
+
+#about-header {
+  background-image: url("./images/pennovation.jpg");
+  background-size: cover;
+  min-height: 50vh;
+}
+
+#welcome-badge {
+  color: white;
+  background-color: $magenta;
+}
+
+.h1-about {
+  font-family: "Luckiest Guy", cursive;
+  text-shadow: 4px 4px 8px black;
+  color: white;
+}
+
+#login-btn,
+#form-button {
+  background-color: #ffffff;
+  background-image: $btn-gradient;
+  color: $blue;
+  margin-bottom: 3%;
+  font-family: "Cabin", sans-serif;
+}
+
+#form-button:hover {
+  box-shadow: 0 0 10px $blue;
+}
+
+.welcome {
+  font-family: "Cabin", sans-serif;
+  font-size: 2em;
+  padding: 1%;
+}
+
+#hero-ref {
+  background-image: url("./images/resources2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+}
+
+#res-float {
+  margin-left: 10%;
+}
+
+.cardpad {
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-bottom: 3px;
+}
+
+#rowOne {
+  margin-left: 9%;
+}
+
+#rowTwo {
+  margin-left: 24%;
+}
+
+#resource-background {
+  background: rgb(228, 250, 200);
+  background: linear-gradient(0deg, rgba(228, 250, 200, 1) 0%, rgba(31, 102, 16, 1) 100%);
+}
+
+/*  our profile cards */
+.creator {
+  transition: box-shadow 0.5s;
+  box-shadow: 5px 0 12px rgba(158, 54, 54, 0.2);
+}
+
+#creator-title {
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.creator-image {
+  max-height: 286px;
+}
+
+.creator:hover {
+  box-shadow: 10px 0 20px rgba(158, 54, 54, 0.2);
+}
+
+.creator a {
+  background-color: #ffffff;
+  background-image: $btn-gradient;
+  color: $blue;
+}
+
+.creator a:hover {
+  // color: #0520bba8;
+  color: black;
+  box-shadow: 0 0 10px $blue;
+}
+
+#login {
+  color: #333333;
+  height: 150px;
+  margin: 0 auto;
+  padding: 10px 0;
+  align-items: center;
+}
+
+.headerText {
+  font-size: 2rem;
+}
+
+.feedback-section {
+  box-shadow: 5px 0 14px rgba(158, 54, 54, 0.2);
+}
+
+.signup-form {
+  font-family: "Cabin", sans-serif;
+}
+
+/* on login and signup */
+
+.error-message {
+  color: black;
+  background-color: rgb(214, 57, 57);
+  font-family: "Cabin", sans-serif;
+}
+
+.winc-link {
+  color: $blue;
+  text-decoration: underline;
+}
+
+.winc-link:hover {
+  color: $magenta;
+}

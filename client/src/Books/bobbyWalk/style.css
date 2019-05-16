@@ -56,7 +56,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    /* margin-bottom: -20px; */
     display: flex;
     justify-content: space-between;
     overflow: hidden;
@@ -66,36 +65,14 @@
     height: 300px;
 }
 
-/* @media only screen and (min-height: 1200px) {
-    .imgsb {
-        max-height: 80%;
-        max-width: 100%;
-    }
-    .bobby-text {
-        font-size: 34px;
-    }
-} */
-
-/* phone landscape */
-
-/* currently scroll required */
-
-@media only screen and (max-height: 414px) {
-    .bobby-text {
-        font-size: 10px;
-    }
-    .imgsb {
-        height: 200px;
-        max-width: 100%;
-    }
-}
-
 .bwLeft {
     position: relative;
     border: solid black;
     border-width: 0 5px 5px 0;
     /* display: inline-block; */
     padding: 7px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
 
 .bwRight {
@@ -104,6 +81,8 @@
     border-width: 0 5px 5px 0;
     display: inline-block;
     padding: 7px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
 }
 
 .bwLeftArrows {
@@ -133,34 +112,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* left: 93.2%; */
     right: 1%;
 }
 
-.bwLeft {
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-}
-
-.bwRight {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}
-
-#butmargin {
+#btn-margin {
     margin-top: 5px;
     margin-left: 5px;
     margin-right: 5px;
     margin-bottom: 5px;
 }
 
-/* .page-image {
-    margin-bottom: -40px;
-} */
-
-/* @media only screen and (max-height: 768px) {
-
-} */
+    /* MEDIA QUERIES */
 
  @media only screen and (min-height: 1200px) {
     .bobby-text {
@@ -178,7 +140,6 @@
 }
 
 /* phone landscape */
-
 /* currently scroll required */
 
 @media only screen and (max-height: 414px) {
@@ -201,5 +162,12 @@
     }
     .bwRightArrows {
         display: none;
+    }
+    .bobby-text {
+        font-size: 10px;
+    }
+    .imgsb {
+        height: 200px;
+        max-width: 100%;
     }
 }
