@@ -91,7 +91,7 @@
     "id": 8,
     "text": [
         "Bobby looks through the house and finds a box full of big black trash bags and runs back to granny. “Here you go Granny.”",
-        "Reaching for the bag, Granny tells Bobby to go and find some gloves.",
+        "Reaching for the bag, Granny tells Bobby to find some gloves.",
         "Grasping for the table behind her, Mother says, “I was just in the garden, here are my gloves.”"
     ],
     "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_9.jpg",
@@ -126,7 +126,7 @@
 {
     "id": 11,
     "text": [
-        "“To fix the city we have to start small. The special somebody can start with a trash bag and gloves to pick up the trash on their street. ",
+        "“To fix the city we have to start small. They can start with a trash bag and gloves to pick up the trash on their street. ",
         "But the key is right here, Sweet Boy,” Granny points at Bobby’s heart."
     ],
     "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_12.jpg",
@@ -137,7 +137,7 @@
     "id": 12,
     "text": [
         "“Like how your mother makes those drawings out of love for you and expects nothing in return, that one special somebody will pick up the trash because they love their community and expect no reward.”",
-        "Bobby thanks Granny for the solution she came up with and makes his way upstairs."
+        "Bobby thanks Granny for her solution and makes his way upstairs."
     ],
     "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_25.jpg",
     "cssClass": "pc-one",
@@ -155,7 +155,7 @@
 {
     "id": 14,
     "text": [
-        "He gets out of bed, goes downstairs and sees the big black trash bag, his mother’s gardening gloves and a little drawing of a heart near the door."
+        "He gets out of bed and goes downstairs. He sees the big black trash bag, his mother’s gardening gloves and a little drawing of a heart near the door."
     ],
     "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_14.jpg",
     "cssClass": "pc13",
@@ -166,8 +166,8 @@
         "id": 1,
         "text": [
             "Bobby decides that he isn’t “that special somebody”. ",
-            "He puts the big black trash bag back into the box he took it out of. He hangs Mother’s gloves on the hook near the backdoor.",
-            "And sticks the drawing of the heart on Granny’s door."
+            "He puts the big black trash bag back into the its box, hangs Mother’s gloves on the hook near the backdoor,",
+            "and sticks the drawing of the heart on Granny’s door."
             
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_21.jpg",
@@ -177,8 +177,8 @@
     {
         "id": 2,
         "text": [
-            "As the years go Bobby gets older and older and sees more and more trash accumulate on his street.",
-            "Bobby decides to move away to college.  Then after graduating he comes back to visit Mother."
+            "As the years go by Bobby gets older and older and sees more and more trash accumulate on his street.",
+            "Bobby moves away to college. After graduating he comes back to visit Mother."
             
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_22.jpg",
@@ -188,8 +188,8 @@
     {
         "id": 3,
         "text": [
-            "Where once sat his mother’s garden,  a pile of trash sits high and mighty.",
-            "After seeing this Bobby says to Mother, “You can’t live in this dirty city anymore. Nobody can fix it now. Come live with me outside the city so you can have a garden again.”",
+            "Where his mother's gardenn once sat, a pile of trash sits high and mighty.",
+            "After seeing this Bobby says to Mother, “You can’t live in this dirty city anymore. Nobody can fix it now. Come live with me outside the city where you can have a garden again.”",
             "Mother sighs and says, “Oh Sweet Boy,” and shakes her head."
             
         ],
