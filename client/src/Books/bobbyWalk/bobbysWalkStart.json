@@ -14,8 +14,8 @@
     {
         "id": 1,
         "text": [
-            "A new day brightens the sky. Little Bobby gets out of bed and  looks out the window and admires his city’s metallic skyline.",
-            "Mother tells him to go the corner store and pick up some eggs for breakfast."
+            "A new day brightens the sky. Little Bobby gets out of bed, looks out the window and admires his city’s metallic skyline.",
+            "Mother tells him to go to the corner store and pick up some eggs for breakfast."
             
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_1.jpg",
@@ -71,7 +71,7 @@
     {
         "id": 6,
         "text": [
-            "“When he gets home he asks Mother, “Why can’t we fix our dirty city?”",
+            "When he gets home he asks Mother, “Why can’t we fix our dirty city?”",
             "Mother replies, “Why do you ask that Sweet Boy?”",
             "Looking down at the ground Bobby solemnly says, “The grown-ups at the store said they are leaving the city because it’s so dirty and there is no way to fix it.”"
         ],
@@ -105,7 +105,7 @@
         "text": [
             "Gesturing to Bobby Granny says, “Sweet Boy, come close.” Bobby came and sat on the arm of Granny’s chair.",
             "She whispers, “What is something nice your mother does for you?”",
-            "Bobby sits back and thinks. He realizes his mother does so many nice things for him that he’s never thought about. "
+            "Bobby sits back and realizes his mother does so many nice things for him that he’s never thought about. "
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_10.jpg",
         "cssClass": "pc-one",
@@ -135,7 +135,7 @@
     {
         "id": 12,
         "text": [
-            "“Like how your mother makes those drawings out of love for you and expects nothing in return, that one special somebody will pick up the trash because they love their community and expect no reward.”",
+            "“Like how your mother makes those drawings out of love for you and expects nothing in return, that special somebody will pick up the trash because they love their community and expect no reward.”",
             "Bobby thanks Granny for the solution she came up with and makes his way upstairs."
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_25.jpg",
@@ -145,7 +145,7 @@
     {
         "id": 13,
         "text": [
-            "The sun illuminates Bobby’s room waking him up, he thinks to himself “Can I be that one special somebody?”"
+            "The sun illuminates Bobby’s room waking him up, he thinks to himself “Can I be that special somebody?”"
         ],
         "imageLink": "https://monetthigpen.github.io/The/Bobbys_walk/IMG_13.jpg",
         "cssClass": "pc-one",
