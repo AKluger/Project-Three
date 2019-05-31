@@ -8,7 +8,7 @@ class Welcome extends React.Component {
   render() {
     return (
       <div>
-        <Nav/>
+        <Nav />
         <Container fluid className="p-0">
           <Jumbotron id="hero-educator" />
           <Row className="justify-content-md-center">
