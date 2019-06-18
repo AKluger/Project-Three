@@ -74,7 +74,7 @@ class SignUp extends Component {
             }
           })
           .then(this.setState({email: "", school: "", password: "", state: "", city: "", name: "", success: true}))
-          .catch(err => this.setState({ errorMsg: "User already exists"}));
+          .catch(err => this.setState({ errorMsg: "User already exists", success: false}));
       }
     }
 
