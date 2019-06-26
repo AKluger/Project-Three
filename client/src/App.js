@@ -13,6 +13,7 @@ import About from './pages/About.js'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faUser } from '@fortawesome/free-solid-svg-icons'
 import trashFall from './Books/trashFall'
+import SustainableProducts from './components/SustainableProducts'
 import './App.scss';
 library.add(faUser)
 
@@ -32,6 +33,7 @@ class App extends Component {
         <Route exact path="/login" component={Login} />
         <Route exact path="/about" component={About} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/sustainableproducts" component={SustainableProducts} />
 
         </Switch>
       </Router>
