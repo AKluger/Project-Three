@@ -3,26 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.17",
-    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/fontawesome-svg-core": "^1.2.22",
+    "@fortawesome/free-solid-svg-icons": "^5.10.2",
     "@fortawesome/react-fontawesome": "^0.1.4",
-    "antd": "^3.16.3",
-    "axios": "^0.18.0",
+    "antd": "^3.22.2",
+    "axios": "^0.18.1",
     "bcrypt": "^3.0.6",
     "bcryptjs": "^2.4.3",
     "client": "0.0.1",
-    "delay": "^4.2.0",
+    "delay": "^4.3.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
     "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.0.0-beta.8",
-    "react-dom": "^16.8.6",
-    "react-draggable": "^3.3.0",
+    "react": "^16.9.0",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-dom": "^16.9.0",
+    "react-draggable": "^3.3.2",
     "react-flip-page": "^1.5.7",
     "react-pose": "^4.0.8",
     "react-pose-text": "^3.1.0",
-    "react-router-dom": "^5.0.0",
+    "react-router-dom": "^5.0.1",
     "react-scripts": "2.1.8",
     "react-spring": "8.0.5"
   },
@@ -43,8 +43,8 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.13.0",
-    "react-test-renderer": "^16.8.6"
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "react-test-renderer": "^16.9.0"
   }
 }
